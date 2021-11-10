@@ -1,0 +1,38 @@
+{
+  "name": "kematianbalita",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon kematianbalita.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arieazland/kematianbalita.git"
+  },
+  "author": "arieazland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arieazland/kematianbalita/issues"
+  },
+  "homepage": "https://github.com/arieazland/kematianbalita#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-useragent": "^1.0.15",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "^4.1.2",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.6.2",
+    "nodemon": "^2.0.7",
+    "req-flash": "^0.0.3"
+  }
+}
