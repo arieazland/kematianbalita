@@ -1,7 +1,7 @@
-#### i-care
+#### Sistem Pencatatan Review Kematian Balita
 
 **Contributors**  : 
-1. M. Ridwan Zalbina
+1. Pacu Putra
 2. Firly
 
 
