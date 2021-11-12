@@ -69,272 +69,819 @@
                     </div>
                 {{/if}}
                 {{!-- End of Notifikasi --}}
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-outline-info">
-                            {{!-- <div class="card-header">
-                                <h4 class="m-b-0 text-white">Form Soal</h4>
-                            </div> --}}
-                            <div class="card-block">
-                                <form id="simpanjawaban" action="jawab/reg" method="post">
-                                    <input type="hidden" class="form-control" id="iduser" name="iduser" value="{{ idu }}">
-                                    {{!-- Start of tabel list soal --}}
-                                    <h4 class="card-title">1. Identitas Balita</h4>
-                                    <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
-                                    <hr>
-                                    <div class="table-responsive m-t-40">
-                                        <table id="soalassessment" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center">No.</th>
-                                                    <th class="text-center">Soal</th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th class="text-center">No.</th>
-                                                    <th class="text-center">Soal</th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
+                <form id="simpanjawaban" action="jawab/reg" method="post">
+                <input type="hidden" class="form-control" id="iduser" name="iduser" value="{{ idu }}">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
+                                    
+                                        {{!-- Start of tabel list soal --}}
+                                        <h4 class="card-title">1. Identitas Balita</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
                                                     <tr>
-                                                        <td class="text-center">
-                                                            1.1
-                                                        </td>
-                                                        <td>
-                                                            Nama Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.1" name="soal1.1" value="Nama Balita:">
-                                                            <input type="text" class="form-control" id="jawabannamabalita" name="jawabannamabalita">
-                                                            {{!-- {{#compare max_jawaban '2' operator="=="}}
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.1
+                                                            </td>
+                                                            <td>
+                                                                Nama Balita: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_1" name="soal1_1" value="Nama Balita:">
+                                                                <input type="text" class="form-control" id="jawabannamabalita" name="jawabannamabalita" placeholder="Nama Balita">
+                                                                {{!-- {{#compare max_jawaban '2' operator="=="}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
+                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
+                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                    </div>
+                                                                {{/compare}}
+                                                                {{#compare max_jawaban '3' operator="=="}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
+                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
+                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                        &nbsp
+                                                            
+                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
+                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
+                                                                    </div> 
+                                                                        {{#compare sub 'c' operator="=="}}
+                                                                        <div id="subradioc_{{id}}" class="boxc" style="display: none;">
+                                                                            {{ sub_pertanyaan }}: &nbsp
+                                                                            <div class="toggle">
+                                                                                <input class="m-r-200" type="radio" name="radiosub{{id}}" id="radiosuba_{{id}}" value="{{ sub_jawaban_a }}">
+                                                                                <label class="m-r-200" for="radiosuba_{{id}}"> {{ sub_jawaban_a }} </label>
+                                                                                &nbsp
+
+                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubb_{{id}}" value="{{ sub_jawaban_b }}">
+                                                                                <label for="radiosubb_{{id}}"> {{ sub_jawaban_b }} </label>
+                                                                                &nbsp
+
+                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubc_{{id}}" value="{{ sub_jawaban_c }}">
+                                                                                <label for="radiosubc_{{id}}"> {{ sub_jawaban_c }} </label>
+                                                                                &nbsp
+
+                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubd_{{id}}" value="{{ sub_jawaban_d }}">
+                                                                                <label for="radiosubd_{{id}}"> {{ sub_jawaban_d }} </label>
+                                                                                &nbsp
+                                                                            </div>
+                                                                        </div>
+                                                                    {{/compare}}
+                                                                {{/compare}}
+                                                                {{#compare max_jawaban '7' operator="=="}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
+                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
+                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                        &nbsp
+                                                                
+                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
+                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
+                                                                        &nbsp
+                                                                
+                                                                        <input type="radio" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
+                                                                        <label for="radiod_{{id}}"> {{ d }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
+                                                                        <label for="radioe_{{id}}"> {{ e }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
+                                                                        <label for="radiof_{{id}}"> {{ f }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
+                                                                        <label for="radiog_{{id}}"> {{ g }} </label>
+                                                                    </div>
+                                                                    {{#compare essay 'g' operator="=="}}
+                                                                        <div id="essayradiog_{{id}}" class="boxg" style="display: none;">
+                                                                            Jelaskan:
+                                                                            <textarea class="form-control essayboxg" name="essayboxg" id="essayboxg" rows="10"></textarea>
+                                                                        </div>
+                                                                    {{/compare}}
+                                                                {{/compare}}
+                                                                {{#compare max_jawaban '9' operator="=="}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
+                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
+                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                        &nbsp
+                                                                
+                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
+                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
+                                                                        &nbsp
+                                                                
+                                                                        <input type="radio" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
+                                                                        <label for="radiod_{{id}}"> {{ d }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
+                                                                        <label for="radioe_{{id}}"> {{ e }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
+                                                                        <label for="radiof_{{id}}"> {{ f }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
+                                                                        <label for="radiog_{{id}}"> {{ g }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radioh_{{id}}" value="{{ h }}">
+                                                                        <label for="radioh_{{id}}"> {{ h }} </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio{{id}}" id="radioi_{{id}}" value="{{ i }}" class="haveessay">
+                                                                        <label for="radioi_{{id}}"> {{ i }} </label>
+                                                                    </div>
+                                                                    
+                                                                    {{#compare essay 'i' operator="=="}}
+                                                                        <div id="essayradioi_{{id}}" class="boxi" style="display: none;">
+                                                                            Jelaskan:
+                                                                            <textarea class="form-control essayboxi" name="essayboxi" id="essayboxi" rows="10"></textarea>
+                                                                        </div>
+                                                                    {{/compare}}
+                                                                {{/compare}} --}}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.2
+                                                            </td>
+                                                            <td>
+                                                                Umur Balita: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_2" name="soal1_2" value="Umur Balita">
+                                                                <input type="text" class="form-control" id="umurbalita" name="umurbalita" readonly>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.3
+                                                            </td>
+                                                            <td>
+                                                                Tanggal Lahir Balita: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_3" name="soal1_3" value="Tanggal Lahir Balita">
+                                                                <input type="text" class="form-control mydatepicker" id="tanggallahir" name="tanggallahir" placeholder="yyyy/mm/dd">
+                                                                {{!-- <span class="input-group-addon"><i class="icon-calender"></i></span> --}}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.4
+                                                            </td>
+                                                            <td>
+                                                                Jenis Kelamin Balita: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_4" name="soal1_4" value="Jenis Kelamin Balita">
+                                                                <select class="select2" id="jeniskelamin" name="jeniskelamin" style="width: 100%" required>
+                                                                        <option value="Laki-Laki">Laki-Laki</option>
+                                                                        <option value="Perempuan">Perempuan</option>
+                                                                        <option value="Ambigu">Ambigu</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.5
+                                                            </td>
+                                                            <td>
+                                                                Urutan Balita Ke-: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_5" name="soal1_5" value="Urutan Balita Ke-:">
+                                                                <input type="number" class="form-control" id="balitake" name="balitake">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.6
+                                                            </td>
+                                                            <td>
+                                                                Jumlah Balita yang Dilahirkan (Hidup) <br>
+                                                                <input type="hidden" class="form-control" id="soal1_6" name="soal1_6" value="Jumlah Balita yang Dilahirkan (Hidup)">
+                                                                <input type="number" class="form-control" id="jumlahbalitadilahirkanhidup" name="jumlahbalitadilahirkanhidup">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.7
+                                                            </td>
+                                                            <td>
+                                                                Nama Ibu: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_7" name="soal1_7" value="Nama Ibu:">
+                                                                <input type="text" class="form-control" id="jawabannamaibu" name="jawabannamaibu" placeholder="Nama Ibu">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.8
+                                                            </td>
+                                                            <td>
+                                                                Umur Ibu: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_8" name="soal1_8" value="Umur Ibu:">
+                                                                <input type="number" class="form-control" id="jawabanumuribu" name="jawabanumuribu">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.9
+                                                            </td>
+                                                            <td>
+                                                                Pekerjaan Ibu: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_9" name="soal1_9" value="Pekerjaan Ibu">
                                                                 <div class="toggle">
-                                                                    <input class="m-r-200" type="radio" required="required" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                    <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                    <input class="m-r-200" type="radio" name="radiopekerjaanibu" id="radioa_pekerjaanibu" value="Tidak Bekerja">
+                                                                    <label class="m-r-200" for="radioa_pekerjaanibu"> Tidak Bekerja </label>
                                                                     &nbsp
 
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                    <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radiob_pekerjaanibu" value="Pekerja Rumah Tangga">
+                                                                    <label for="radiob_pekerjaanibu"> Pekerja Rumah Tangga </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radioc_pekerjaanibu" value="Mahasiswa">
+                                                                    <label for="radioc_pekerjaanibu"> Mahasiswa </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radiod_pekerjaanibu" value="TNI/Polri">
+                                                                    <label for="radiod_pekerjaanibu"> TNI/Polri </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radioe_pekerjaanibu" value="PNS">
+                                                                    <label for="radioe_pekerjaanibu"> PNS </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radiof_pekerjaanibu" value="Wiraswasta/Pelayanan Jasa/Dagang">
+                                                                    <label for="radiof_pekerjaanibu"> Wiraswasta/Pelayanan Jasa/Dagang </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radiog_pekerjaanibu" value="Pegawai Swasta">
+                                                                    <label for="radiog_pekerjaanibu"> Pegawai Swasta </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radioh_pekerjaanibu" value="Petani">
+                                                                    <label for="radioh_pekerjaanibu"> Petani </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radioi_pekerjaanibu" value="Buruh Pabrik">
+                                                                    <label for="radioi_pekerjaanibu"> Buruh Pabrik </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radioj_pekerjaanibu" value="Pensiunan">
+                                                                    <label for="radioj_pekerjaanibu"> Pensiunan </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanibu" id="radiok_pekerjaanibu" value="Lainnya">
+                                                                    <label for="radiok_pekerjaanibu"> Lainnya </label>
                                                                 </div>
-                                                            {{/compare}}
-                                                            {{#compare max_jawaban '3' operator="=="}}
+                                                                <div id="essayradiok_pekerjaanibu" class="boxk" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxk_pekerjaanibu" id="essayboxk_pekerjaanibu" rows="10"></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.10
+                                                            </td>
+                                                            <td>
+                                                                Pendidikan Ibu: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_10" name="soal1_10" value="Pendidikan Ibu">
                                                                 <div class="toggle">
-                                                                    <input class="m-r-200" type="radio" required="required" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                    <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
+                                                                    <input class="m-r-200" type="radio" name="radiopendidikanibu" id="radioa_pendidikanibu" value="Tidak Sekolah">
+                                                                    <label class="m-r-200" for="radioa_pendidikanibu"> Tidak Sekolah </label>
                                                                     &nbsp
 
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                    <label for="radiob_{{id}}"> {{ b }} </label>
+                                                                    <input type="radio" name="radiopendidikanibu" id="radiob_pendidikanibu" value="Tidak Tamat SD">
+                                                                    <label for="radiob_pendidikanibu"> Tidak Tamat SD </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopendidikanibu" id="radioc_pendidikanibu" value="Tamat SD">
+                                                                    <label for="radioc_pendidikanibu"> Tamat SD </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopendidikanibu" id="radiod_pendidikanibu" value="Tamat SMP">
+                                                                    <label for="radiod_pendidikanibu"> Tamat SMP </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanibu" id="radioe_pendidikanibu" value="Tamat SMA">
+                                                                    <label for="radioe_pendidikanibu"> Tamat SMA </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanibu" id="radiof_pendidikanibu" value="Tamat Akademi/Universitas">
+                                                                    <label for="radiof_pendidikanibu"> Tamat Akademi/Universitas </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanibu" id="radiog_pendidikanibu" value="Tidak Tahu">
+                                                                    <label for="radiog_pendidikanibu"> Tidak Tahu </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.11
+                                                            </td>
+                                                            <td>
+                                                                Nama Ayah: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_11" name="soal1_11" value="Nama Ayah:">
+                                                                <input type="text" class="form-control" id="jawabannamaayah" name="jawabannamaayah" placeholder="Nama Ayah">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.12
+                                                            </td>
+                                                            <td>
+                                                                Umur Ayah: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_12" name="soal1_12" value="Umur Ayah:">
+                                                                <input type="number" class="form-control" id="jawabanumurayah" name="jawabanumurayah">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.13
+                                                            </td>
+                                                            <td>
+                                                                Pekerjaan Ayah: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_13" name="soal1_13" value="Pekerjaan Ayah">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiopekerjaanayah" id="radioa_pekerjaanayah" value="Tidak Bekerja">
+                                                                    <label class="m-r-200" for="radioa_pekerjaanayah"> Tidak Bekerja </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiob_pekerjaanayah" value="Sopir/Ojek">
+                                                                    <label for="radiob_pekerjaanayah"> Sopir/Ojek </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radioc_pekerjaanayah" value="Pekerja Rumah Tangga">
+                                                                    <label for="radioc_pekerjaanayah"> Pekerja Rumah Tangga </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiod_pekerjaanayah" value="Mahasiswa">
+                                                                    <label for="radiod_pekerjaanayah"> Mahasiswa </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radioe_pekerjaanayah" value="TNI/Polri">
+                                                                    <label for="radioe_pekerjaanayah"> TNI/Polri </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiof_pekerjaanayah" value="PNS">
+                                                                    <label for="radiof_pekerjaanayah"> PNS </label>
+                                                                    &nbsp
+
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiog_pekerjaanayah" value="Wiraswasta/Pelayanan Jasa/Dagang">
+                                                                    <label for="radiog_pekerjaanayah"> Wiraswasta/Pelayanan Jasa/Dagang </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radioh_pekerjaanayah" value="Pegawai Swasta">
+                                                                    <label for="radioh_pekerjaanayah"> Pegawai Swasta </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radioi_pekerjaanayah" value="Petani">
+                                                                    <label for="radioi_pekerjaanayah"> Petani </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radioj_pekerjaanayah" value="Buruh Pabrik">
+                                                                    <label for="radioj_pekerjaanayah"> Buruh Pabrik </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiok_pekerjaanayah" value="Buruh Bangunan">
+                                                                    <label for="radiok_pekerjaanayah"> Buruh Bangunan </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiol_pekerjaanayah" value="Pensiunan">
+                                                                    <label for="radiol_pekerjaanayah"> Pensiunan </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopekerjaanayah" id="radiom_pekerjaanayah" value="Lainnya">
+                                                                    <label for="radiom_pekerjaanayah"> Lainnya </label>
+                                                                </div>
+                                                                <div id="essayradiom_pekerjaanayah" class="boxm" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxm" name="essayboxm_pekerjaanayah" id="essayboxm_pekerjaanayah" rows="10"></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.14
+                                                            </td>
+                                                            <td>
+                                                                Pendidikan Ayah: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_14" name="soal1_14" value="Pendidikan Ayah">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiopendidikanayah" id="radioa_pendidikanayah" value="Tidak Sekolah">
+                                                                    <label class="m-r-200" for="radioa_pendidikanayah"> Tidak Sekolah </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanayah" id="radiob_pendidikanayah" value="Tidak Tamat SD">
+                                                                    <label for="radiob_pendidikanayah"> Tidak Tamat SD </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopendidikanayah" id="radioc_pendidikanayah" value="Tamat SD">
+                                                                    <label for="radioc_pendidikanayah"> Tamat SD </label>
+                                                                    &nbsp
+                                                            
+                                                                    <input type="radio" name="radiopendidikanayah" id="radiod_pendidikanayah" value="Tamat SMP">
+                                                                    <label for="radiod_pendidikanayah"> Tamat SMP </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanayah" id="radioe_pendidikanayah" value="Tamat SMA">
+                                                                    <label for="radioe_pendidikanayah"> Tamat SMA </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanayah" id="radiof_pendidikanayah" value="Tamat Akademi/Universitas">
+                                                                    <label for="radiof_pendidikanayah"> Tamat Akademi/Universitas </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopendidikanayah" id="radiog_pendidikanayah" value="Tidak Tahu">
+                                                                    <label for="radiog_pendidikanayah"> Tidak Tahu </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.15
+                                                            </td>
+                                                            <td>
+                                                                Alamat: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_15" name="soal1_15" value="Alamat:">
+                                                                <textarea class="form-control" name="jawabanalamat" id="jawabanalamat" rows="10" placeholder="Alamat Lengkap"></textarea>
+
+                                                                {{!-- <input type="text" class="form-control" id="jawabandesa_kelurahan" name="jawabandesa_kelurahan" placeholder="Desa/Kelurahan">
+                                                                &nbsp
+                                                                <input type="text" class="form-control" id="jawabanrt" name="jawabanrt" placeholder="RT">
+                                                                &nbsp
+                                                                <input type="text" class="form-control" id="jawabanrw" name="jawabanrw" placeholder="RW">
+                                                                &nbsp
+                                                                <input type="text" class="form-control" id="jawabankecamatan" name="jawabankecamatan" placeholder="Kecamatan">
+                                                                &nbsp
+                                                                <input type="text" class="form-control" id="jawabankabupaten_kota" name="jawabankabupaten_kota" placeholder="Kabupaten/Kota">
+                                                                &nbsp
+                                                                <input type="text" class="form-control" id="jawabanprovinsi" name="jawabanprovinsi" placeholder="Provinsi"> --}}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.16
+                                                            </td>
+                                                            <td>
+                                                                Nomor Telephone: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_16" name="soal1_16" value="Nomor Telephone:">
+                                                                <input type="text" class="form-control" id="jawabantelephone" name="jawabantelephone" placeholder="Nomor Telephone">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.17
+                                                            </td>
+                                                            <td>
+                                                                Penghasilan Keluarga: <br>
+                                                                <input type="hidden" class="form-control" id="soal1_17" name="soal1_17" value="Penghasilan Keluarga:">
+                                                                <input type="number" class="form-control" id="jawabanpenghasilan" name="jawabanpenghasilan" placeholder="Penghasilan Keluarga (Rp) (Tanpa Titik)">
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- end of row --}}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
+                                        {{!-- Start of tabel list soal --}}
+                                        <h4 class="card-title">2. Faktor Intrinsik Balita</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment2" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.1
+                                                            </td>
+                                                            <td>
+                                                                Berat Badan Lahir: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_1" name="soal2_1" value="Berat Badan Lahir:">
+                                                                <input type="number" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Berat Badan Lahir (gram)">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.2
+                                                            </td>
+                                                            <td>
+                                                                Berat Badan Saat Ini: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_2" name="soal2_2" value="Berat Badan Saat Ini:">
+                                                                <input type="number" class="form-control" id="jawabanberatbadansaatini" name="jawabanberatbadansaatini" placeholder="Berat Badan Saat Ini (kg)">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.3
+                                                            </td>
+                                                            <td>
+                                                                Tinggi Badan/Panjang Badan Saat Ini: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_3" name="soal2_3" value="Tinggi Badan/Panjang Badan Saat Ini:">
+                                                                <input type="number" class="form-control" id="jawabantinggibadan" name="jawabantinggibadan" placeholder="Tinggi Badan/Panjang Badan Saat Ini (cm)">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.4
+                                                            </td>
+                                                            <td>
+                                                                Cara Persalinan: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_4" name="soal2_4" value="Cara Persalinan:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiocarapersalinan" id="radioa_carapersalinan" value="Normal">
+                                                                    <label class="m-r-200" for="radioa_carapersalinan"> Normal </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiocarapersalinan" id="radiob_carapersalinan" value="Spontan">
+                                                                    <label for="radiob_carapersalinan"> Spontan </label>
                                                                     &nbsp
                                                         
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                    <label for="radioc_{{id}}"> {{ c }} </label>
+                                                                    <input type="radio" name="radiocarapersalinan" id="radioc_carapersalinan" value="SC">
+                                                                    <label for="radioc_carapersalinan"> SC </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiocarapersalinan" id="radiod_carapersalinan" value="Vaginam Dengan Tindakan:">
+                                                                    <label for="radiod_carapersalinan"> Vaginam Dengan Tindakan: </label>
                                                                 </div> 
-                                                                    {{#compare sub 'c' operator="=="}}
-                                                                    <div id="subradioc_{{id}}" class="boxc" style="display: none;">
-                                                                        {{ sub_pertanyaan }}: &nbsp
-                                                                        <div class="toggle">
-                                                                            <input class="m-r-200" type="radio" name="radiosub{{id}}" id="radiosuba_{{id}}" value="{{ sub_jawaban_a }}">
-                                                                            <label class="m-r-200" for="radiosuba_{{id}}"> {{ sub_jawaban_a }} </label>
-                                                                            &nbsp
+                                                                <div id="subradiod_carapersalinan" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubcarapersalinan" id="radiosuba_carapersalinan" value="Vacuum">
+                                                                        <label class="m-r-200" for="radiosuba_carapersalinan"> Vacuum </label>
+                                                                        &nbsp
 
-                                                                            <input type="radio" name="radiosub{{id}}" id="radiosubb_{{id}}" value="{{ sub_jawaban_b }}">
-                                                                            <label for="radiosubb_{{id}}"> {{ sub_jawaban_b }} </label>
-                                                                            &nbsp
-
-                                                                            <input type="radio" name="radiosub{{id}}" id="radiosubc_{{id}}" value="{{ sub_jawaban_c }}">
-                                                                            <label for="radiosubc_{{id}}"> {{ sub_jawaban_c }} </label>
-                                                                            &nbsp
-
-                                                                            <input type="radio" name="radiosub{{id}}" id="radiosubd_{{id}}" value="{{ sub_jawaban_d }}">
-                                                                            <label for="radiosubd_{{id}}"> {{ sub_jawaban_d }} </label>
-                                                                            &nbsp
-                                                                        </div>
+                                                                        <input type="radio" name="radiosubcarapersalinan" id="radiosubb_carapersalinan" value="Forcep">
+                                                                        <label for="radiosubb_carapersalinan"> Forcep </label>
+                                                                        &nbsp
                                                                     </div>
-                                                                {{/compare}}
-                                                            {{/compare}}
-                                                            {{#compare max_jawaban '7' operator="=="}}
-                                                                <div class="toggle">
-                                                                    <input class="m-r-200" type="radio" required="required" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                    <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                    <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                    &nbsp
-                                                            
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                    <label for="radioc_{{id}}"> {{ c }} </label>
-                                                                    &nbsp
-                                                            
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
-                                                                    <label for="radiod_{{id}}"> {{ d }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
-                                                                    <label for="radioe_{{id}}"> {{ e }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
-                                                                    <label for="radiof_{{id}}"> {{ f }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
-                                                                    <label for="radiog_{{id}}"> {{ g }} </label>
                                                                 </div>
-                                                                {{#compare essay 'g' operator="=="}}
-                                                                    <div id="essayradiog_{{id}}" class="boxg" style="display: none;">
-                                                                        Jelaskan:
-                                                                        <textarea class="form-control essayboxg" name="essayboxg" id="essayboxg" rows="10"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.5
+                                                            </td>
+                                                            <td>
+                                                                Usia Kehamilan Saat lahir: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_5" name="soal2_5" value="Usia Kehamilan Saat lahir:">
+                                                                <input type="text" class="form-control" id="jawabanusiakehamilansaatlahir" name="jawabanusiakehamilansaatlahir" placeholder="Usia Kehamilan Saat lahir (jika diketahui)">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.6
+                                                            </td>
+                                                            <td>
+                                                                Riwayat Pemberian ASI IMD: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_6a" name="soal2_6a" value="Riwayat Pemberian ASI IMD:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="ASIIMD" id="radioa_asiimd" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_asiimd"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="ASIIMD" id="radiob_asiimd" value="Tidak">
+                                                                    <label for="radiob_asiimd"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                                &nbsp
+
+                                                                Riwayat Pemberian ASI: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_6b" name="soal2_6b" value="Riwayat Pemberian ASI:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="ASI" id="radioa_asi" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_asi"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="ASI" id="radiob_asi" value="Tidak">
+                                                                    <label for="radiob_asi"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                                <div id="essayradioa_asi" class="boxa" style="display: none;">
+                                                                    Sampai bulan:
+                                                                    {{!-- <textarea class="form-control essayboxa" name="essayboxa_asi" id="essayboxa_asi" rows="10"></textarea> --}}
+                                                                    <input type="text" class="form-control essayboxa" id="essayboxa_asi" name="essayboxa_asi" placeholder="">
+                                                                </div>
+                                                                <div id="subradiob_asi" class="boxb" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubasi" id="radiosuba_asi" value="ASI+Susu Formula">
+                                                                        <label class="m-r-200" for="radiosuba_asi"> ASI+Susu Formula </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubasi" id="radiosubb_asi" value="Susu Formula">
+                                                                        <label for="radiosubb_asi"> Susu Formula </label>
+                                                                        &nbsp
                                                                     </div>
-                                                                {{/compare}}
-                                                            {{/compare}}
-                                                            {{#compare max_jawaban '9' operator="=="}}
-                                                                <div class="toggle">
-                                                                    <input class="m-r-200" type="radio" required="required" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                    <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                    <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                    &nbsp
-                                                            
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                    <label for="radioc_{{id}}"> {{ c }} </label>
-                                                                    &nbsp
-                                                            
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
-                                                                    <label for="radiod_{{id}}"> {{ d }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
-                                                                    <label for="radioe_{{id}}"> {{ e }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
-                                                                    <label for="radiof_{{id}}"> {{ f }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
-                                                                    <label for="radiog_{{id}}"> {{ g }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioh_{{id}}" value="{{ h }}">
-                                                                    <label for="radioh_{{id}}"> {{ h }} </label>
-                                                                    &nbsp
-
-                                                                    <input type="radio" required="required" name="radio{{id}}" id="radioi_{{id}}" value="{{ i }}" class="haveessay">
-                                                                    <label for="radioi_{{id}}"> {{ i }} </label>
                                                                 </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.7
+                                                            </td>
+                                                            <td>
+                                                                Status Nutrisi: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_7" name="soal2_7" value="Status Nutrisi:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiostatusnutrisi" id="radioa_statusnutrisi" value="Baik">
+                                                                    <label class="m-r-200" for="radioa_statusnutrisi"> Baik </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiostatusnutrisi" id="radiob_statusnutrisi" value="Buruk">
+                                                                    <label for="radiob_statusnutrisi"> Buruk </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiostatusnutrisi" id="radioc_statusnutrisi" value="Moderat">
+                                                                    <label for="radioc_statusnutrisi"> Moderat </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiostatusnutrisi" id="radiod_statusnutrisi" value="Tidak Ada Informasi">
+                                                                    <label for="radiod_statusnutrisi"> Tidak Ada Informasi </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.8
+                                                            </td>
+                                                            <td>
+                                                                Riwayat Pemberian Imunisasi: <br>
+                                                                <input type="hidden" class="form-control" id="soal2_8" name="soal2_8" value="Riwayat Pemberian Imunisasi:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiopemberianimunisasi1" id="radioa_pemberianimunisasi" value="Tidak/Belum Pernah Diberikan">
+                                                                    <label class="m-r-200" for="radioa_pemberianimunisasi"> Tidak/Belum Pernah Diberikan </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopemberianimunisasi2" id="radiob_pemberianimunisasi" value="&lt;24 Jam: Hepatitis, HBO">
+                                                                    <label for="radiob_pemberianimunisasi"> &lt;24 Jam: Hepatitis, HBO </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiopemberianimunisasi3" id="radioc_pemberianimunisasi" value="1 Bulan: BCG, OPV1">
+                                                                    <label for="radioc_pemberianimunisasi"> 1 Bulan: BCG, OPV1 </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopemberianimunisasi4" id="radiod_pemberianimunisasi" value="2 Bulan: DPT-HB-Hib1,OPV2">
+                                                                    <label for="radiod_pemberianimunisasi"> 2 Bulan: DPT-HB-Hib1,OPV2 </label>
+                                                                    &nbsp
+                                                                    
+                                                                    <input type="radio" name="radiopemberianimunisasi5" id="radioe_pemberianimunisasi" value="3 Bulan: DPT-HB-Hib2,OPV3">
+                                                                    <label for="radioe_pemberianimunisasi"> 3 Bulan: DPT-HB-Hib2,OPV3 </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopemberianimunisasi6" id="radiof_pemberianimunisasi" value="4 Bulan: DPT-HB-Hib3,OPV4,IPV">
+                                                                    <label for="radiof_pemberianimunisasi"> 4 Bulan: DPT-HB-Hib3,OPV4,IPV </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopemberianimunisasi7" id="radiog_pemberianimunisasi" value="9 Bulan: MR">
+                                                                    <label for="radiog_pemberianimunisasi"> 9 Bulan: MR </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopemberianimunisasi8" id="radioh_pemberianimunisasi" value="18 Bulan: MR,DPT-HB-Hib">
+                                                                    <label for="radioh_pemberianimunisasi"> 18 Bulan: MR,DPT-HB-Hib </label>
+                                                                    &nbsp
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- end of row --}}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
+                                        {{!-- Start of tabel list soal --}}
+                                        <h4 class="card-title">3. Informasi Kematian</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment3" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                3.1
+                                                            </td>
+                                                            <td>
+                                                                Usia Balita Saat Meninggal: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_1a" name="soal3_1a" value="Usia Balita Saat Meninggal:">
+                                                                <input type="text" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Usia Balita Saat Meninggal" readonly>
+                                                                &nbsp
+
+                                                                Tanggal Kematian: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Tanggal Kematian:">
+                                                                <input type="date" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Tanggal Kematian">
+                                                                &nbsp
+
+                                                                Jam Kematian: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Jam Kematian:">
+                                                                <input type="time" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Jam Kematian">
+                                                                &nbsp
                                                                 
-                                                                {{#compare essay 'i' operator="=="}}
-                                                                    <div id="essayradioi_{{id}}" class="boxi" style="display: none;">
-                                                                        Jelaskan:
-                                                                        <textarea class="form-control essayboxi" name="essayboxi" id="essayboxi" rows="10"></textarea>
-                                                                    </div>
-                                                                {{/compare}}
-                                                            {{/compare}} --}}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.2
-                                                        </td>
-                                                        <td>
-                                                            Umur Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.2" name="soal1.2" value="Umur Balita">
-                                                            <input type="text" class="form-control" id="umurbalita" name="umurbalita" readonly>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.3
-                                                        </td>
-                                                        <td>
-                                                            Tanggal Lahir Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.3" name="soal1.3" value="Tanggal Lahir Balita">
-                                                            <input type="text" class="form-control mydatepicker" id="tanggallahir" name="tanggallahir" placeholder="yyyy/mm/dd">
-                                                            {{!-- <span class="input-group-addon"><i class="icon-calender"></i></span> --}}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.4
-                                                        </td>
-                                                        <td>
-                                                            Jenis Kelamin Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.4" name="soal1.4" value="Jenis Kelamin Balita">
-                                                            <select class="select2" id="jeniskelamin" name="jeniskelamin" style="width: 100%" required>
-                                                                    <option value="Laki-Laki">Laki-Laki</option>
-                                                                    <option value="Perempuan">Perempuan</option>
-                                                                    <option value="Ambigu">Ambigu</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.5
-                                                        </td>
-                                                        <td>
-                                                            Urutan Balita Ke-: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.5" name="soal1.5" value="Urutan Balita Ke-:">
-                                                            <input type="number" class="form-control" id="balitake" name="balitake">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.6
-                                                        </td>
-                                                        <td>
-                                                            Jumlah Balita yang Dilahirkan (Hidup) <br>
-                                                            <input type="hidden" class="form-control" id="soal1.6" name="soal1.6" value="Jumlah Balita yang Dilahirkan (Hidup)">
-                                                            <input type="number" class="form-control" id="jumlahbalitadilahirkanhidup" name="jumlahbalitadilahirkanhidup">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.7
-                                                        </td>
-                                                        <td>
-                                                            Nama Ibu: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.7" name="soal1.7" value="Nama Ibu:">
-                                                            <input type="number" class="form-control" id="jawabannamaibu" name="jawabannamaibu">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.8
-                                                        </td>
-                                                        <td>
-                                                            Umur Ibu: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.7" name="soal1.7" value="Umur Ibu:">
-                                                            <input type="number" class="form-control" id="jawabanumuribu" name="jawabanumuribu">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            1.9
-                                                        </td>
-                                                        <td>
-                                                            Pekerjaan Ibu: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.4" name="soal1.4" value="Pekerjaan Ibu">
-                                                            
-                                                        </td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    {{!-- End of tabel list soal --}}
-                                    <hr>
-                                    <br>
+                                                                Nama Fasilitas Kesehatan Tempat Kematian: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Nama Fasilitas Kesehatan Tempat Kematian:">
+                                                                <input type="text" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Nama Fasilitas Kesehatan Tempat Kematian">
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
                                     <div class="form-actions text-right">
                                         <button type="submit" id="tombolsimpan" class="btn btn-block btn-outline-success"> <i class="fa fa-check"></i> Simpan Jawaban</button>
                                         <button type="reset" id="tombolreset" class="btn btn-block btn-outline-warning">Reset</button>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {{!-- end of row --}}
+                </form>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -374,57 +921,169 @@
     <script src="/js/client/datepicker/tambahdatakematian.js"></script>
     {{!-- <script src="/js/client/modal/soal.js"></script> --}}
     {{!-- <script src="/js/client/adddiv/soal.js"></script> --}}
-    {{#if datasoal}}
-    {{#each datasoal}} {{#compare sub 'c' operator="=="}} 
-        <script>
-            $(document).ready(function(){
-                var nama = 'radio'+{{id}}
-                var namasub = 'radiosub'+{{id}}
-                $("input[name$='"+nama+"']").click(function() {
-                    var inputValue = $(this).attr("id");
-                    $("div.boxc").hide();
-                    $('input[name='+namasub+']').prop('checked', false);
 
-                    var add = '#sub'+inputValue
-                    $(add).show();
-                    $('input[name='+namasub+']').setAttribute("required","required");
-                });
+    <script>
+        $(document).ready(function(){
+            /** show textarea */
+            $("input[name$='radiopekerjaanibu']").click(function() {
+                if($(this).attr('id') == 'radiok_pekerjaanibu') {
+                        $('#essayradiok_pekerjaanibu').show();           
+                }
+                else {
+                        $('#essayradiok_pekerjaanibu').hide();
+                        $('#essayboxk_pekerjaanibu').val('');
+                }
             });
-        </script>
-    {{/compare}} {{/each}}
-    {{#each datasoal}} {{#compare essay 'g' operator="=="}} 
-        <script>
-            $(document).ready(function(){
-                var nama = 'radio'+{{id}}
-                $("input[name$='"+nama+"']").click(function() {
-                    var inputId = $(this).attr("id");
-                    
-                    $("div.boxg").hide();
-                    $('#essayboxg').val('');
+            $("input[name$='radiopekerjaanayah']").click(function() {
+                if($(this).attr('id') == 'radiom_pekerjaanayah') {
+                        $('#essayradiom_pekerjaanayah').show();           
+                }
+                else {
+                        $('#essayradiom_pekerjaanayah').hide();
+                        $('#essayboxm_pekerjaanayah').val('');
+                }
+            });
+            $("input[name$='ASI']").click(function() {
+                if($(this).attr('id') == 'radioa_asi') {
+                        $('#essayradioa_asi').show();           
+                }
+                else {
+                        $('#essayradioa_asi').hide();
+                        $('#essayboxa_asi').val('');
+                }
+            });
 
-                    var add = '#essay'+inputId
-                    $(add).show();
-                });
+            /** show sub jawaban */
+            var namasub = "radiosubcarapersalinan";
+            $("input[name$='radiocarapersalinan']").click(function() {
+                if($(this).attr('id') == 'radiod_carapersalinan') {
+                        $('#subradiod_carapersalinan').show();           
+                }
+                else {
+                        $('#subradiod_carapersalinan').hide();
+                        $('input[name='+namasub+']').prop('checked', false);
+                }
             });
-        </script>
-    {{/compare}} {{/each}}
-    {{#each datasoal}} {{#compare essay 'i' operator="=="}} 
-        <script>
-            $(document).ready(function(){
-                var nama = 'radio'+{{id}}
-                $("input[name$='"+nama+"']").click(function() {
-                    var inputId = $(this).attr("id");
-                    
-                    $("div.boxi").hide();
-                    $('#essayboxi').val('');
 
-                    var add = '#essay'+inputId
-                    $(add).show();
-                });
+            var namasub = "radiosubasi";
+            $("input[name$='ASI']").click(function() {
+                if($(this).attr('id') == 'radiob_asi') {
+                        $('#subradiob_asi').show();           
+                }
+                else {
+                        $('#subradiob_asi').hide();
+                        $('input[name='+namasub+']').prop('checked', false);
+                }
             });
-        </script>
-    {{/compare}} {{/each}}
-    {{/if}}
+
+            /**
+            var nama = 'radio'+{{id}}
+            var namasub = 'radiosub'+{{id}}
+            $("input[name$='"+nama+"']").click(function() {
+                var inputValue = $(this).attr("id");
+                $("div.boxc").hide();
+                $('input[name='+namasub+']').prop('checked', false);
+
+                var add = '#sub'+inputValue
+                $(add).show();
+                $('input[name='+namasub+']').setAttribute("required","required");
+            });
+            */
+
+            /** fungsi kalkulasi umur */
+            function getAge(dateString) {
+                var now = new Date();
+                var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+                
+                var yearNow = now.getYear();
+                var monthNow = now.getMonth();
+                var dateNow = now.getDate();
+                
+                /*  var dob = new Date(dateString.substring(6,10),
+                                    dateString.substring(0,2)-1,                   
+                                    dateString.substring(3,5)                  
+                                    ); */
+                                    
+                var dob = new Date(dateString.substring(0,4),
+                                    dateString.substring(5,7)-1,                   
+                                    dateString.substring(8,10)                  
+                                    );
+                
+                var yearDob = dob.getYear();
+                var monthDob = dob.getMonth();
+                var dateDob = dob.getDate();
+                var age = {};
+                var ageString = "";
+                var yearString = "";
+                var monthString = "";
+                var dayString = "";
+                
+                
+                yearAge = yearNow - yearDob;
+                
+                if (monthNow >= monthDob)
+                    var monthAge = monthNow - monthDob;
+                else {
+                    yearAge--;
+                    var monthAge = 12 + monthNow -monthDob;
+                }
+                
+                if (dateNow >= dateDob)
+                    var dateAge = dateNow - dateDob;
+                else {
+                    monthAge--;
+                    var dateAge = 31 + dateNow - dateDob;
+                
+                    if (monthAge < 0) {
+                    monthAge = 11;
+                    yearAge--;
+                    }
+                }
+                
+                age = {
+                    years: yearAge,
+                    months: monthAge,
+                    days: dateAge
+                    };
+
+                if ( age.years > 1 ) yearString = " tahun";
+                else yearString = " tahun";
+                if ( age.months> 1 ) monthString = " bulan";
+                else monthString = " bulan";
+                if ( age.days > 1 ) dayString = " hari";
+                else dayString = " hari";
+                
+                
+                if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
+                    ageString = age.years + yearString + ", " + age.months + monthString + ", " + age.days + dayString;
+                else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
+                    ageString = age.days + dayString ;
+                else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
+                    ageString = age.years + yearString;
+                else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
+                    ageString = age.years + yearString + ", " + age.months + monthString;
+                else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
+                    ageString = age.months + monthString + ", " + age.days + dayString;
+                else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
+                    ageString = age.years + yearString + ", " + age.days + dayString;
+                else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
+                    ageString = age.months + monthString;
+                else ageString = "Oops, tidak dapat melakukan kalkulasi umur!";
+                
+                return ageString;
+                }
+                
+                /* alert(getAge('11/12/2020')); */
+                // alert(getAge('2020/11/12'));
+
+            document.getElementById("tanggallahir").onchange = function() {myFunction()};
+
+            function myFunction() {
+                var harilahir = document.getElementById("tanggallahir").value;
+                document.getElementById("umurbalita").value = getAge(harilahir);
+            }
+        });
+    </script>
 </body>
 
 </html>
