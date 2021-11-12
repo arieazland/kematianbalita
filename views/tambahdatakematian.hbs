@@ -103,8 +103,8 @@
                                                         </td>
                                                         <td>
                                                             Nama Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.1" name="soal1.1" value="Nama Balita">
-                                                            <input type="text" class="form-control" id="jawaban1.1" name="jawaban1.1">
+                                                            <input type="hidden" class="form-control" id="soal1.1" name="soal1.1" value="Nama Balita:">
+                                                            <input type="text" class="form-control" id="jawabannamabalita" name="jawabannamabalita">
                                                             {{!-- {{#compare max_jawaban '2' operator="=="}}
                                                                 <div class="toggle">
                                                                     <input class="m-r-200" type="radio" required="required" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
@@ -240,8 +240,8 @@
                                                         </td>
                                                         <td>
                                                             Umur Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.2" name="soal1.2" value="umur Balita">
-                                                            <input type="text" class="form-control" id="jawaban1.2" name="jawaban1.2">
+                                                            <input type="hidden" class="form-control" id="soal1.2" name="soal1.2" value="Umur Balita">
+                                                            <input type="text" class="form-control" id="umurbalita" name="umurbalita">
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -250,8 +250,73 @@
                                                         </td>
                                                         <td>
                                                             Tanggal Lahir Balita: <br>
-                                                            <input type="hidden" class="form-control" id="soal1.2" name="soal1.2" value="umur Balita">
-                                                            <input type="text" class="form-control" id="jawaban1.2" name="jawaban1.2">
+                                                            <input type="hidden" class="form-control" id="soal1.3" name="soal1.3" value="Tanggal Lahir Balita">
+                                                            <input type="text" class="form-control mydatepicker" id="tanggallahir" name="tanggallahir" placeholder="yyyy/mm/dd">
+                                                            {{!-- <span class="input-group-addon"><i class="icon-calender"></i></span> --}}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.4
+                                                        </td>
+                                                        <td>
+                                                            Jenis Kelamin Balita: <br>
+                                                            <input type="hidden" class="form-control" id="soal1.4" name="soal1.4" value="Jenis Kelamin Balita">
+                                                            <select class="select2" id="jeniskelamin" name="jeniskelamin" style="width: 100%" required>
+                                                                    <option value="Laki-Laki">Laki-Laki</option>
+                                                                    <option value="Perempuan">Perempuan</option>
+                                                                    <option value="Ambigu">Ambigu</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.5
+                                                        </td>
+                                                        <td>
+                                                            Urutan Balita Ke-: <br>
+                                                            <input type="hidden" class="form-control" id="soal1.5" name="soal1.5" value="Urutan Balita Ke-:">
+                                                            <input type="number" class="form-control" id="balitake" name="balitake">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.6
+                                                        </td>
+                                                        <td>
+                                                            Jumlah Balita yang Dilahirkan (Hidup) <br>
+                                                            <input type="hidden" class="form-control" id="soal1.6" name="soal1.6" value="Jumlah Balita yang Dilahirkan (Hidup)">
+                                                            <input type="number" class="form-control" id="jumlahbalitadilahirkanhidup" name="jumlahbalitadilahirkanhidup">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.7
+                                                        </td>
+                                                        <td>
+                                                            Nama Ibu: <br>
+                                                            <input type="hidden" class="form-control" id="soal1.7" name="soal1.7" value="Nama Ibu:">
+                                                            <input type="number" class="form-control" id="jawabannamaibu" name="jawabannamaibu">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.8
+                                                        </td>
+                                                        <td>
+                                                            Umur Ibu: <br>
+                                                            <input type="hidden" class="form-control" id="soal1.7" name="soal1.7" value="Umur Ibu:">
+                                                            <input type="number" class="form-control" id="jawabanumuribu" name="jawabanumuribu">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            1.9
+                                                        </td>
+                                                        <td>
+                                                            Pekerjaan Ibu: <br>
+                                                            <input type="hidden" class="form-control" id="soal1.4" name="soal1.4" value="Pekerjaan Ibu">
+                                                            
                                                         </td>
                                                     </tr>
                                             </tbody>
@@ -305,9 +370,10 @@
     <!-- ============================================================== -->
     {{> plugins}}
     <script src="/js/client/disablebutton/assessmentkarir.js"></script>
-    {{!-- <script src="/js/client/datatable/pertanyaan.js"></script>
-    <script src="/js/client/modal/soal.js"></script>
-    <script src="/js/client/adddiv/soal.js"></script> --}}
+    {{!-- <script src="/js/client/datatable/pertanyaan.js"></script> --}}
+    <script src="/js/client/datepicker/tambahdatakematian.js"></script>
+    {{!-- <script src="/js/client/modal/soal.js"></script> --}}
+    {{!-- <script src="/js/client/adddiv/soal.js"></script> --}}
     {{#if datasoal}}
     {{#each datasoal}} {{#compare sub 'c' operator="=="}} 
         <script>
