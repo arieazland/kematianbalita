@@ -106,133 +106,6 @@
                                                                 Nama Balita: <br>
                                                                 <input type="hidden" class="form-control" id="soal1_1" name="soal1_1" value="Nama Balita:">
                                                                 <input type="text" class="form-control" id="jawabannamabalita" name="jawabannamabalita" placeholder="Nama Balita">
-                                                                {{!-- {{#compare max_jawaban '2' operator="=="}}
-                                                                    <div class="toggle">
-                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                    </div>
-                                                                {{/compare}}
-                                                                {{#compare max_jawaban '3' operator="=="}}
-                                                                    <div class="toggle">
-                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                        &nbsp
-                                                            
-                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
-                                                                    </div> 
-                                                                        {{#compare sub 'c' operator="=="}}
-                                                                        <div id="subradioc_{{id}}" class="boxc" style="display: none;">
-                                                                            {{ sub_pertanyaan }}: &nbsp
-                                                                            <div class="toggle">
-                                                                                <input class="m-r-200" type="radio" name="radiosub{{id}}" id="radiosuba_{{id}}" value="{{ sub_jawaban_a }}">
-                                                                                <label class="m-r-200" for="radiosuba_{{id}}"> {{ sub_jawaban_a }} </label>
-                                                                                &nbsp
-
-                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubb_{{id}}" value="{{ sub_jawaban_b }}">
-                                                                                <label for="radiosubb_{{id}}"> {{ sub_jawaban_b }} </label>
-                                                                                &nbsp
-
-                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubc_{{id}}" value="{{ sub_jawaban_c }}">
-                                                                                <label for="radiosubc_{{id}}"> {{ sub_jawaban_c }} </label>
-                                                                                &nbsp
-
-                                                                                <input type="radio" name="radiosub{{id}}" id="radiosubd_{{id}}" value="{{ sub_jawaban_d }}">
-                                                                                <label for="radiosubd_{{id}}"> {{ sub_jawaban_d }} </label>
-                                                                                &nbsp
-                                                                            </div>
-                                                                        </div>
-                                                                    {{/compare}}
-                                                                {{/compare}}
-                                                                {{#compare max_jawaban '7' operator="=="}}
-                                                                    <div class="toggle">
-                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                        &nbsp
-                                                                
-                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
-                                                                        &nbsp
-                                                                
-                                                                        <input type="radio" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
-                                                                        <label for="radiod_{{id}}"> {{ d }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
-                                                                        <label for="radioe_{{id}}"> {{ e }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
-                                                                        <label for="radiof_{{id}}"> {{ f }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
-                                                                        <label for="radiog_{{id}}"> {{ g }} </label>
-                                                                    </div>
-                                                                    {{#compare essay 'g' operator="=="}}
-                                                                        <div id="essayradiog_{{id}}" class="boxg" style="display: none;">
-                                                                            Jelaskan:
-                                                                            <textarea class="form-control essayboxg" name="essayboxg" id="essayboxg" rows="10"></textarea>
-                                                                        </div>
-                                                                    {{/compare}}
-                                                                {{/compare}}
-                                                                {{#compare max_jawaban '9' operator="=="}}
-                                                                    <div class="toggle">
-                                                                        <input class="m-r-200" type="radio" name="radio{{id}}" id="radioa_{{id}}" value="{{ a }}">
-                                                                        <label class="m-r-200" for="radioa_{{id}}"> {{ a }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiob_{{id}}" value="{{ b }}">
-                                                                        <label for="radiob_{{id}}"> {{ b }} </label>
-                                                                        &nbsp
-                                                                
-                                                                        <input type="radio" name="radio{{id}}" id="radioc_{{id}}" value="{{ c }}">
-                                                                        <label for="radioc_{{id}}"> {{ c }} </label>
-                                                                        &nbsp
-                                                                
-                                                                        <input type="radio" name="radio{{id}}" id="radiod_{{id}}" value="{{ d }}">
-                                                                        <label for="radiod_{{id}}"> {{ d }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radioe_{{id}}" value="{{ e }}">
-                                                                        <label for="radioe_{{id}}"> {{ e }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiof_{{id}}" value="{{ f }}">
-                                                                        <label for="radiof_{{id}}"> {{ f }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radiog_{{id}}" value="{{ g }}">
-                                                                        <label for="radiog_{{id}}"> {{ g }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radioh_{{id}}" value="{{ h }}">
-                                                                        <label for="radioh_{{id}}"> {{ h }} </label>
-                                                                        &nbsp
-
-                                                                        <input type="radio" name="radio{{id}}" id="radioi_{{id}}" value="{{ i }}" class="haveessay">
-                                                                        <label for="radioi_{{id}}"> {{ i }} </label>
-                                                                    </div>
-                                                                    
-                                                                    {{#compare essay 'i' operator="=="}}
-                                                                        <div id="essayradioi_{{id}}" class="boxi" style="display: none;">
-                                                                            Jelaskan:
-                                                                            <textarea class="form-control essayboxi" name="essayboxi" id="essayboxi" rows="10"></textarea>
-                                                                        </div>
-                                                                    {{/compare}}
-                                                                {{/compare}} --}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -263,11 +136,23 @@
                                                             <td>
                                                                 Jenis Kelamin Balita: <br>
                                                                 <input type="hidden" class="form-control" id="soal1_4" name="soal1_4" value="Jenis Kelamin Balita">
-                                                                <select class="select2" id="jeniskelamin" name="jeniskelamin" style="width: 100%" required>
+                                                                {{!-- <select class="select2" id="jeniskelamin" name="jeniskelamin" style="width: 100%" required>
                                                                         <option value="Laki-Laki">Laki-Laki</option>
                                                                         <option value="Perempuan">Perempuan</option>
                                                                         <option value="Ambigu">Ambigu</option>
-                                                                </select>
+                                                                </select> --}}
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiojeniskelamin" id="radioa_jeniskelamin" value="Laki-laki">
+                                                                    <label class="m-r-200" for="radioa_jeniskelamin"> Laki-laki </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiojeniskelamin" id="radiob_jeniskelamin" value="Perempuan">
+                                                                    <label for="radiob_jeniskelamin"> Perempuan </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiojeniskelamin" id="radioc_jeniskelamin" value="Ambigu">
+                                                                    <label for="radioc_jeniskelamin"> Ambigu </label>
+                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -922,6 +807,305 @@
                                     <h4 class="m-b-0 text-white">Form Soal</h4>
                                 </div> --}}
                                 <div class="card-block">
+                                        {{!-- Start of tabel list soal --}}
+                                        <h4 class="card-title">4. Penyebab Kematian Medis</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment3" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                4.1
+                                                            </td>
+                                                            <td>
+                                                                Penyakit Penyebab Utama Kematian: <br>
+                                                                <input type="hidden" class="form-control" id="soal4_1" name="soal4_1" value="Penyakit Penyebab Utama Kematian:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiopenyebabutamakematian" id="radioa_penyebabutamakematian" value="Pernafasan">
+                                                                    <label class="m-r-200" for="radioa_penyebabutamakematian"> Pernafasan </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiob_penyebabutamakematian" value="Gastrontestinal">
+                                                                    <label for="radiob_penyebabutamakematian"> Gastrontestinal </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioc_penyebabutamakematian" value="Gizi">
+                                                                    <label for="radioc_penyebabutamakematian"> Gizi </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiod_penyebabutamakematian" value="Malaria">
+                                                                    <label for="radiod_penyebabutamakematian"> Malaria </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioe_penyebabutamakematian" value="Neurologis Kronis">
+                                                                    <label for="radioe_penyebabutamakematian"> Neurologis Kronis </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiof_penyebabutamakematian" value="Neurologis Akut">
+                                                                    <label for="radiof_penyebabutamakematian"> Neurologis Akut </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiog_penyebabutamakematian" value="Tuberkulosis">
+                                                                    <label for="radiog_penyebabutamakematian"> Tuberkulosis </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioh_penyebabutamakematian" value="Ruam dan Demam/Infeksi Akut">
+                                                                    <label for="radioh_penyebabutamakematian"> Ruam dan Demam/Infeksi Akut </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioi_penyebabutamakematian" value="Infeksi HIV">
+                                                                    <label for="radioi_penyebabutamakematian"> Infeksi HIV </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioj_penyebabutamakematian" value="Darurat, Bedah">
+                                                                    <label for="radioj_penyebabutamakematian"> Darurat, Bedah </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiok_penyebabutamakematian" value="Ginjal">
+                                                                    <label for="radiok_penyebabutamakematian"> Ginjal </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiol_penyebabutamakematian" value="Kelenjar Endokrin">
+                                                                    <label for="radiol_penyebabutamakematian"> Kelenjar Endokrin </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiom_penyebabutamakematian" value="Hematologi">
+                                                                    <label for="radiom_penyebabutamakematian"> Hematologi </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radion_penyebabutamakematian" value="Penyakit Jantung">
+                                                                    <label for="radion_penyebabutamakematian"> Penyakit Jantung </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioo_penyebabutamakematian" value="Kanker">
+                                                                    <label for="radioo_penyebabutamakematian"> Kanker </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radiop_penyebabutamakematian" value="Perlindungan Balita">
+                                                                    <label for="radiop_penyebabutamakematian"> Perlindungan Balita </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioq_penyebabutamakematian" value="Perlindungan Balita">
+                                                                    <label for="radioq_penyebabutamakematian"> Perlindungan Balita </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                {{!-- Sub Radio Pernafasan --}}
+                                                                <div id="subradio_pernafasan" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubpernafasan" id="radiosuba_pernafasan" value="Pneumonia (J18)">
+                                                                        <label class="m-r-200" for="radiosuba_pernafasan"> Pneumonia (J18) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubb_pernafasan" value="Bronkiektasis (J47)">
+                                                                        <label for="radiosubb_pernafasan"> Bronkiektasis (J47) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubc_pernafasan" value="Abses Paru (J85)">
+                                                                        <label for="radiosubc_pernafasan"> Abses Paru (J85) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubpernafasan" id="radiosubd_pernafasan" value="Pneumotoraks (J93)">
+                                                                        <label class="m-r-200" for="radiosubd_pernafasan"> Pneumotoraks (J93) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosube_pernafasan" value="Batuk Rejan (A37)">
+                                                                        <label for="radiosube_pernafasan"> Batuk Rejan (A37) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubf_pernafasan" value="Croup (J05.0)">
+                                                                        <label for="radiosubf_pernafasan"> Croup (J05.0) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubpernafasan" id="radiosubg_pernafasan" value="Epiglotitis (J05.1)">
+                                                                        <label class="m-r-200" for="radiosubg_pernafasan"> Epiglotitis (J05.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubh_pernafasan" value="Bronkiolitis (J21)">
+                                                                        <label for="radiosubh_pernafasan"> Bronkiolitis (J21) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubi_pernafasan" value="Asma (J45)">
+                                                                        <label for="radiosubi_pernafasan"> Asma (J45) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubpernafasan" id="radiosubj_pernafasan" value="Asma Akut Parah atau Status Asthmaticus (J46)">
+                                                                        <label class="m-r-200" for="radiosubj_pernafasan"> Asma Akut Parah atau Status Asthmaticus (J46) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubk_pernafasan" value="Otitis Media Akut (H66.9)">
+                                                                        <label for="radiosubk_pernafasan"> Otitis Media Akut (H66.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubl_pernafasan" value="Otitis Media Serosa Kronis (H66.3)">
+                                                                        <label for="radiosubl_pernafasan"> Otitis Media Serosa Kronis (H66.3) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubpernafasan" id="radiosubm_pernafasan" value="Pernafasan, lain-lain">
+                                                                        <label for="radiosubm_pernafasan"> Pernafasan, lain-lain </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradiosubm_pernafasan" class="boxm" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxm_pernafasan" id="essayboxm_pernafasan" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Gastrontestinal --}}
+                                                                <div id="subradio_gastrontestinal" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubgastrontestinal" id="radiosuba_gastrontestinal" value="Diare Encer Akut (A09.9)">
+                                                                        <label class="m-r-200" for="radiosuba_gastrontestinal"> Diare Encer Akut (A09.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubb_gastrontestinal" value="Diare Persisten">
+                                                                        <label for="radiosubb_gastrontestinal"> Diare Persisten </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubc_gastrontestinal" value="Disentri (Shigella) (A03)">
+                                                                        <label for="radiosubc_gastrontestinal"> Disentri (Shigella) (A03) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubgastrontestinal" id="radiosubd_gastrontestinal" value="Disentri (Amubiasis) (A06.0)">
+                                                                        <label class="m-r-200" for="radiosubd_gastrontestinal"> Disentri (Amubiasis) (A06.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosube_gastrontestinal" value="Kolera (A00)">
+                                                                        <label for="radiosube_gastrontestinal"> Kolera (A00) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubf_gastrontestinal" value="Hepatitis (K75.9)">
+                                                                        <label for="radiosubf_gastrontestinal"> Hepatitis (K75.9) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubgastrontestinal" id="radiosubg_gastrontestinal" value="Hepatitis (Kronis) (K73)">
+                                                                        <label class="m-r-200" for="radiosubg_gastrontestinal"> Hepatitis (Kronis) (K73) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubh_gastrontestinal" value="Hepatitis (A) (B15)">
+                                                                        <label for="radiosubh_gastrontestinal"> Hepatitis (A) (B15) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubi_gastrontestinal" value="Hepatitis (B) (B16)">
+                                                                        <label for="radiosubi_gastrontestinal"> Hepatitis (B) (B16) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubgastrontestinal" id="radiosubj_gastrontestinal" value="Hepatitis (Virus Akut Lainnya) (B17)">
+                                                                        <label class="m-r-200" for="radiosubj_gastrontestinal"> Hepatitis (Virus Akut Lainnya) (B17) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubk_gastrontestinal" value="Tifus (A01.0)">
+                                                                        <label for="radiosubk_gastrontestinal"> Tifus (A01.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgastrontestinal" id="radiosubl_gastrontestinal" value="Gastrointestinal, lain-lain (K92.9)">
+                                                                        <label for="radiosubl_gastrontestinal"> Gastrointestinal, lain-lain (K92.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradiogastrontestinal" class="boxm" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxl_gastrontestinal" id="essayboxl_gastrontestinal" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Gizi --}}
+                                                                <div id="subradio_gizi" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubgizi" id="radiosuba_gizi" value="Malnutrisi Akut Berat (E43)">
+                                                                        <label class="m-r-200" for="radiosuba_gizi"> Malnutrisi Akut Berat (E43) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgizi" id="radiosubb_gizi" value="Marasmus (E41)">
+                                                                        <label for="radiosubb_gizi"> Marasmus (E41) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgizi" id="radiosubc_gizi" value="Kwashiorkor (E40)">
+                                                                        <label for="radiosubc_gizi"> Kwashiorkor (E40) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubgizi" id="radiosubd_gizi" value="Defisiensi Vitamin A (E55)">
+                                                                        <label class="m-r-200" for="radiosubd_gizi"> Defisiensi Vitamin A (E55) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgizi" id="radiosube_gizi" value="Beri Beri (Defisiensi Tiamin) (E51)">
+                                                                        <label for="radiosube_gizi"> Beri Beri (Defisiensi Tiamin) (E51) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubgizi" id="radiosubf_gizi" value="Defisiensi Zat Besi (D50)">
+                                                                        <label for="radiosubf_gizi"> Defisiensi Zat Besi (D50) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubgizi" id="radiosubg_gizi" value="Gangguan Gizi Lainnya (E46)">
+                                                                        <label class="m-r-200" for="radiosubg_gizi"> Gangguan Gizi Lainnya (E46) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradiogizi" class="boxm" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxg_gizi" id="essayboxg_gizi" rows="10"></textarea>
+                                                                </div>
+
+
+                                                                Riwayat Balita Saat Dilahirkan: <br>
+                                                                <input type="hidden" class="form-control" id="soal4_1a" name="soal4_1a" value="Riwayat Balita Saat Dilahirkan:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radioriwayatbalita" id="radioa_riwayatbalita" value="BBLR">
+                                                                    <label class="m-r-200" for="radioa_riwayatbalita"> BBLR </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radioriwayatbalita" id="radiob_riwayatbalita" value="Prematuritas">
+                                                                    <label for="radiob_riwayatbalita"> Prematuritas </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radioriwayatbalita" id="radioc_riwayatbalita" value="Infeksi Neonatal">
+                                                                    <label for="radioc_riwayatbalita"> Infeksi Neonatal </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radioriwayatbalita" id="radiod_riwayatbalita" value="Kondisi Perinatal">
+                                                                    <label for="radiod_riwayatbalita"> Kondisi Perinatal </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radioriwayatbalita" id="radioe_riwayatbalita" value="Malformasi Congenital">
+                                                                    <label for="radioe_riwayatbalita"> Malformasi Congenital </label>
+                                                                    &nbsp
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
                                     <div class="form-actions text-right">
                                         <button type="submit" id="tombolsimpan" class="btn btn-block btn-outline-success"> <i class="fa fa-check"></i> Simpan Jawaban</button>
                                         <button type="reset" id="tombolreset" class="btn btn-block btn-outline-warning">Reset</button>
@@ -967,273 +1151,11 @@
     {{> plugins}}
     <script src="/js/client/disablebutton/assessmentkarir.js"></script>
     {{!-- <script src="/js/client/datatable/pertanyaan.js"></script> --}}
+    <script src="/js/client/__custom/tambahdatakematian.js"></script>
     <script src="/js/client/datepicker/tambahdatakematian.js"></script>
     <script src="/js/client/clockpicker/tambahdatakematian.js"></script>
     {{!-- <script src="/js/client/modal/soal.js"></script> --}}
     {{!-- <script src="/js/client/adddiv/soal.js"></script> --}}
-
-    <script>
-        $(document).ready(function(){
-            /** show textarea */
-            $("input[name$='radiopekerjaanibu']").click(function() {
-                if($(this).attr('id') == 'radiok_pekerjaanibu') {
-                        $('#essayradiok_pekerjaanibu').show();           
-                }
-                else {
-                        $('#essayradiok_pekerjaanibu').hide();
-                        $('#essayboxk_pekerjaanibu').val('');
-                }
-            });
-            $("input[name$='radiopekerjaanayah']").click(function() {
-                if($(this).attr('id') == 'radiom_pekerjaanayah') {
-                        $('#essayradiom_pekerjaanayah').show();           
-                }
-                else {
-                        $('#essayradiom_pekerjaanayah').hide();
-                        $('#essayboxm_pekerjaanayah').val('');
-                }
-            });
-            $("input[name$='ASI']").click(function() {
-                if($(this).attr('id') == 'radioa_asi') {
-                        $('#essayradioa_asi').show();           
-                }
-                else {
-                        $('#essayradioa_asi').hide();
-                        $('#essayboxa_asi').val('');
-                }
-            });
-
-            /** show sub jawaban */
-            var namasub = "radiosubcarapersalinan";
-            $("input[name$='radiocarapersalinan']").click(function() {
-                if($(this).attr('id') == 'radiod_carapersalinan') {
-                        $('#subradiod_carapersalinan').show();           
-                }
-                else {
-                        $('#subradiod_carapersalinan').hide();
-                        $('input[name='+namasub+']').prop('checked', false);
-                }
-            });
-
-            var namasub = "radiosubasi";
-            $("input[name$='ASI']").click(function() {
-                if($(this).attr('id') == 'radiob_asi') {
-                        $('#subradiob_asi').show();           
-                }
-                else {
-                        $('#subradiob_asi').hide();
-                        $('input[name='+namasub+']').prop('checked', false);
-                }
-            });
-
-            /**
-            var nama = 'radio'+{{id}}
-            var namasub = 'radiosub'+{{id}}
-            $("input[name$='"+nama+"']").click(function() {
-                var inputValue = $(this).attr("id");
-                $("div.boxc").hide();
-                $('input[name='+namasub+']').prop('checked', false);
-
-                var add = '#sub'+inputValue
-                $(add).show();
-                $('input[name='+namasub+']').setAttribute("required","required");
-            });
-            */
-
-            /** fungsi kalkulasi umur */
-            function getAge(dateString) {
-                var now = new Date();
-                var today = new Date(now.getYear(),now.getMonth(),now.getDate());
-                
-                var yearNow = now.getYear();
-                var monthNow = now.getMonth();
-                var dateNow = now.getDate();
-                
-                /*  var dob = new Date(dateString.substring(6,10),
-                                    dateString.substring(0,2)-1,                   
-                                    dateString.substring(3,5)                  
-                                    ); */
-                                    
-                var dob = new Date(dateString.substring(0,4),
-                                    dateString.substring(5,7)-1,                   
-                                    dateString.substring(8,10)                  
-                                    );
-                
-                var yearDob = dob.getYear();
-                var monthDob = dob.getMonth();
-                var dateDob = dob.getDate();
-                var age = {};
-                var ageString = "";
-                var yearString = "";
-                var monthString = "";
-                var dayString = "";
-                
-                
-                yearAge = yearNow - yearDob;
-                
-                if (monthNow >= monthDob)
-                    var monthAge = monthNow - monthDob;
-                else {
-                    yearAge--;
-                    var monthAge = 12 + monthNow -monthDob;
-                }
-                
-                if (dateNow >= dateDob)
-                    var dateAge = dateNow - dateDob;
-                else {
-                    monthAge--;
-                    var dateAge = 31 + dateNow - dateDob;
-                
-                    if (monthAge < 0) {
-                    monthAge = 11;
-                    yearAge--;
-                    }
-                }
-                
-                age = {
-                    years: yearAge,
-                    months: monthAge,
-                    days: dateAge
-                    };
-
-                if ( age.years > 1 ) yearString = " tahun";
-                else yearString = " tahun";
-                if ( age.months> 1 ) monthString = " bulan";
-                else monthString = " bulan";
-                if ( age.days > 1 ) dayString = " hari";
-                else dayString = " hari";
-                
-                
-                if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
-                    ageString = age.years + yearString + ", " + age.months + monthString + ", " + age.days + dayString;
-                else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
-                    ageString = age.days + dayString ;
-                else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
-                    ageString = age.years + yearString;
-                else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
-                    ageString = age.years + yearString + ", " + age.months + monthString;
-                else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
-                    ageString = age.months + monthString + ", " + age.days + dayString;
-                else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
-                    ageString = age.years + yearString + ", " + age.days + dayString;
-                else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
-                    ageString = age.months + monthString;
-                else ageString = "Oops, tidak dapat melakukan kalkulasi umur!";
-                
-                return ageString;
-                }
-                
-                /* alert(getAge('11/12/2020')); */
-                // alert(getAge('2020/11/12'));
-
-            document.getElementById("tanggallahir").onchange = function() {myFunction()};
-
-            function myFunction() {
-                var harilahir = document.getElementById("tanggallahir").value;
-                document.getElementById("umurbalita").value = getAge(harilahir);
-            }
-
-            /** fungsi kalkulasi umur ketika kematian */
-            function getAge2(dateString2) {
-                /**
-                var now = new Date();
-                var today = new Date(now.getYear(),now.getMonth(),now.getDate());
-
-                var yearNow = now.getYear();
-                var monthNow = now.getMonth();
-                var dateNow = now.getDate();
-                */
-
-                var harilahir = document.getElementById("tanggallahir").value;
-                
-                var lahir = new Date(harilahir.substring(0,4),
-                                harilahir.substring(5,7)-1,
-                                harilahir.substring(8,10));
-                
-                var yearLahir = lahir.getYear();
-                var monthLahir = lahir.getMonth();
-                var dateLahir = lahir.getDate();
-                                    
-                var kematian = new Date(dateString2.substring(0,4),
-                                    dateString2.substring(5,7)-1,                   
-                                    dateString2.substring(8,10)                  
-                                    );
-                
-                var yearKematian = kematian.getYear();
-                var monthKematian = kematian.getMonth();
-                var dateKematian = kematian.getDate();
-                var age = {};
-                var ageString = "";
-                var yearString = "";
-                var monthString = "";
-                var dayString = "";
-                
-                
-                yearAge = yearKematian - yearLahir;
-                
-                if (monthKematian >= monthLahir)
-                    var monthAge = monthKematian - monthLahir;
-                else {
-                    yearAge--;
-                    var monthAge = 12 + monthKematian -monthLahir;
-                }
-                
-                if (dateKematian >= dateLahir)
-                    var dateAge = dateKematian - dateLahir;
-                else {
-                    monthAge--;
-                    var dateAge = 31 + dateKematian - dateLahir;
-                
-                    if (monthAge < 0) {
-                    monthAge = 11;
-                    yearAge--;
-                    }
-                }
-                
-                age = {
-                    years: yearAge,
-                    months: monthAge,
-                    days: dateAge
-                    };
-
-                if ( age.years > 1 ) yearString = " tahun";
-                else yearString = " tahun";
-                if ( age.months> 1 ) monthString = " bulan";
-                else monthString = " bulan";
-                if ( age.days > 1 ) dayString = " hari";
-                else dayString = " hari";
-                
-                
-                if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
-                    ageString = age.years + yearString + ", " + age.months + monthString + ", " + age.days + dayString;
-                else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
-                    ageString = age.days + dayString ;
-                else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
-                    ageString = age.years + yearString;
-                else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
-                    ageString = age.years + yearString + ", " + age.months + monthString;
-                else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
-                    ageString = age.months + monthString + ", " + age.days + dayString;
-                else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
-                    ageString = age.years + yearString + ", " + age.days + dayString;
-                else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
-                    ageString = age.months + monthString;
-                else ageString = "Oops, tidak dapat melakukan kalkulasi umur!";
-                
-                return ageString;
-                }
-                
-                /* alert(getAge('11/12/2020')); */
-                // alert(getAge('2020/11/12'));
-
-            document.getElementById("tanggalkematian").onchange = function() {myFunction2()};
-
-            function myFunction2() {
-                var harikematian = document.getElementById("tanggalkematian").value;
-                document.getElementById("jawabanusiameninggal").value = getAge2(harikematian);
-            }
-        });
-    </script>
 </body>
 
 </html>
