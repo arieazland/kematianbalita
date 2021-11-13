@@ -839,22 +839,71 @@
                                                             <td>
                                                                 Usia Balita Saat Meninggal: <br>
                                                                 <input type="hidden" class="form-control" id="soal3_1a" name="soal3_1a" value="Usia Balita Saat Meninggal:">
-                                                                <input type="text" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Usia Balita Saat Meninggal" readonly>
+                                                                <input type="text" class="form-control" id="jawabanusiameninggal" name="jawabanusiameninggal" placeholder="Usia Balita Saat Meninggal" readonly>
                                                                 &nbsp
 
                                                                 Tanggal Kematian: <br>
                                                                 <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Tanggal Kematian:">
-                                                                <input type="date" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Tanggal Kematian">
+                                                                <input type="text" class="form-control mydatepicker" id="tanggalkematian" name="tanggalkematian" placeholder="yyyy/mm/dd">
                                                                 &nbsp
 
                                                                 Jam Kematian: <br>
                                                                 <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Jam Kematian:">
-                                                                <input type="time" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Jam Kematian">
-                                                                &nbsp
-                                                                
+                                                                <div class="input-group clockpicker " data-placement="bottom" data-align="top" data-autoclose="true">
+                                                                    <input type="text" class="form-control" id="jamkematian" name="jamkematian" value="12:00"> <span class="input-group-addon"> <span class="fa fa-clock-o"></span> </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                3.2
+                                                            </td>
+                                                            <td>
                                                                 Nama Fasilitas Kesehatan Tempat Kematian: <br>
-                                                                <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Nama Fasilitas Kesehatan Tempat Kematian:">
-                                                                <input type="text" class="form-control" id="jawabanberatbadanbalita" name="jawabanberatbadanbalita" placeholder="Nama Fasilitas Kesehatan Tempat Kematian">
+                                                                <input type="hidden" class="form-control" id="soal3_2" name="soal3_2" value="Nama Fasilitas Kesehatan Tempat Kematian:">
+                                                                <input type="text" class="form-control" id="jawabanfaskeskematian" name="jawabanfaskeskematian" placeholder="Nama Fasilitas Kesehatan Tempat Kematian">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                3.3
+                                                            </td>
+                                                            <td>
+                                                                Apakah Balita dibawa dari Rumah ke Fasilitas Kesehatan: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_3" name="soal3_3" value="Apakah Balita dibawa dari Rumah ke Fasilitas Kesehatan:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiodibawakefaskes" id="radioa_dibawakefaskes" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_dibawakefaskes"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiodibawakefaskes" id="radiob_dibawakefaskes" value="Tidak">
+                                                                    <label for="radiob_dibawakefaskes"> Tidak </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiodibawakefaskes" id="radioc_dibawakefaskes" value="Tidak Tahu">
+                                                                    <label for="radioc_dibawakefaskes"> Tidak Tahu </label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                3.4
+                                                            </td>
+                                                            <td>
+                                                                Apakah balita dirujuk dari Fasilitas Kesehatan Lain: <br>
+                                                                <input type="hidden" class="form-control" id="soal3_4" name="soal3_4" value="Apakah balita dirujuk dari Fasilitas Kesehatan Lain:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radiofaskeslain" id="radioa_faskeslain" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_faskeslain"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radiofaskeslain" id="radiob_faskeslain" value="Tidak">
+                                                                    <label for="radiob_faskeslain"> Tidak </label>
+                                                                    &nbsp
+                                                        
+                                                                    <input type="radio" name="radiofaskeslain" id="radioc_faskeslain" value="Tidak Tahu">
+                                                                    <label for="radioc_faskeslain"> Tidak Tahu </label>
+                                                                </div>
                                                             </td>
                                                         </tr>
                                                 </tbody>
@@ -919,6 +968,7 @@
     <script src="/js/client/disablebutton/assessmentkarir.js"></script>
     {{!-- <script src="/js/client/datatable/pertanyaan.js"></script> --}}
     <script src="/js/client/datepicker/tambahdatakematian.js"></script>
+    <script src="/js/client/clockpicker/tambahdatakematian.js"></script>
     {{!-- <script src="/js/client/modal/soal.js"></script> --}}
     {{!-- <script src="/js/client/adddiv/soal.js"></script> --}}
 
@@ -1081,6 +1131,106 @@
             function myFunction() {
                 var harilahir = document.getElementById("tanggallahir").value;
                 document.getElementById("umurbalita").value = getAge(harilahir);
+            }
+
+            /** fungsi kalkulasi umur ketika kematian */
+            function getAge2(dateString2) {
+                /**
+                var now = new Date();
+                var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+
+                var yearNow = now.getYear();
+                var monthNow = now.getMonth();
+                var dateNow = now.getDate();
+                */
+
+                var harilahir = document.getElementById("tanggallahir").value;
+                
+                var lahir = new Date(harilahir.substring(0,4),
+                                harilahir.substring(5,7)-1,
+                                harilahir.substring(8,10));
+                
+                var yearLahir = lahir.getYear();
+                var monthLahir = lahir.getMonth();
+                var dateLahir = lahir.getDate();
+                                    
+                var kematian = new Date(dateString2.substring(0,4),
+                                    dateString2.substring(5,7)-1,                   
+                                    dateString2.substring(8,10)                  
+                                    );
+                
+                var yearKematian = kematian.getYear();
+                var monthKematian = kematian.getMonth();
+                var dateKematian = kematian.getDate();
+                var age = {};
+                var ageString = "";
+                var yearString = "";
+                var monthString = "";
+                var dayString = "";
+                
+                
+                yearAge = yearKematian - yearLahir;
+                
+                if (monthKematian >= monthLahir)
+                    var monthAge = monthKematian - monthLahir;
+                else {
+                    yearAge--;
+                    var monthAge = 12 + monthKematian -monthLahir;
+                }
+                
+                if (dateKematian >= dateLahir)
+                    var dateAge = dateKematian - dateLahir;
+                else {
+                    monthAge--;
+                    var dateAge = 31 + dateKematian - dateLahir;
+                
+                    if (monthAge < 0) {
+                    monthAge = 11;
+                    yearAge--;
+                    }
+                }
+                
+                age = {
+                    years: yearAge,
+                    months: monthAge,
+                    days: dateAge
+                    };
+
+                if ( age.years > 1 ) yearString = " tahun";
+                else yearString = " tahun";
+                if ( age.months> 1 ) monthString = " bulan";
+                else monthString = " bulan";
+                if ( age.days > 1 ) dayString = " hari";
+                else dayString = " hari";
+                
+                
+                if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
+                    ageString = age.years + yearString + ", " + age.months + monthString + ", " + age.days + dayString;
+                else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
+                    ageString = age.days + dayString ;
+                else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
+                    ageString = age.years + yearString;
+                else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
+                    ageString = age.years + yearString + ", " + age.months + monthString;
+                else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
+                    ageString = age.months + monthString + ", " + age.days + dayString;
+                else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
+                    ageString = age.years + yearString + ", " + age.days + dayString;
+                else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
+                    ageString = age.months + monthString;
+                else ageString = "Oops, tidak dapat melakukan kalkulasi umur!";
+                
+                return ageString;
+                }
+                
+                /* alert(getAge('11/12/2020')); */
+                // alert(getAge('2020/11/12'));
+
+            document.getElementById("tanggalkematian").onchange = function() {myFunction2()};
+
+            function myFunction2() {
+                var harikematian = document.getElementById("tanggalkematian").value;
+                document.getElementById("jawabanusiameninggal").value = getAge2(harikematian);
             }
         });
     </script>
