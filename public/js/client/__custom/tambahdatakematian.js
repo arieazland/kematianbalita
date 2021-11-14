@@ -47,15 +47,47 @@ $(document).ready(function(){
         }
     });
 
-    $("input[name$='radiosubgizi']").click(function() {
-        if($(this).attr('id') == 'radiosubg_gizi') {
-                $('#essayradiogizi').show();           
+    $("input[name$='radiosubneurologiskronis']").click(function() {
+        if($(this).attr('id') == 'radiosube_neurologiskronis') {
+                $('#essayradioneurologiskronis').show();           
         }
         else {
-                $('#essayradiogizi').hide();
-                $('#essayboxg_gizi').val('');
+                $('#essayradioneurologiskronis').hide();
+                $('#essayboxe_neurologiskronis').val('');
         }
     });
+
+    $("input[name$='radiosubneurologisakut']").click(function() {
+        if($(this).attr('id') == 'radiosubh_neurologisakut') {
+                $('#essayradioneurologisakut').show();           
+        }
+        else {
+                $('#essayradioneurologisakut').hide();
+                $('#essayboxh_neurologisakut').val('');
+        }
+    });
+
+    $("input[name$='radiosubhematologi']").click(function() {
+        if($(this).attr('id') == 'radiosubg_hematologi') {
+                $('#essayradiohematologi').show();           
+        }
+        else {
+                $('#essayradiohematologi').hide();
+                $('#essayboxg_hematologi').val('');
+        }
+    });
+
+    $("input[name$='radiosubkanker']").click(function() {
+        if($(this).attr('id') == 'radiosubh_kanker') {
+                $('#essayradiokanker').show();           
+        }
+        else {
+                $('#essayradiokanker').hide();
+                $('#essayboxh_kanker').val('');
+        }
+    });
+
+
 
     /** show sub jawaban */
     var namasub1 = "radiosubcarapersalinan";
@@ -110,6 +142,138 @@ $(document).ready(function(){
         else {
                 $('#subradio_gizi').hide();
                 $('input[name='+namasubGizi+']').prop('checked', false);
+        }
+    });
+
+    var namasubMalaria = "radiosubmalaria";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiod_penyebabutamakematian') {
+                $('#subradio_malaria').show();           
+        }
+        else {
+                $('#subradio_malaria').hide();
+                $('input[name='+namasubMalaria+']').prop('checked', false);
+        }
+    });
+
+    var namasubNeurologiskronis = "radiosubneurologiskronis";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radioe_penyebabutamakematian') {
+                $('#subradio_neurologiskronis').show();           
+        }
+        else {
+                $('#subradio_neurologiskronis').hide();
+                $('input[name='+namasubNeurologiskronis+']').prop('checked', false);
+        }
+    });
+
+    var namasubNeurologisakut = "radiosubneurologisakut";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiof_penyebabutamakematian') {
+                $('#subradio_neurologisakut').show();           
+        }
+        else {
+                $('#subradio_neurologisakut').hide();
+                $('input[name='+namasubNeurologisakut+']').prop('checked', false);
+        }
+    });
+
+    var namasubTuberkulosis = "radiosubtuberkulosis";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiog_penyebabutamakematian') {
+                $('#subradio_tuberkulosis').show();           
+        }
+        else {
+                $('#subradio_tuberkulosis').hide();
+                $('input[name='+namasubTuberkulosis+']').prop('checked', false);
+        }
+    });
+
+    var namasubRuamdandemam = "radiosubruamdandemam";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radioh_penyebabutamakematian') {
+                $('#subradio_ruamdandemam').show();           
+        }
+        else {
+                $('#subradio_ruamdandemam').hide();
+                $('input[name='+namasubRuamdandemam+']').prop('checked', false);
+        }
+    });
+
+    var namasubHiv = "radiosubhiv";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radioi_penyebabutamakematian') {
+                $('#subradio_hiv').show();           
+        }
+        else {
+                $('#subradio_hiv').hide();
+                $('input[name='+namasubHiv+']').prop('checked', false);
+        }
+    });
+
+    var namasubGinjal = "radiosubginjal";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiok_penyebabutamakematian') {
+                $('#subradio_ginjal').show();           
+        }
+        else {
+                $('#subradio_ginjal').hide();
+                $('input[name='+namasubGinjal+']').prop('checked', false);
+        }
+    });
+
+    var namasubKelenjarendokrin = "radiosubkelenjarendokrin";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiol_penyebabutamakematian') {
+                $('#subradio_kelenjarendokrin').show();           
+        }
+        else {
+                $('#subradio_kelenjarendokrin').hide();
+                $('input[name='+namasubKelenjarendokrin+']').prop('checked', false);
+        }
+    });
+
+    var namasubHematologi = "radiosubhematologi";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiom_penyebabutamakematian') {
+                $('#subradio_hematologi').show();           
+        }
+        else {
+                $('#subradio_hematologi').hide();
+                $('input[name='+namasubHematologi+']').prop('checked', false);
+        }
+    });
+
+    var namasubJantung = "radiosubjantung";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radion_penyebabutamakematian') {
+                $('#subradio_jantung').show();           
+        }
+        else {
+                $('#subradio_jantung').hide();
+                $('input[name='+namasubJantung+']').prop('checked', false);
+        }
+    });
+
+    var namasubKanker = "radiosubkanker";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radioo_penyebabutamakematian') {
+                $('#subradio_kanker').show();           
+        }
+        else {
+                $('#subradio_kanker').hide();
+                $('input[name='+namasubKanker+']').prop('checked', false);
+        }
+    });
+
+    var namasubPerlindunganbalita = "radiosubperlindunganbalita";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radiop_penyebabutamakematian') {
+                $('#subradio_perlindunganbalita').show();           
+        }
+        else {
+                $('#subradio_perlindunganbalita').hide();
+                $('input[name='+namasubPerlindunganbalita+']').prop('checked', false);
         }
     });
 

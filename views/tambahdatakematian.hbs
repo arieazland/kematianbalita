@@ -897,10 +897,6 @@
                                                                     <input type="radio" name="radiopenyebabutamakematian" id="radiop_penyebabutamakematian" value="Perlindungan Balita">
                                                                     <label for="radiop_penyebabutamakematian"> Perlindungan Balita </label>
                                                                     &nbsp
-
-                                                                    <input type="radio" name="radiopenyebabutamakematian" id="radioq_penyebabutamakematian" value="Perlindungan Balita">
-                                                                    <label for="radioq_penyebabutamakematian"> Perlindungan Balita </label>
-                                                                    &nbsp
                                                                 </div>
 
                                                                 {{!-- Sub Radio Pernafasan --}}
@@ -1063,6 +1059,479 @@
                                                                     Sebutkan:
                                                                     <textarea class="form-control essayboxk" name="essayboxg_gizi" id="essayboxg_gizi" rows="10"></textarea>
                                                                 </div>
+
+                                                                {{!-- Sub Radio Malaria --}}
+                                                                <div id="subradio_malaria" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubmalaria" id="radiosuba_malaria" value="Malaria, Tanpa Komplikasi (Falciparum) (B50.9)">
+                                                                        <label class="m-r-200" for="radiosuba_malaria"> Malaria, Tanpa Komplikasi (Falciparum) (B50.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalaria" id="radiosubb_malaria" value="Malaria, Tanpa Kompilkasi (Klinis) (B54)">
+                                                                        <label for="radiosubb_malaria"> Malaria, Tanpa Kompilkasi (Klinis) (B54) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalaria" id="radiosubc_malaria" value="Malaria, Berat (Dengan Komplikasi) (B50.8)">
+                                                                        <label for="radiosubc_malaria"> Malaria, Berat (Dengan Komplikasi) (B50.8) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubmalaria" id="radiosubd_malaria" value="Malaria Serebral (B50.0)">
+                                                                        <label class="m-r-200" for="radiosubd_malaria"> Malaria Serebral (B50.0) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Neurologis Kronis --}}
+                                                                <div id="subradio_neurologiskronis" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubneurologiskronis" id="radiosuba_neurologiskronis" value="Epilepsi (G40)">
+                                                                        <label class="m-r-200" for="radiosuba_neurologiskronis"> Epilepsi (G40) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologiskronis" id="radiosubb_neurologiskronis" value="Hidrosefalus (G91)">
+                                                                        <label for="radiosubb_neurologiskronis"> Hidrosefalus (G91) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologiskronis" id="radiosubc_neurologiskronis" value="Cerebralpalsy (G80)">
+                                                                        <label for="radiosubc_neurologiskronis"> Cerebralpalsy (G80) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubneurologiskronis" id="radiosubd_neurologiskronis" value="Keterlambatan Perkembangan (R62.0)">
+                                                                        <label class="m-r-200" for="radiosubd_neurologiskronis"> Keterlambatan Perkembangan (R62.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologiskronis" id="radiosube_neurologiskronis" value="Neurologis, Lain-lain (R29.8)">
+                                                                        <label for="radiosube_neurologiskronis"> Neurologis, Lain-lain (R29.8) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradioneurologiskronis" class="boxe" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxe_neurologiskronis" id="essayboxe_neurologiskronis" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Neurologis Akut --}}
+                                                                <div id="subradio_neurologisakut" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubneurologisakut" id="radiosuba_neurologisakut" value="Meningitis, Haemophilus Influenzae (G00.0)">
+                                                                        <label class="m-r-200" for="radiosuba_neurologisakut"> Meningitis, Haemophilus Influenzae (G00.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologisakut" id="radiosubb_neurologisakut" value="Meningitis, Streptococcus Pneumoniae (G00.2)">
+                                                                        <label for="radiosubb_neurologisakut"> Meningitis, Streptococcus Pneumoniae (G00.2) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologisakut" id="radiosubc_neurologisakut" value="Meningitis, Neisseria Meningitides (A39.0)">
+                                                                        <label for="radiosubc_neurologisakut"> Meningitis, Neisseria Meningitides (A39.0) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubneurologisakut" id="radiosubd_neurologisakut" value="Meningitis, Cryptococcus (B45.1)">
+                                                                        <label class="m-r-200" for="radiosubd_neurologisakut"> Meningitis, Cryptococcus (B45.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologisakut" id="radiosube_neurologisakut" value="Meningitis, tidak ada penyebab yang teridentifikasi atau aseptik (G03.9)">
+                                                                        <label for="radiosube_neurologisakut"> Meningitis, tidak ada penyebab yang teridentifikasi atau aseptik (G03.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologisakut" id="radiosubf_neurologisakut" value="Kejang Akut (R56)">
+                                                                        <label for="radiosubf_neurologisakut"> Kejang Akut (R56) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubneurologisakut" id="radiosubg_neurologisakut" value="Ensefalitis, ensefalitis Jepang (A83.0)">
+                                                                        <label class="m-r-200" for="radiosubg_neurologisakut"> Ensefalitis, ensefalitis Jepang (A83.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubneurologisakut" id="radiosubh_neurologisakut" value="Ensefalitis, lain-lain (G04.9)">
+                                                                        <label for="radiosubh_neurologisakut"> Ensefalitis, lain-lain (G04.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradioneurologisakut" class="boxh" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxh_neurologisakut" id="essayboxh_neurologisakut" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Tuberkulosis --}}
+                                                                <div id="subradio_tuberkulosis" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubtuberkulosis" id="radiosuba_tuberkulosis" value="Tuberkulosis paru (A15)">
+                                                                        <label class="m-r-200" for="radiosuba_tuberkulosis"> Tuberkulosis paru (A15) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubb_tuberkulosis" value="Tuberkulosis paru yang belum dikonfirmasi (A16)">
+                                                                        <label for="radiosubb_tuberkulosis"> Tuberkulosis paru yang belum dikonfirmasi (A16) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubc_tuberkulosis" value="Meningitis tuberkulosis (A17.0)">
+                                                                        <label for="radiosubc_tuberkulosis"> Meningitis tuberkulosis (A17.0) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubtuberkulosis" id="radiosubd_tuberkulosis" value="Tuberkulosis kelenjar getah bening (A18.2)">
+                                                                        <label class="m-r-200" for="radiosubd_tuberkulosis"> Tuberkulosis kelenjar getah bening (A18.2) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosube_tuberkulosis" value="Tuberkulosis kelenjar getah bening intratoraks yang dikonfirmasi (A15.4)">
+                                                                        <label for="radiosube_tuberkulosis"> Tuberkulosis kelenjar getah bening intratoraks yang dikonfirmasi (A15.4) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubf_tuberkulosis" value="Tuberkulosis tulang dan sendi (termasuk penyakit tulang belakang Potts) (A18.0)">
+                                                                        <label for="radiosubf_tuberkulosis"> Tuberkulosis tulang dan sendi (termasuk penyakit tulang belakang Potts) (A18.0) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubtuberkulosis" id="radiosubg_tuberkulosis" value="Tuberkulosis tulang belakang (penyakit Potts) (A18.0)">
+                                                                        <label class="m-r-200" for="radiosubg_tuberkulosis"> Tuberkulosis tulang belakang (penyakit Potts) (A18.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubh_tuberkulosis" value="Artritis tuberkulosis (A18.0)">
+                                                                        <label for="radiosubh_tuberkulosis"> Artritis tuberkulosis (A18.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubi_tuberkulosis" value="Tuberkulosis abdomen (A18.3)">
+                                                                        <label for="radiosubi_tuberkulosis"> Tuberkulosis abdomen (A18.3) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubtuberkulosis" id="radiosubj_tuberkulosis" value="Tuberkulosis milier (A19)">
+                                                                        <label class="m-r-200" for="radiosubj_tuberkulosis"> Tuberkulosis milier (A19) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubk_tuberkulosis" value="Tuberkulosis, efusi perikardial (A18.8)">
+                                                                        <label for="radiosubk_tuberkulosis"> Tuberkulosis, efusi perikardial (A18.8) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubl_tuberkulosis" value="Tuberkulosis diseminata (termasuk tuberkulosis milier) (A19.1)">
+                                                                        <label for="radiosubl_tuberkulosis"> Tuberkulosis diseminata (termasuk tuberkulosis milier) (A19.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubtuberkulosis" id="radiosubm_tuberkulosis" value="Tuberkulosis yang resistan terhadap berbagai obat (Multi- drug-resistant tuberculosis) (U84.3)">
+                                                                        <label for="radiosubm_tuberkulosis"> Tuberkulosis yang resistan terhadap berbagai obat (Multi- drug-resistant tuberculosis) (U84.3) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Ruam dan Demam --}}
+                                                                <div id="subradio_ruamdandemam" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubruamdandemam" id="radiosuba_ruamdandemam" value="Sepsis (termasuk bakteremia) (A41.9)">
+                                                                        <label class="m-r-200" for="radiosuba_ruamdandemam"> Sepsis (termasuk bakteremia) (A41.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubb_ruamdandemam" value="Campak (B05)">
+                                                                        <label for="radiosubb_ruamdandemam"> Campak (B05) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubc_ruamdandemam" value="Rubella (B06)">
+                                                                        <label for="radiosubc_ruamdandemam"> Rubella (B06) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubruamdandemam" id="radiosubd_ruamdandemam" value="Varicella, cacar air (B01)">
+                                                                        <label class="m-r-200" for="radiosubd_ruamdandemam"> Varicella, cacar air (B01) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosube_ruamdandemam" value="Hepatitis (B17.9)">
+                                                                        <label for="radiosube_ruamdandemam"> Hepatitis (B17.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubf_ruamdandemam" value="Demam Dengue (A97)">
+                                                                        <label for="radiosubf_ruamdandemam"> Demam Dengue (A97) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubruamdandemam" id="radiosubg_ruamdandemam" value="Sindrom syok demam dengue (Dengue shock syndrome) (A97.2)">
+                                                                        <label class="m-r-200" for="radiosubg_ruamdandemam"> Sindrom syok demam dengue (Dengue shock syndrome) (A97.2) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubh_ruamdandemam" value="Demam berdarah dengue (A97.1)">
+                                                                        <label for="radiosubh_ruamdandemam"> Demam berdarah dengue (A97.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubi_ruamdandemam" value="Selulitis (sepsis kulit) (L03)">
+                                                                        <label for="radiosubi_ruamdandemam"> Selulitis (sepsis kulit) (L03) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubj_ruamdandemam" value="Osteomielitis (infeksi tulang) (M86)">
+                                                                        <label for="radiosubj_ruamdandemam"> Osteomielitis (infeksi tulang) (M86) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubk_ruamdandemam" value="Artritis septik (infeksi sendi) (M00)">
+                                                                        <label for="radiosubk_ruamdandemam"> Artritis septik (infeksi sendi) (M00) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubruamdandemam" id="radiosubl_ruamdandemam" value="Pyomyositis (infeksi otot atau abses) (M60.0)">
+                                                                        <label for="radiosubl_ruamdandemam"> Pyomyositis (infeksi otot atau abses) (M60.0) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio hiv --}}
+                                                                <div id="subradio_hiv" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubhiv" id="radiosuba_hiv" value="HIV/AIDS (B24)">
+                                                                        <label class="m-r-200" for="radiosuba_hiv"> HIV/AIDS (B24) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhiv" id="radiosubb_hiv" value="Pneumonia pneumocystis (B59)">
+                                                                        <label for="radiosubb_hiv"> Pneumonia pneumocystis (B59) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhiv" id="radiosubc_hiv" value="Diare persllkk/,isten terkait HIV">
+                                                                        <label for="radiosubc_hiv"> Diare persllkk/,isten terkait HIV </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubhiv" id="radiosubd_hiv" value="Penyakit paru kronis terkait HIV">
+                                                                        <label class="m-r-200" for="radiosubd_hiv"> Penyakit paru kronis terkait HIV </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Darurat bedah --}}
+                                                                <div id="subradio_daruratbedah" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubdaruratbedah" id="radiosuba_daruratbedah" value="Radang usus buntu (K35)">
+                                                                        <label class="m-r-200" for="radiosuba_daruratbedah"> Radang usus buntu (K35) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubb_daruratbedah" value="Obstruksi usus, pembedahan (K56.6)">
+                                                                        <label for="radiosubb_daruratbedah"> Obstruksi usus, pembedahan (K56.6) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubc_daruratbedah" value="Luka Bakar (T29)">
+                                                                        <label for="radiosubc_daruratbedah"> Luka Bakar (T29) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubdaruratbedah" id="radiosubd_daruratbedah" value="Tenggelam (W74)">
+                                                                        <label class="m-r-200" for="radiosubd_daruratbedah"> Tenggelam (W74) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosube_daruratbedah" value="Keracunan (T65.9)">
+                                                                        <label for="radiosube_daruratbedah"> Keracunan (T65.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubf_daruratbedah" value="Gigitan Ular (T63.0)">
+                                                                        <label for="radiosubf_daruratbedah"> Gigitan Ular (T63.0) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubdaruratbedah" id="radiosubg_daruratbedah" value="Trauma (T07)">
+                                                                        <label class="m-r-200" for="radiosubg_daruratbedah"> Trauma (T07) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubh_daruratbedah" value="Tetanus (A35)">
+                                                                        <label for="radiosubh_daruratbedah"> Tetanus (A35) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubi_daruratbedah" value="Bedah, lain-lain (Y83.4)">
+                                                                        <label for="radiosubi_daruratbedah"> Bedah, lain-lain (Y83.4) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubdaruratbedah" id="radiosubj_daruratbedah" value="Kecelakaan, terkait transport (V99)">
+                                                                        <label for="radiosubj_daruratbedah"> Kecelakaan, terkait transport (V99) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Ginjal --}}
+                                                                <div id="subradio_ginjal" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubginjal" id="radiosuba_ginjal" value="Infeksi saluran kemih (N39.0)">
+                                                                        <label class="m-r-200" for="radiosuba_ginjal"> Infeksi saluran kemih (N39.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubginjal" id="radiosubb_ginjal" value="Glomerulonefritis (N08)">
+                                                                        <label for="radiosubb_ginjal"> Glomerulonefritis (N08) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubginjal" id="radiosubc_ginjal" value="Gagal ginjal akut (N17)">
+                                                                        <label for="radiosubc_ginjal"> Gagal ginjal akut (N17) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubginjal" id="radiosubd_ginjal" value="Penyakit ginjal kronis (N18)">
+                                                                        <label class="m-r-200" for="radiosubd_ginjal"> Penyakit ginjal kronis (N18) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubginjal" id="radiosube_ginjal" value="Ginjal, lain-lain (N28.9)">
+                                                                        <label for="radiosube_ginjal"> Ginjal, lain-lain (N28.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Kelenjar Endokrin --}}
+                                                                <div id="subradio_kelenjarendokrin" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubkelenjarendokrin" id="radiosuba_kelenjarendokrin" value="Diabetes Tipe 1 (E10)">
+                                                                        <label class="m-r-200" for="radiosuba_kelenjarendokrin"> Diabetes Tipe 1 (E10) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkelenjarendokrin" id="radiosubb_kelenjarendokrin" value="Diabetes Tipe 2 (E11)">
+                                                                        <label for="radiosubb_kelenjarendokrin"> Diabetes Tipe 2 (E11) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkelenjarendokrin" id="radiosubc_kelenjarendokrin" value="Hipoglikemia (E161)">
+                                                                        <label for="radiosubc_kelenjarendokrin"> Hipoglikemia (E161) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubkelenjarendokrin" id="radiosubd_kelenjarendokrin" value="Penyakit tiroid (E07.9)">
+                                                                        <label class="m-r-200" for="radiosubd_kelenjarendokrin"> Penyakit tiroid (E07.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkelenjarendokrin" id="radiosube_kelenjarendokrin" value="Endokrin, lain-lain (E34.9)">
+                                                                        <label for="radiosube_kelenjarendokrin"> Endokrin, lain-lain (E34.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Radio Hematologi --}}
+                                                                <div id="subradio_hematologi" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubhematologi" id="radiosuba_hematologi" value="Anemia berat">
+                                                                        <label class="m-r-200" for="radiosuba_hematologi"> Anemia berat </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhematologi" id="radiosubb_hematologi" value="Anemia (aplastic) (D61)">
+                                                                        <label for="radiosubb_hematologi"> Anemia (aplastic) (D61) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhematologi" id="radiosubc_hematologi" value="Anemia sel sabit (D57)">
+                                                                        <label for="radiosubc_hematologi"> Anemia sel sabit (D57) </label>
+                                                                        &nbsp
+
+                                                                        <input class="m-r-200" type="radio" name="radiosubhematologi" id="radiosubd_hematologi" value="Anemia (hemolysis yang didapat) (D59)">
+                                                                        <label class="m-r-200" for="radiosubd_hematologi"> Anemia (hemolysis yang didapat) (D59) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhematologi" id="radiosube_hematologi" value="Gangguan pendarahan (D68.9)">
+                                                                        <label for="radiosube_hematologi"> Gangguan pendarahan (D68.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhematologi" id="radiosubf_hematologi" value="Thalasemia (D56)">
+                                                                        <label for="radiosubf_hematologi"> Thalasemia (D56) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubhematologi" id="radiosubg_hematologi" value="Hematologis, lain-lain">
+                                                                        <label for="radiosubg_hematologi"> Hematologis, lain-lain </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradiohematologi" class="boxg" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxg_hematologi" id="essayboxg_hematologi" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Penyakit jantung --}}
+                                                                <div id="subradio_jantung" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubjantung" id="radiosuba_jantung" value="Penyakit jantung, bawaan (Q24.9)">
+                                                                        <label class="m-r-200" for="radiosuba_jantung"> Penyakit jantung, bawaan (Q24.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubjantung" id="radiosubb_jantung" value="Penyakit jantung, rematik (I01)">
+                                                                        <label for="radiosubb_jantung"> Penyakit jantung, rematik (I01) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubjantung" id="radiosubc_jantung" value="Penyakit jantung, lain-lain (I51.9)">
+                                                                        <label for="radiosubc_jantung"> Penyakit jantung, lain-lain (I51.9) </label>
+                                                                        &nbsp
+
+                                                                    </div>
+                                                                </div>
+                                                                {{!-- <div id="essayradiojantung" class="boxg" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxg_jantung" id="essayboxg_jantung" rows="10"></textarea>
+                                                                </div> --}}
+
+                                                                {{!-- Sub kanker --}}
+                                                                <div id="subradio_kanker" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubkanker" id="radiosuba_kanker" value="Tumor Wilms (C64)">
+                                                                        <label class="m-r-200" for="radiosuba_kanker"> Tumor Wilms (C64) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubb_kanker" value="Leukemia (C95.9)">
+                                                                        <label for="radiosubb_kanker"> Leukemia (C95.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubc_kanker" value="Limfoma (Hodgkins) (C81)">
+                                                                        <label for="radiosubc_kanker"> Limfoma (Hodgkins) (C81) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubd_kanker" value="Limfoma (non-Hodgkins (C85)">
+                                                                        <label for="radiosubd_kanker"> Limfoma (non-Hodgkins (C85) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosube_kanker" value="Retinoblastoma (C69.2)">
+                                                                        <label for="radiosube_kanker"> Retinoblastoma (C69.2) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubf_kanker" value="Tumor sistem saraf pusat (C72.9)">
+                                                                        <label for="radiosubf_kanker"> Tumor sistem saraf pusat (C72.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubg_kanker" value="Neuroblastoma (kelenjar adrenal) (C74.9)">
+                                                                        <label for="radiosubg_kanker"> Neuroblastoma (kelenjar adrenal) (C74.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkanker" id="radiosubh_kanker" value="Kanker, lain-lain (D48.9)">
+                                                                        <label for="radiosubh_kanker"> Kanker, lain-lain (D48.9) </label>
+                                                                        &nbsp
+
+                                                                    </div>
+                                                                </div>
+                                                                <div id="essayradiokanker" class="boxg" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxh_kanker" id="essayboxh_kanker" rows="10"></textarea>
+                                                                </div>
+
+                                                                {{!-- Sub Perlindungan Balita --}}
+                                                                <div id="subradio_perlindunganbalita" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubperlindunganbalita" id="radiosuba_perlindunganbalita" value="Pelecehan fisik (Y07)">
+                                                                        <label class="m-r-200" for="radiosuba_perlindunganbalita"> Pelecehan fisik (Y07) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubperlindunganbalita" id="radiosubb_perlindunganbalita" value="Pelecehan seksual (Y07)">
+                                                                        <label for="radiosubb_perlindunganbalita"> Pelecehan seksual (Y07) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubperlindunganbalita" id="radiosubc_perlindunganbalita" value="Terlantar (Y06)">
+                                                                        <label for="radiosubc_perlindunganbalita"> Terlantar (Y06) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubperlindunganbalita" id="radiosubd_perlindunganbalita" value="Pembunuhan (Y09)">
+                                                                        <label for="radiosubd_perlindunganbalita"> Pembunuhan (Y09) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubperlindunganbalita" id="radiosube_perlindunganbalita" value="Bunuh Diri (X84)">
+                                                                        <label for="radiosube_perlindunganbalita"> Bunuh Diri (X84) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                                {{!-- <div id="essayradioperlindunganbalita" class="boxg" style="display: none;">
+                                                                    Sebutkan:
+                                                                    <textarea class="form-control essayboxk" name="essayboxh_perlindunganbalita" id="essayboxh_perlindunganbalita" rows="10"></textarea>
+                                                                </div> --}}
 
 
                                                                 Riwayat Balita Saat Dilahirkan: <br>
