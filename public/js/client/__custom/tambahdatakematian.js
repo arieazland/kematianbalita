@@ -9,6 +9,7 @@ $(document).ready(function(){
                 $('#essayboxk_pekerjaanibu').val('');
         }
     });
+
     $("input[name$='radiopekerjaanayah']").click(function() {
         if($(this).attr('id') == 'radiom_pekerjaanayah') {
                 $('#essayradiom_pekerjaanayah').show();           
@@ -18,6 +19,7 @@ $(document).ready(function(){
                 $('#essayboxm_pekerjaanayah').val('');
         }
     });
+
     $("input[name$='ASI']").click(function() {
         if($(this).attr('id') == 'radioa_asi') {
                 $('#essayradioa_asi').show();           
@@ -27,6 +29,7 @@ $(document).ready(function(){
                 $('#essayboxa_asi').val('');
         }
     });
+
     $("input[name$='radiosubpernafasan']").click(function() {
         if($(this).attr('id') == 'radiosubm_pernafasan') {
                 $('#essayradiosubm_pernafasan').show();           
@@ -97,6 +100,276 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='radio5_1']").click(function() {
+        if($(this).attr('id') == 'radiol_5_1') {
+                $('#essay5_1').show();           
+        }
+        else {
+                $('#essay5_1').hide();
+                $('#essayboxl_5_1').val('');
+        }
+    });
+
+    $("input[name$='radio5_2']").click(function() {
+        if($(this).attr('id') == 'radioi_5_2') {
+                $('#essay5_2').show();           
+        }
+        else {
+                $('#essay5_2').hide();
+                $('#essayboxi_5_2').val('');
+        }
+    });
+
+    $("input[name$='radio5_3c']").click(function() {
+        if($(this).attr('id') == 'radiob_5_3c') {
+                $('#essay5_3c').show();           
+        }
+        else {
+                $('#essay5_3c').hide();
+                $('#essayboxb_5_3c').val('');
+        }
+    });
+
+    $("input[name$='radio5_5a']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5a') {
+                $('#essaya5_5a').show();           
+        }
+        else {
+                $('#essaya5_5a').hide();
+                $('#essayboxa_5_5a').val('');
+        }
+    });
+
+    $("input[name$='radio5_5a']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5a') {
+                $('#essayb5_5a').show();           
+        }
+        else {
+                $('#essayb5_5a').hide();
+                $('#essayboxb_5_5a').val('');
+        }
+    });
+
+    $("input[name$='radio5_5b']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5b') {
+                $('#essaya5_5b').show();           
+        }
+        else {
+                $('#essaya5_5b').hide();
+                $('#essayboxa_5_5b').val('');
+        }
+    });
+
+    $("input[name$='radio5_5b']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5b') {
+                $('#essayb5_5b').show();           
+        }
+        else {
+                $('#essayb5_5b').hide();
+                $('#essayboxb_5_5b').val('');
+        }
+    });
+
+    $("input[name$='radio5_5c']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5c') {
+                $('#essaya5_5c').show();           
+        }
+        else {
+                $('#essaya5_5c').hide();
+                $('#essayboxa_5_5c').val('');
+        }
+    });
+
+    $("input[name$='radio5_5c']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5c') {
+                $('#essayb5_5c').show();           
+        }
+        else {
+                $('#essayb5_5c').hide();
+                $('#essayboxb_5_5c').val('');
+        }
+    });
+
+    $("input[name$='radio5_5e']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5e') {
+                $('#essaya5_5e').show();           
+        }
+        else {
+                $('#essaya5_5e').hide();
+                $('#essayboxa_5_5e').val('');
+        }
+    });
+
+    $("input[name$='radio5_5e']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5e') {
+                $('#essayb5_5e').show();           
+        }
+        else {
+                $('#essayb5_5e').hide();
+                $('#essayboxb_5_5e').val('');
+        }
+    });
+
+    $("input[name$='radio5_5f']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5f') {
+                $('#essaya5_5f').show();           
+        }
+        else {
+                $('#essaya5_5f').hide();
+                $('#essayboxa_5_5f').val('');
+        }
+    });
+
+    $("input[name$='radio5_5f']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5f') {
+                $('#essayb5_5f').show();           
+        }
+        else {
+                $('#essayb5_5f').hide();
+                $('#essayboxb_5_5f').val('');
+        }
+    });
+
+    $("input[name$='radio5_5g']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5g') {
+                $('#essaya5_5g').show();           
+        }
+        else {
+                $('#essaya5_5g').hide();
+                $('#essayboxa_5_5g').val('');
+        }
+    });
+
+    $("input[name$='radio5_5g']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5g') {
+                $('#essayb5_5g').show();           
+        }
+        else {
+                $('#essayb5_5g').hide();
+                $('#essayboxb_5_5g').val('');
+        }
+    });
+
+    $("input[name$='radio5_5h']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5h') {
+                $('#essaya5_5h').show();           
+        }
+        else {
+                $('#essaya5_5h').hide();
+                $('#essayboxa_5_5h').val('');
+        }
+    });
+
+    $("input[name$='radio5_5h']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5h') {
+                $('#essayb5_5h').show();           
+        }
+        else {
+                $('#essayb5_5h').hide();
+                $('#essayboxb_5_5h').val('');
+        }
+    });
+
+    $("input[name$='radio5_5i']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5i') {
+                $('#essaya5_5i').show();           
+        }
+        else {
+                $('#essaya5_5i').hide();
+                $('#essayboxa_5_5i').val('');
+        }
+    });
+
+    $("input[name$='radio5_5i']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5i') {
+                $('#essayb5_5i').show();           
+        }
+        else {
+                $('#essayb5_5i').hide();
+                $('#essayboxb_5_5i').val('');
+        }
+    });
+
+    $("input[name$='radio6_2']").click(function() {
+        if($(this).attr('id') == 'radioa_6_2') {
+                $('#essaya6_2').show();           
+        }
+        else {
+                $('#essaya6_2').hide();
+                $('#essayboxa_6_2').val('');
+        }
+    });
+
+    $("input[name$='radio6_2']").click(function() {
+        if($(this).attr('id') == 'radiob_6_2') {
+                $('#essayb6_2').show();           
+        }
+        else {
+                $('#essayb6_2').hide();
+                $('#essayboxb_6_2').val('');
+        }
+    });
+
+    $("input[name$='radio6_3']").click(function() {
+        if($(this).attr('id') == 'radioa_6_3') {
+                $('#essaya6_3').show();           
+        }
+        else {
+                $('#essaya6_3').hide();
+                $('#essayboxa_6_3').val('');
+        }
+    });
+
+    $("input[name$='radio6_3']").click(function() {
+        if($(this).attr('id') == 'radiob_6_3') {
+                $('#essayb6_3').show();           
+        }
+        else {
+                $('#essayb6_3').hide();
+                $('#essayboxb_6_3').val('');
+        }
+    });
+
+    $("input[name$='radio6_6']").click(function() {
+        if($(this).attr('id') == 'radioa_6_6') {
+                $('#essaya6_6').show();           
+        }
+        else {
+                $('#essaya6_6').hide();
+                $('#essayboxa_6_6').val('');
+        }
+    });
+
+    $("input[name$='radio6_6']").click(function() {
+        if($(this).attr('id') == 'radiob_6_6') {
+                $('#essayb6_6').show();           
+        }
+        else {
+                $('#essayb6_6').hide();
+                $('#essayboxb_6_6').val('');
+        }
+    });
+
+    $("input[name$='radio6_7']").click(function() {
+        if($(this).attr('id') == 'radioa_6_7') {
+                $('#essaya6_7').show();           
+        }
+        else {
+                $('#essaya6_7').hide();
+                $('#essayboxa_6_7').val('');
+        }
+    });
+
+    $("input[name$='radio6_7']").click(function() {
+        if($(this).attr('id') == 'radiob_6_7') {
+                $('#essayb6_7').show();           
+        }
+        else {
+                $('#essayb6_7').hide();
+                $('#essayboxb_6_7').val('');
+        }
+    });
+
 
 
 
@@ -121,6 +394,17 @@ $(document).ready(function(){
         else {
                 $('#subradiob_asi').hide();
                 $('input[name='+namasub2+']').prop('checked', false);
+        }
+    });
+
+    var classpemberianimunisasi = "radiosubpemberianimunisasi";
+    $("input[name$='radiopemberianimunisasi']").click(function() {
+        if($(this).attr('id') == 'radiob_pemberianimunisasi') {
+                $('#subradiob_pemberianimunisasi').show();           
+        }
+        else {
+                $('#subradiob_pemberianimunisasi').hide();
+                $('input[class='+classpemberianimunisasi+']').prop('checked', false);
         }
     });
 
