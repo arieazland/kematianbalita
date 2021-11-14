@@ -1528,10 +1528,6 @@
                                                                         &nbsp
                                                                     </div>
                                                                 </div>
-                                                                {{!-- <div id="essayradioperlindunganbalita" class="boxg" style="display: none;">
-                                                                    Sebutkan:
-                                                                    <textarea class="form-control essayboxk" name="essayboxh_perlindunganbalita" id="essayboxh_perlindunganbalita" rows="10"></textarea>
-                                                                </div> --}}
 
 
                                                                 Riwayat Balita Saat Dilahirkan: <br>
@@ -1556,7 +1552,148 @@
                                                                     <input type="radio" name="radioriwayatbalita" id="radioe_riwayatbalita" value="Malformasi Congenital">
                                                                     <label for="radioe_riwayatbalita"> Malformasi Congenital </label>
                                                                     &nbsp
+
+                                                                    <input type="radio" name="radioriwayatbalita" id="radiof_riwayatbalita" value="Normal">
+                                                                    <label for="radiof_riwayatbalita"> Normal </label>
+                                                                    &nbsp
                                                                 </div>
+
+                                                                {{!-- Sub BBLR --}}
+                                                                <div id="subradio_bblr" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubbblr" id="radiosuba_bblr" value="1500g - 2500g (P07.1)">
+                                                                        <label class="m-r-200" for="radiosuba_bblr"> 1500g - 2500g (P07.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubbblr" id="radiosubb_bblr" value="1000g - 1499g (P07.1)">
+                                                                        <label for="radiosubb_bblr"> 1000g - 1499g (P07.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubbblr" id="radiosubc_bblr" value="&#60;1000g (P07.1)">
+                                                                        <label for="radiosubc_bblr">&#60;1000g (P07.1) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Infeksi Neonatal --}}
+                                                                <div id="subradio_infeksineonatal" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubinfeksineonatal" id="radiosuba_infeksineonatal" value="Radang paru (P2.3)">
+                                                                        <label class="m-r-200" for="radiosuba_infeksineonatal"> Radang paru (P2.3) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubb_infeksineonatal" value="Meningitis (G03.9)">
+                                                                        <label for="radiosubb_infeksineonatal"> Meningitis (G03.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubc_infeksineonatal" value="Sepsis, neonatal (P36)">
+                                                                        <label for="radiosubc_infeksineonatal">Sepsis, neonatal (P36) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubd_infeksineonatal" value="Sepsis tali pusat (P38)">
+                                                                        <label for="radiosubd_infeksineonatal">Sepsis tali pusat (P38) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosube_infeksineonatal" value="Sepsis kulit (P39.4)">
+                                                                        <label for="radiosube_infeksineonatal">Sepsis kulit (P39.4) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubf_infeksineonatal" value="Sifilis kongenital (A50)">
+                                                                        <label for="radiosubf_infeksineonatal">Sifilis kongenital (A50) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubg_infeksineonatal" value="Malaria kongenital (P37)">
+                                                                        <label for="radiosubg_infeksineonatal">Malaria kongenital (P37) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubh_infeksineonatal" value="Sindrom rubella kongenital (P35.0)">
+                                                                        <label for="radiosubh_infeksineonatal">Sindrom rubella kongenital (P35.0) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubi_infeksineonatal" value="Tetanus neonatal (A33)">
+                                                                        <label for="radiosubi_infeksineonatal">Tetanus neonatal (A33) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubj_infeksineonatal" value="Diare (P78.3)">
+                                                                        <label for="radiosubj_infeksineonatal">Diare (P78.3) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubinfeksineonatal" id="radiosubk_infeksineonatal" value="Infeksi neonatal, lain-lain (P39.9)">
+                                                                        <label for="radiosubk_infeksineonatal">Infeksi neonatal, lain-lain (P39.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Kondisi Perinatal --}}
+                                                                <div id="subradio_kondisiperinatal" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubkondisiperinatal" id="radiosuba_kondisiperinatal" value="Asfiksia lahir (P21)">
+                                                                        <label class="m-r-200" for="radiosuba_kondisiperinatal"> Asfiksia lahir (P21) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosubb_kondisiperinatal" value="Aspirasi Mekonium (P24)">
+                                                                        <label for="radiosubb_kondisiperinatal"> Aspirasi Mekonium (P24) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosubc_kondisiperinatal" value="Sindrom gangguan pernapasan (P22)">
+                                                                        <label for="radiosubc_kondisiperinatal">Sindrom gangguan pernapasan (P22) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosubd_kondisiperinatal" value="Penyakit kuning (P59)">
+                                                                        <label for="radiosubd_kondisiperinatal">Penyakit kuning (P59) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosube_kondisiperinatal" value="Obstruksi usus (P76)">
+                                                                        <label for="radiosube_kondisiperinatal">Obstruksi usus (P76) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosubf_kondisiperinatal" value="Entero kolitisnekrotikans (P77)">
+                                                                        <label for="radiosubf_kondisiperinatal">Entero kolitisnekrotikans (P77) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubkondisiperinatal" id="radiosubg_kondisiperinatal" value="Neonatal, lain-lain (P96.9)">
+                                                                        <label for="radiosubg_kondisiperinatal">Neonatal, lain-lain (P96.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
+                                                                {{!-- Sub Malformasi Congenital --}}
+                                                                <div id="subradio_malformasicongenital" class="boxd" style="display: none;">
+                                                                    {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Diagnosis:
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radiosubmalformasicongenital" id="radiosuba_malformasicongenital" value="Penyakit jantung bawaan (Q24.9)">
+                                                                        <label class="m-r-200" for="radiosuba_malformasicongenital"> Penyakit jantung bawaan (Q24.9) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalformasicongenital" id="radiosubb_malformasicongenital" value="Anus imperforate (Q42.3)">
+                                                                        <label for="radiosubb_malformasicongenital"> Anus imperforate (Q42.3) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalformasicongenital" id="radiosubc_malformasicongenital" value="Penyakit Hirschsprung (Q43.1)">
+                                                                        <label for="radiosubc_malformasicongenital">Penyakit Hirschsprung (Q43.1) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalformasicongenital" id="radiosubd_malformasicongenital" value="Malrotasi(Q43.4)">
+                                                                        <label for="radiosubd_malformasicongenital">Malrotasi(Q43.4) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalformasicongenital" id="radiosube_malformasicongenital" value="Malformasi gastrointestinal: omphalocoele, gastroschisis (Q79.2/Q79.3)">
+                                                                        <label for="radiosube_malformasicongenital">Malformasi gastrointestinal: omphalocoele, gastroschisis (Q79.2/Q79.3) </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radiosubmalformasicongenital" id="radiosubf_malformasicongenital" value="Multiple (Q89.9)">
+                                                                        <label for="radiosubf_malformasicongenital">Multiple (Q89.9) </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+
                                                             </td>
                                                         </tr>
                                                 </tbody>

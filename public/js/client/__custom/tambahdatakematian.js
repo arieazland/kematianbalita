@@ -277,6 +277,50 @@ $(document).ready(function(){
         }
     });
 
+    var namasubBblr = "radiosubbblr";
+    $("input[name$='radioriwayatbalita']").click(function() {
+        if($(this).attr('id') == 'radioa_riwayatbalita') {
+                $('#subradio_bblr').show();           
+        }
+        else {
+                $('#subradio_bblr').hide();
+                $('input[name='+namasubBblr+']').prop('checked', false);
+        }
+    });
+
+    var namasubInfeksineonatal = "radiosubinfeksineonatal";
+    $("input[name$='radioriwayatbalita']").click(function() {
+        if($(this).attr('id') == 'radioc_riwayatbalita') {
+                $('#subradio_infeksineonatal').show();           
+        }
+        else {
+                $('#subradio_infeksineonatal').hide();
+                $('input[name='+namasubInfeksineonatal+']').prop('checked', false);
+        }
+    });
+
+    var namasubKondisiperinatal = "radiosubkondisiperinatal";
+    $("input[name$='radioriwayatbalita']").click(function() {
+        if($(this).attr('id') == 'radiod_riwayatbalita') {
+                $('#subradio_kondisiperinatal').show();           
+        }
+        else {
+                $('#subradio_kondisiperinatal').hide();
+                $('input[name='+namasubKondisiperinatal+']').prop('checked', false);
+        }
+    });
+
+    var namasubMalformasicongenital = "radiosubmalformasicongenital";
+    $("input[name$='radioriwayatbalita']").click(function() {
+        if($(this).attr('id') == 'radioe_riwayatbalita') {
+                $('#subradio_malformasicongenital').show();           
+        }
+        else {
+                $('#subradio_malformasicongenital').hide();
+                $('input[name='+namasubMalformasicongenital+']').prop('checked', false);
+        }
+    });
+
     /**
     var nama = 'radio'+{{id}}
     var namasub = 'radiosub'+{{id}}
