@@ -87,6 +87,18 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='radiokondisikronis']").click(function() {
+        if($(this).attr('id') == 'radiok_kondisikronis') {
+                $('#essaykondisikronis').show();           
+        }
+        else {
+                $('#essaykondisikronis').hide();
+                $('#essayboxk_kondisikronis').val('');
+        }
+    });
+
+
+
 
 
     /** show sub jawaban */
