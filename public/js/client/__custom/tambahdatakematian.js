@@ -30,6 +30,26 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        $('#essayradiosubm_pernafasan').hide();
+        $('#essayboxm_pernafasan').val('');
+
+        $('#essayradiogastrontestinal').hide();
+        $('#essayboxl_gastrontestinal').val('');
+
+        $('#essayradioneurologiskronis').hide();
+        $('#essayboxe_neurologiskronis').val('');
+
+        $('#essayradioneurologisakut').hide();
+        $('#essayboxh_neurologisakut').val('');
+
+        $('#essayradiohematologi').hide();
+        $('#essayboxg_hematologi').val('');
+
+        $('#essayradiokanker').hide();
+        $('#essayboxh_kanker').val('');
+    });
+
     $("input[name$='radiosubpernafasan']").click(function() {
         if($(this).attr('id') == 'radiosubm_pernafasan') {
                 $('#essayradiosubm_pernafasan').show();           
@@ -397,16 +417,51 @@ $(document).ready(function(){
         }
     });
 
+//     var classpemberianimunisasi = "radiosubpemberianimunisasi";
+//     $("input[name$='radiopemberianimunisasi']").click(function() {
+//         if($(this).attr('id') == 'radiob_pemberianimunisasi') {
+//                 $('#subradiob_pemberianimunisasi').show();           
+//         }
+//         else {
+//                 $('#subradiob_pemberianimunisasi').hide();
+//                 $('input[class='+classpemberianimunisasi+']').prop('checked', false);
+//         }
+//     });
+
     var classpemberianimunisasi = "radiosubpemberianimunisasi";
     $("input[name$='radiopemberianimunisasi']").click(function() {
         if($(this).attr('id') == 'radiob_pemberianimunisasi') {
-                $('#subradiob_pemberianimunisasi').show();           
+                $('#subradiob_pemberianimunisasi').show();
+
+                $('#subradiob_pemberianimunisasi_a').show();
+                $('#subradiob_pemberianimunisasi_b').show();
+                $('#subradiob_pemberianimunisasi_c').show();
+                $('#subradiob_pemberianimunisasi_d').show();
+                $('#subradiob_pemberianimunisasi_e').show();
+                $('#subradiob_pemberianimunisasi_f').show();
+                $('#subradiob_pemberianimunisasi_g').show();
         }
         else {
                 $('#subradiob_pemberianimunisasi').hide();
                 $('input[class='+classpemberianimunisasi+']').prop('checked', false);
+
+                $('#subradiob_pemberianimunisasi_a').hide();
+                $('input[class='+radiosubpemberianimunisasi_a+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_b').hide();
+                $('input[class='+radiosubpemberianimunisasi_b+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_c').hide();
+                $('input[class='+radiosubpemberianimunisasi_c+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_d').hide();
+                $('input[class='+radiosubpemberianimunisasi_d+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_e').hide();
+                $('input[class='+radiosubpemberianimunisasi_e+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_f').hide();
+                $('input[class='+radiosubpemberianimunisasi_f+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_g').hide();
+                $('input[class='+radiosubpemberianimunisasi_g+']').prop('checked', false);
         }
     });
+
 
     var namasubPernafasan = "radiosubpernafasan";
     $("input[name$='radiopenyebabutamakematian']").click(function() {

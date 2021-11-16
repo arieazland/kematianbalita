@@ -49,7 +49,7 @@ exports.login = async (req, res) => {
                 req.session.nama = cek_user[0].nama;
                 req.session.id_akun = cek_user[0].id;
                 req.session.type = cek_user[0].status
-                res.redirect("/");
+                res.redirect("/home");
             } else {
                 /** send error */
                 throw new Error('Login Gagal');
@@ -95,7 +95,7 @@ exports.register = async (req, res) => {
                     throw new Error('Email sudah di gunakan');
                 } else if(cek_email.length === 0){
 
-                    if(role === 'role1' || role === 'role2' || role === 'role3' || role === 'role4' || role === 'role5' || role === 'role6' || role === 'role7' || role === 'admin'){
+                    if(role === 'user' || role === 'admin'){
                         /** hashing password */
                         let hashedPassword = await Bcrypt.hash(password, 8);
 
@@ -152,75 +152,74 @@ exports.register = async (req, res) => {
 };
 
 
-
-/** Edit Account Process */
-exports.edit = (req, res) => {
-    const { id, email, nama, } = req.body;
-    var tanggal = Moment().format("YYYY-MM-DD");
-    var waktu = Moment().format("HH:mm:ss");
+// /** Edit Account Process */
+// exports.edit = (req, res) => {
+//     const { id, email, nama, } = req.body;
+//     var tanggal = Moment().format("YYYY-MM-DD");
+//     var waktu = Moment().format("HH:mm:ss");
     
-    if(id && email && nama){
-        Connection.query('SELECT email FROM cdc_account WHERE email = ? AND id <> ?', [email, id], async (error, results) => {
-            if(error) { 
-                // throw error;
-                res.status(500).json({
-                    message: error
-                });
-            } else if(results.length > 0){
-                /** username sudah dipakai */
-                res.status(500).json({
-                    message: "Email sudah terdaftar silahkan gunakan email yang lain",
-                });
+//     if(id && email && nama){
+//         Connection.query('SELECT email FROM cdc_account WHERE email = ? AND id <> ?', [email, id], async (error, results) => {
+//             if(error) { 
+//                 // throw error;
+//                 res.status(500).json({
+//                     message: error
+//                 });
+//             } else if(results.length > 0){
+//                 /** username sudah dipakai */
+//                 res.status(500).json({
+//                     message: "Email sudah terdaftar silahkan gunakan email yang lain",
+//                 });
 
-            } else if (results.length == 0){
-                /** Username tersedia */
+//             } else if (results.length == 0){
+//                 /** Username tersedia */
 
-                Connection.query('UPDATE cdc_account SET ? WHERE id = ?', [{email: email, nama: nama, 
-                    date_updated: tanggal, time_updated: waktu}, id], (error, results) => {
-                    if(error){
-                        console.log(error)
-                    } else {
-                        /** Registrasi berhasil dilanjutkan ke login */
-                        res.status(201).json({
-                            message: "Data user berhasil di ubah",
-                        });
-                    }
-                })
-            }
-        })
-    } else {
-        /** Field tidak boleh kosong */
-        res.status(500).json({
-            message: "Field tidak boleh kosong",
-        });
-    }
-};
+//                 Connection.query('UPDATE cdc_account SET ? WHERE id = ?', [{email: email, nama: nama, 
+//                     date_updated: tanggal, time_updated: waktu}, id], (error, results) => {
+//                     if(error){
+//                         console.log(error)
+//                     } else {
+//                         /** Registrasi berhasil dilanjutkan ke login */
+//                         res.status(201).json({
+//                             message: "Data user berhasil di ubah",
+//                         });
+//                     }
+//                 })
+//             }
+//         })
+//     } else {
+//         /** Field tidak boleh kosong */
+//         res.status(500).json({
+//             message: "Field tidak boleh kosong",
+//         });
+//     }
+// };
 
-/** Delete Account Process */
-exports.delete = (req, res) => {
-    const { id } = req.body;
-    var tanggal = Moment().format("YYYY-MM-DD");
-    var waktu = Moment().format("HH:mm:ss");
+// /** Delete Account Process */
+// exports.delete = (req, res) => {
+//     const { id } = req.body;
+//     var tanggal = Moment().format("YYYY-MM-DD");
+//     var waktu = Moment().format("HH:mm:ss");
     
-    if(id){
-        Connection.query('UPDATE cdc_account SET ? WHERE id = ? ', [{account_type: 'nonaktif', date_updated: tanggal, 
-        time_updated: waktu}, id], async (error, results) => {
-            if(error) { 
-                // throw error;
-                res.status(500).json({
-                    message: error
-                });
-            } else {
-                /** username dinonaktifkan */
-                res.status(201).json({
-                    message: "User account berhasil di hapus",
-                });
-            }
-        })
-    } else {
-        /** Field tidak boleh kosong */
-        res.status(500).json({
-            message: "Field tidak boleh kosong",
-        });
-    }
-};
+//     if(id){
+//         Connection.query('UPDATE cdc_account SET ? WHERE id = ? ', [{account_type: 'nonaktif', date_updated: tanggal, 
+//         time_updated: waktu}, id], async (error, results) => {
+//             if(error) { 
+//                 // throw error;
+//                 res.status(500).json({
+//                     message: error
+//                 });
+//             } else {
+//                 /** username dinonaktifkan */
+//                 res.status(201).json({
+//                     message: "User account berhasil di hapus",
+//                 });
+//             }
+//         })
+//     } else {
+//         /** Field tidak boleh kosong */
+//         res.status(500).json({
+//             message: "Field tidak boleh kosong",
+//         });
+//     }
+// };

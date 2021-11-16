@@ -76,7 +76,7 @@
                                 <h4 class="m-b-0 text-white">Data Kematian Balita</h4>
                             </div>
                             <div class="card-block">
-                                <form action="#">
+                                <form action="/home" method="post">
                                     <div class="form-body">
                                         <h4 class="card-title">Data Kematian Balita</h4>
                                         <h6 class="card-subtitle">Pilih tanggal tanggal terlebih dahulu</h6>
@@ -84,9 +84,9 @@
                                         <div class="row p-t-20">
                                             <div class="col-md-12">
                                                 <div class="input-daterange input-group" id="date-range">
-                                                    <input type="text" class="form-control" name="start" />
+                                                    <input type="text" class="form-control" name="tanggal_awal" id="tanggal_awal" value="{{#if tanggal_awal}}{{ tanggal_awal }}{{/if}}" />
                                                     <span class="input-group-addon bg-info b-0 text-white">to</span>
-                                                    <input type="text" class="form-control" name="end" />
+                                                    <input type="text" class="form-control" name="tanggal_akhir" id="tanggal_akhir" value="{{#if tanggal_akhir}}{{ tanggal_akhir }}{{/if}}" />
                                                 </div>
                                             </div>
                                         </div>
@@ -113,65 +113,38 @@
                                     <table id="list_kematian" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th class="text=center">No.</th>
+                                                <th class="text=center">Kode Registrasi</th>
+                                                <th class="text=center">Nama Balita</th>
+                                                <th class="text=center">Tanggal Lahir</th>
+                                                <th class="text=center">Nama Ibu</th>
+                                                <th class="text=center">Tanggal Registrasi</th>
+                                                <th class="text=center notexport">Detail</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th class="text=center">No.</th>
+                                                <th class="text=center">Kode Registrasi</th>
+                                                <th class="text=center">Nama Balita</th>
+                                                <th class="text=center">Tanggal Lahir</th>
+                                                <th class="text=center">Nama Ibu</th>
+                                                <th class="text=center">Tanggal Registrasi</th>
+                                                <th class="text=center notexport">Detail</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>33</td>
-                                                <td>2008/11/28</td>
-                                                <td>$162,700</td>
-                                            </tr>
+                                            {{#each get_data}}
+                                                <tr>
+                                                    <td>{{counter @index}}</td>
+                                                    <td>{{ kode_registrasi }}</td>
+                                                    <td>{{ nama_balita }}</td>
+                                                    <td>{{#if tanggal_lahir_balita}}{{#compare tanggal_lahir_balita '0000-00-00' operator="!="}}{{formatDate tanggal_lahir_balita }}{{/compare}}{{/if}}</td>
+                                                    <td>{{ nama_ibu }}</td>
+                                                    <td>{{#if date_created}}{{#compare date_created '0000-00-00' operator="!="}}{{formatDate date_created }}{{/compare}}{{/if}}</td>
+                                                    <td class="text-center notexport"><a href="/detail/{{ kode_registrasi }}" target="_blank" class=""><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn edit" ><i class="fa fa-pencil" aria-hidden="true"></i></button></a></td>
+                                                </tr>
+                                            {{/each}}
                                         </tbody>
                                     </table>
                                 </div>
