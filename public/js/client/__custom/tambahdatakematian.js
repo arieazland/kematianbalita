@@ -429,6 +429,13 @@ $(document).ready(function(){
 //     });
 
     var classpemberianimunisasi = "radiosubpemberianimunisasi";
+    var radiosubpemberianimunisasi_a = "radiosubpemberianimunisasi_a";
+    var radiosubpemberianimunisasi_b = "radiosubpemberianimunisasi_b";
+    var radiosubpemberianimunisasi_c = "radiosubpemberianimunisasi_c";
+    var radiosubpemberianimunisasi_d = "radiosubpemberianimunisasi_d";
+    var radiosubpemberianimunisasi_e = "radiosubpemberianimunisasi_e";
+    var radiosubpemberianimunisasi_f = "radiosubpemberianimunisasi_f";
+    var radiosubpemberianimunisasi_g = "radiosubpemberianimunisasi_g";
     $("input[name$='radiopemberianimunisasi']").click(function() {
         if($(this).attr('id') == 'radiob_pemberianimunisasi') {
                 $('#subradiob_pemberianimunisasi').show();
@@ -444,21 +451,21 @@ $(document).ready(function(){
         else {
                 $('#subradiob_pemberianimunisasi').hide();
                 $('input[class='+classpemberianimunisasi+']').prop('checked', false);
-
+                
                 $('#subradiob_pemberianimunisasi_a').hide();
-                $('input[class='+radiosubpemberianimunisasi_a+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_a+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_b').hide();
-                $('input[class='+radiosubpemberianimunisasi_b+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_b+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_c').hide();
-                $('input[class='+radiosubpemberianimunisasi_c+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_c+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_d').hide();
-                $('input[class='+radiosubpemberianimunisasi_d+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_d+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_e').hide();
-                $('input[class='+radiosubpemberianimunisasi_e+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_e+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_f').hide();
-                $('input[class='+radiosubpemberianimunisasi_f+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_f+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_g').hide();
-                $('input[class='+radiosubpemberianimunisasi_g+']').prop('checked', false);
+                $('input[name='+radiosubpemberianimunisasi_g+']').prop('checked', false);
         }
     });
 
@@ -558,6 +565,17 @@ $(document).ready(function(){
         }
         else {
                 $('#subradio_hiv').hide();
+                $('input[name='+namasubHiv+']').prop('checked', false);
+        }
+    });
+
+    var namasubHiv = "radiosubdaruratbedah";
+    $("input[name$='radiopenyebabutamakematian']").click(function() {
+        if($(this).attr('id') == 'radioj_penyebabutamakematian') {
+                $('#subradio_daruratbedah').show();           
+        }
+        else {
+                $('#subradio_daruratbedah').hide();
                 $('input[name='+namasubHiv+']').prop('checked', false);
         }
     });

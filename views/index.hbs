@@ -119,6 +119,7 @@
                                                 <th class="text=center">Tanggal Lahir</th>
                                                 <th class="text=center">Nama Ibu</th>
                                                 <th class="text=center">Tanggal Registrasi</th>
+                                                <th class="text=center">User Pendaftar</th>
                                                 <th class="text=center notexport">Detail</th>
                                             </tr>
                                         </thead>
@@ -130,6 +131,7 @@
                                                 <th class="text=center">Tanggal Lahir</th>
                                                 <th class="text=center">Nama Ibu</th>
                                                 <th class="text=center">Tanggal Registrasi</th>
+                                                <th class="text=center">User Pendaftar</th>
                                                 <th class="text=center notexport">Detail</th>
                                             </tr>
                                         </tfoot>
@@ -142,7 +144,8 @@
                                                     <td>{{#if tanggal_lahir_balita}}{{#compare tanggal_lahir_balita '0000-00-00' operator="!="}}{{formatDate tanggal_lahir_balita }}{{/compare}}{{/if}}</td>
                                                     <td>{{ nama_ibu }}</td>
                                                     <td>{{#if date_created}}{{#compare date_created '0000-00-00' operator="!="}}{{formatDate date_created }}{{/compare}}{{/if}}</td>
-                                                    <td class="text-center notexport"><a href="/detail/{{ kode_registrasi }}" target="_blank" class=""><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn edit" ><i class="fa fa-folder-open" aria-hidden="true"></i></button></a></td>
+                                                    <td> {{ nama_user }} </td>
+                                                    <td class="text-center notexport"><a href="/detail/{{ kode_registrasi }}" target="_blank" class=""><button type="button" data-toggle="tooltip" data-original-title="Detail" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn edit" ><i class="fa fa-folder-open" aria-hidden="true"></i></button></a></td>
                                                 </tr>
                                             {{/each}}
                                         </tbody>

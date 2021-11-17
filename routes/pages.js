@@ -64,7 +64,7 @@ Router.get('/home', async (req, res) => {
             try{
                 /** get data kematian balita*/
                 const get_data = await new Promise((resolve, reject) => {
-                    Connection.query("SELECT * FROM kb_header WHERE date_created BETWEEN ? AND ?", [tanggal_awal, tanggal_akhir], (error, results) => {
+                    Connection.query("SELECT h.*, ac.nama AS nama_user FROM kb_header h, kb_account ac WHERE h.id_user = ac.id AND h.date_created BETWEEN ? AND ?", [tanggal_awal, tanggal_akhir], (error, results) => {
                         if(error){
                             reject(error)
                         } else {
@@ -111,14 +111,13 @@ Router.post('/home', async (req, res) => {
             try{
                 /** get data kematian balita*/
                 const get_data = await new Promise((resolve, reject) => {
-                    Connection.query("SELECT * FROM kb_header WHERE date_created BETWEEN ? AND ?", [tanggal_awal, tanggal_akhir], (error, results) => {
+                    Connection.query("SELECT h.*, ac.nama AS nama_user FROM kb_header h, kb_account ac WHERE h.id_user = ac.id AND h.date_created BETWEEN ? AND ?", [tanggal_awal, tanggal_akhir], (error, results) => {
                         if(error){
                             reject(error)
                         } else {
                             resolve(results)
                         }
                     })
-
                 })
                 if(get_data.length >= 0){
                     res.render("index",{
