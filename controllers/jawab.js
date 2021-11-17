@@ -13,7 +13,7 @@ Moment.locale('id');
 
 /** Insert Jawaban Process */
 exports.registrasi = async (req, res) => {
-    const { iduser, jawabannamabalita, umurbalita, tanggallahir, radiojeniskelamin, balitake, jumlahbalitadilahirkanhidup, jawabannamaibu, jawabanumuribu, radiopekerjaanibu, essayboxk_pekerjaanibu, radiopendidikanibu, jawabannamaayah, jawabanumurayah, radiopekerjaanayah, essayboxm_pekerjaanayah, radiopendidikanayah, jawabanalamat, jawabantelephone, jawabanpenghasilan } = req.body;
+    const { iduser, jawabannamabalita, umurbalita, tanggallahir, radiojeniskelamin, balitake, jumlahbalitadilahirkanhidup, jawabannamaibu, jawabanumuribu, radiopekerjaanibu, essayboxk_pekerjaanibu, radiopendidikanibu, jawabannamaayah, jawabanumurayah, radiopekerjaanayah, essayboxm_pekerjaanayah, radiopendidikanayah, jawabanalamat, jawabantelephone, jawabanpenghasilan, jawabanberatbadanbalita, jawabanberatbadansaatini, jawabantinggibadan, radiocarapersalinan, radiosubcarapersalinan, jawabanusiakehamilansaatlahir, ASIIMD, ASI, essayboxa_asi, radiosubasi, radiostatusnutrisi, radiopemberianimunisasi, radiosubpemberianimunisasi_a, radiosubpemberianimunisasi_b, radiosubpemberianimunisasi_c, radiosubpemberianimunisasi_d, radiosubpemberianimunisasi_e, radiosubpemberianimunisasi_f, radiosubpemberianimunisasi_g, } = req.body;
     var tanggal = Moment().format("YYYY-MM-DD");
     var waktu = Moment().format("HH:mm:ss");
     var tglreg = Moment().format("YYYYMMDD");
@@ -216,6 +216,102 @@ exports.registrasi = async (req, res) => {
                 /** insert detail 1 soal17*/
                 const insert_detail_1_soal17 = await new Promise((resolve, reject) => {
                     const sql = Connection.query("INSERT INTO kb_detail_1 SET ?", [{id: null, kode_registrasi: newId, jawaban: jawabanpenghasilan, essay_jawaban: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal21*/
+                const insert_detail_2_soal21 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: jawabanberatbadanbalita, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal22*/
+                const insert_detail_2_soal22 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: jawabanberatbadansaatini, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal23*/
+                const insert_detail_2_soal23 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: jawabantinggibadan, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal24*/
+                const insert_detail_2_soal24 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: radiocarapersalinan, jawaban1: radiosubcarapersalinan, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal25*/
+                const insert_detail_2_soal25 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: jawabanusiakehamilansaatlahir, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal26*/
+                let isi_jawaban2 = null;
+                if(!radiosubasi && essayboxa_asi) {
+                    isi_jawaban2 = essayboxa_asi;
+                } else if(!essayboxa_asi && radiosubasi){
+                    isi_jawaban2 = radiosubasi;
+                }
+                console.log(isi_jawaban2);
+
+                const insert_detail_2_soal26 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: ASIIMD, jawaban1: ASI, jawaban2: isi_jawaban2, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal27*/
+                const insert_detail_2_soal27 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: radiostatusnutrisi, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 2 soal28*/
+                const insert_detail_2_soal28 = await new Promise((resolve, reject) => {
+                    const sql = Connection.query("INSERT INTO kb_detail_2 SET ?", [{id: null, kode_registrasi: newId, jawaban: radiopemberianimunisasi, jawaban1: radiosubpemberianimunisasi_a, jawaban2: radiosubpemberianimunisasi_b, jawaban3: radiosubpemberianimunisasi_c, jawaban4: radiosubpemberianimunisasi_d, jawaban5: radiosubpemberianimunisasi_e, jawaban6: radiosubpemberianimunisasi_f, jawaban7: radiosubpemberianimunisasi_g, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
                         if(error){
                             reject(error)
                         } else {

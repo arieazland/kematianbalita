@@ -93,7 +93,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-actions text-right">
-                                        <button type="submit" class="btn btn-block btn-outline-success"> <i class="fa fa-check"></i> Simpan</button>
+                                        <button type="submit" class="btn btn-block btn-outline-success"> <i class="fa fa-check"></i> Pilih</button>
                                         <button type="reset" class="btn btn-block btn-outline-warning">Batal</button>
                                     </div>
                                 </form>
@@ -142,7 +142,7 @@
                                                     <td>{{#if tanggal_lahir_balita}}{{#compare tanggal_lahir_balita '0000-00-00' operator="!="}}{{formatDate tanggal_lahir_balita }}{{/compare}}{{/if}}</td>
                                                     <td>{{ nama_ibu }}</td>
                                                     <td>{{#if date_created}}{{#compare date_created '0000-00-00' operator="!="}}{{formatDate date_created }}{{/compare}}{{/if}}</td>
-                                                    <td class="text-center notexport"><a href="/detail/{{ kode_registrasi }}" target="_blank" class=""><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn edit" ><i class="fa fa-pencil" aria-hidden="true"></i></button></a></td>
+                                                    <td class="text-center notexport"><a href="/detail/{{ kode_registrasi }}" target="_blank" class=""><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn edit" ><i class="fa fa-folder-open" aria-hidden="true"></i></button></a></td>
                                                 </tr>
                                             {{/each}}
                                         </tbody>
