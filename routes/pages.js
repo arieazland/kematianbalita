@@ -177,25 +177,131 @@ Router.get('/tambahdatakematian', (req, res) => {
         email = req.session.email
         nama = req.session.nama
         tipe = req.session.type
-        res.render("tambahdatakematian",{
-            email, nama, idu, tipe,
-        });
+        if(tipe === 'admin' || tipe === 'user'){
+            res.render("tambahdatakematian",{
+                email, nama, idu, tipe,
+            });
+        } else {
+            res.redirect('/login');    
+        }
     } else {
         res.redirect('/login');
     }
 });
 
 /** Route for tambah data kematian */
-Router.get('/detail/:kode_registrasi', (req, res) => {
+Router.get('/detail/:kode_registrasi', async (req, res) => {
     if(req.session.loggedIn){
-        var idregistrasi = req.params.kode_registrasi;
+        const idregistrasi = req.params.kode_registrasi;
         idu = req.session.id_akun
         email = req.session.email
         nama = req.session.nama
         tipe = req.session.type
-        // res.render("detail",{
-        //     email, nama, idu, tipe,
-        // });
+        var tanggalSekarang = Moment().format("YYYY-MM-DD");
+        if(tipe === 'admin' || tipe === 'user'){
+            try{
+                /** get data kematian balita*/
+                const get_data_header = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT h.*, ac.* FROM kb_header h, kb_account ac WHERE h.id_user = ac.id AND h.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d1 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_1 WHERE kb_detail_1.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d2 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_2 WHERE kb_detail_2.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d3 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_3 WHERE kb_detail_3.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d4 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_4 WHERE kb_detail_4.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d5 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_5 WHERE kb_detail_5.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d6 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_6 WHERE kb_detail_6.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                const get_data_d7 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_7 WHERE kb_detail_7.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                if(get_data_header.length >= 0 && get_data_d1.length >= 0 && get_data_d2.length >= 0 && get_data_d3.length >= 0 && get_data_d4.length >= 0 && get_data_d5.length >= 0 && get_data_d6.length >= 0 && get_data_d7.length >= 0){
+                    res.render("detail",{
+                        email, nama, idu, tipe, tanggalSekarang,
+                        get_data_header, 
+                        get_data_d1, 
+                        get_data_d2, 
+                        get_data_d3, 
+                        get_data_d4,
+                        get_data_d5,
+                        get_data_d6,
+                        get_data_d7
+                    });
+                } else {
+                    /** pengambilan data gagal */
+                    throw new Error("Pengambilan data gagal");
+                }
+            } catch(e) {
+                req.session.sessionFlash = {
+                    type: 'error',
+                    message: e.message
+                }
+                res.redirect("/home")
+            }
+            // res.render("detail",{
+            //     email, nama, idu, tipe,
+            // });
+        } else {
+            res.redirect('/login');    
+        }
     } else {
         res.redirect('/login');
     }

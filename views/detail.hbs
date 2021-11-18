@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{{> header}}
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    {{> preloader}}
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        {{> topbar}}
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        {{> navbar}}
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Detail Data Kematian Balita</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Detail Data Kematian Balita</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                {{!-- Start of Notifikasi --}}
+                {{#if sessionFlash.message}}
+                    <div class="alert alert-danger"> 
+                        {{sessionFlash.message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    </div>
+                {{/if}}
+                {{#if sessionFlash2.message}}
+                    <div class="alert alert-success"> 
+                        {{sessionFlash2.message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    </div>
+                {{/if}}
+                {{!-- End of Notifikasi --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">Header Data</h4>
+                                    <h6 class="card-subtitle"> Data Header Catatan Kematian Balita</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-nowrap text-center" colspan="2">Header</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Kode Registrasi</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if kode_registrasi}} {{kode_registrasi}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Tanggal Dibuat</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if date_created}} {{formatDate date_created}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>User Pembuat</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if nama}} {{nama}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">1. Identitas Balita</h4>
+                                    <h6 class="card-subtitle"> Data Identitas Balita</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d1}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        1.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if essay_jawaban}} 
+                                                            <p style="white-space: pre-line">{{ soal_essay_jawaban }}:</p>
+                                                            <b> {{ essay_jawaban }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">2. Faktor Intrinsik Balita</h4>
+                                    <h6 class="card-subtitle"> Data Faktor Intrinsik Balita</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d2}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        2.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if jawaban1}} 
+                                                            <p style="white-space: pre-line">{{ soal1 }}</p>
+                                                            <b> {{ jawaban1 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban2}} 
+                                                            <p style="white-space: pre-line">{{ soal2 }}</p>
+                                                            <b> {{ jawaban2 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban3}} 
+                                                            <p style="white-space: pre-line">{{ soal3 }}</p>
+                                                            <b> {{ jawaban3 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban4}} 
+                                                            <p style="white-space: pre-line">{{ soal4 }}</p>
+                                                            <b> {{ jawaban4 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban5}} 
+                                                            <p style="white-space: pre-line">{{ soal5 }}</p>
+                                                            <b> {{ jawaban5 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban6}} 
+                                                            <p style="white-space: pre-line">{{ soal6 }}</p>
+                                                            <b> {{ jawaban6 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban7}} 
+                                                            <p style="white-space: pre-line">{{ soal7 }}</p>
+                                                            <b> {{ jawaban7 }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">3. Informasi Kematian</h4>
+                                    <h6 class="card-subtitle"> Data Informasi Kematian</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d3}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        3.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if jawaban1}} 
+                                                            <p style="white-space: pre-line">{{ soal1 }}</p>
+                                                            <b> {{ jawaban1 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban2}} 
+                                                            <p style="white-space: pre-line">{{ soal2 }}</p>
+                                                            <b> {{ jawaban2 }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">4. Penyebab Kematian Medis</h4>
+                                    <h6 class="card-subtitle"> Data Penyebab Kematian Medis</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d4}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        4.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if jawaban1}} 
+                                                            <p style="white-space: pre-line">{{ soal1 }}</p>
+                                                            <b> {{ jawaban1 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban2}} 
+                                                            <p style="white-space: pre-line">{{ soal2 }}</p>
+                                                            <b> {{ jawaban2 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban3}} 
+                                                            <p style="white-space: pre-line">{{ soal3 }}</p>
+                                                            <b> {{ jawaban3 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban4}} 
+                                                            <p style="white-space: pre-line">{{ soal4 }}</p>
+                                                            <b> {{ jawaban4 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban5}} 
+                                                            <p style="white-space: pre-line">{{ soal5 }}</p>
+                                                            <b> {{ jawaban5 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban6}} 
+                                                            <p style="white-space: pre-line">{{ soal6 }}</p>
+                                                            <b> {{ jawaban6 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban7}} 
+                                                            <p style="white-space: pre-line">{{ soal7 }}</p>
+                                                            <b> {{ jawaban7 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban8}} 
+                                                            <p style="white-space: pre-line">{{ soal8 }}</p>
+                                                            <b> {{ jawaban8 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban9}} 
+                                                            <p style="white-space: pre-line">{{ soal9 }}</p>
+                                                            <b> {{ jawaban9 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban10}} 
+                                                            <p style="white-space: pre-line">{{ soal10 }}</p>
+                                                            <b> {{ jawaban10 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban11}} 
+                                                            <p style="white-space: pre-line">{{ soal11 }}</p>
+                                                            <b> {{ jawaban11 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban12}} 
+                                                            <p style="white-space: pre-line">{{ soal12 }}</p>
+                                                            <b> {{ jawaban12 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban13}} 
+                                                            <p style="white-space: pre-line">{{ soal13 }}</p>
+                                                            <b> {{ jawaban13 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban14}} 
+                                                            <p style="white-space: pre-line">{{ soal14 }}</p>
+                                                            <b> {{ jawaban14 }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">5. Penyebab Kematian Non Medis</h4>
+                                    <h6 class="card-subtitle"> Data Penyebab Kematian Non Medis</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d5}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        5.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if jawaban1}} 
+                                                            <p style="white-space: pre-line">{{ soal1 }}</p>
+                                                            <b> {{ jawaban1 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban2}} 
+                                                            <p style="white-space: pre-line">{{ soal2 }}</p>
+                                                            <b> {{ jawaban2 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban3}} 
+                                                            <p style="white-space: pre-line">{{ soal3 }}</p>
+                                                            <b> {{ jawaban3 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban4}} 
+                                                            <p style="white-space: pre-line">{{ soal4 }}</p>
+                                                            <b> {{ jawaban4 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban5}} 
+                                                            <p style="white-space: pre-line">{{ soal5 }}</p>
+                                                            <b> {{ jawaban5 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban6}} 
+                                                            <p style="white-space: pre-line">{{ soal6 }}</p>
+                                                            <b> {{ jawaban6 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban7}} 
+                                                            <p style="white-space: pre-line">{{ soal7 }}</p>
+                                                            <b> {{ jawaban7 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban8}} 
+                                                            <p style="white-space: pre-line">{{ soal8 }}</p>
+                                                            <b> {{ jawaban8 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban9}} 
+                                                            <p style="white-space: pre-line">{{ soal9 }}</p>
+                                                            <b> {{ jawaban9 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban10}} 
+                                                            <p style="white-space: pre-line">{{ soal10 }}</p>
+                                                            <b> {{ jawaban10 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban11}} 
+                                                            <p style="white-space: pre-line">{{ soal11 }}</p>
+                                                            <b> {{ jawaban11 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban12}} 
+                                                            <p style="white-space: pre-line">{{ soal12 }}</p>
+                                                            <b> {{ jawaban12 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban13}} 
+                                                            <p style="white-space: pre-line">{{ soal13 }}</p>
+                                                            <b> {{ jawaban13 }} </b> </br>
+                                                        {{/if}}
+
+                                                        {{#if jawaban14}} 
+                                                            <p style="white-space: pre-line">{{ soal14 }}</p>
+                                                            <b> {{ jawaban14 }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">6. Mutu Fasilitas Pelayanan Kesehatan (FASYANKES)</h4>
+                                    <h6 class="card-subtitle"> Data Mutu Fasilitas Pelayanan Kesehatan (FASYANKES)</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d6}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        6.{{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                        {{#if jawaban1}} 
+                                                            <p style="white-space: pre-line">{{ soal1 }}</p>
+                                                            <b> {{ jawaban1 }} </b> </br>
+                                                        {{/if}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">Kesimpulan</h4>
+                                    <h6 class="card-subtitle">Data Kesimpulan</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No.</th>
+                                                    <th class="text-center">Soal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each get_data_d7}}
+                                                <tr>
+                                                    <td class="text-center">
+                                                        {{counter @index}}
+                                                    </td>
+                                                    <td>
+                                                        <p style="white-space: pre-line">{{ soal }}</p>
+                                                        <b>{{ jawaban }}</b> </br>
+                                                        {{!-- <input type="text" class="form-control" id="" name="" value="{{jawaban}}" readonly>
+                                                        &nbsp --}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-outline-info">
+                            {{!-- <div class="card-header">
+                                <h4 class="m-b-0 text-white">Form Soal</h4>
+                            </div> --}}
+                            <div class="card-block">
+                                    {{!-- Start of tabel list soal --}}
+                                    <h4 class="card-title">Footer Data</h4>
+                                    <h6 class="card-subtitle">Identitas Pembuat Data</h6>
+                                    <hr>
+                                    <div class="table-responsive m-t-40">
+                                        <table id="data1" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-nowrap text-center" colspan="2">INSTRUMENT INI DISELESAIKAN OLEH:</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Nama</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if nama}} {{nama}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Jabatan</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if jabatan}} {{jabatan}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Telepon</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if telepon}} {{telepon}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Fax</b> </td>
+                                                    <td>{{#each get_data_header}} {{#if fax}} {{fax}} {{/if}} {{/each}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Tanggal</b> </td>
+                                                    {{!-- <td>{{#each tanggalSekarang}} {{#if tanggalSekarang}} {{tanggalSekarang}} {{/if}} {{/each}}</td> --}}
+                                                    <td>{{formatDate tanggalSekarang}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap"> <b>Tanda Tangan</b> </td>
+                                                    <td>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{!-- End of tabel list soal --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- end of row --}}
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            {{> footer}}
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    {{> plugins}}
+    <script src="/js/client/datatable/home.js"></script>
+    <script src="/js/client/datepicker/home.js"></script>
+</body>
+
+</html>
