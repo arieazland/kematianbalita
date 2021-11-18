@@ -248,6 +248,7 @@
                                                                 </div>
                                                                 <div id="essayradiok_pekerjaanibu" class="boxk" style="display: none;">
                                                                     Sebutkan:
+                                                                    <input type="hidden" class="form-control" id="subsoal1_9" name="subsoal1_9" value="Sebutkan">
                                                                     <textarea class="form-control essayboxk" name="essayboxk_pekerjaanibu" id="essayboxk_pekerjaanibu" rows="10"></textarea>
                                                                 </div>
                                                             </td>
@@ -371,6 +372,7 @@
                                                                 </div>
                                                                 <div id="essayradiom_pekerjaanayah" class="boxm" style="display: none;">
                                                                     Sebutkan:
+                                                                    <input type="hidden" class="form-control" id="subsoal1_13" name="subsoal1_13" value="Sebutkan">
                                                                     <textarea class="form-control essayboxm" name="essayboxm_pekerjaanayah" id="essayboxm_pekerjaanayah" rows="10"></textarea>
                                                                 </div>
                                                             </td>
@@ -540,10 +542,12 @@
                                                                     &nbsp
 
                                                                     <input type="radio" name="radiocarapersalinan" id="radiod_carapersalinan" value="Vaginam Dengan Tindakan:">
-                                                                    <label for="radiod_carapersalinan"> Vaginam Dengan Tindakan: </label>
+                                                                    <label for="radiod_carapersalinan"> Vaginam Dengan Tindakan </label>
                                                                 </div> 
                                                                 <div id="subradiod_carapersalinan" class="boxd" style="display: none;">
                                                                     {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Sebutkan:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_4" name="subsoal2_4" value="Sebutkan:">
                                                                     <div class="toggle">
                                                                         <input class="m-r-200" type="radio" name="radiosubcarapersalinan" id="radiosuba_carapersalinan" value="Vacuum">
                                                                         <label class="m-r-200" for="radiosuba_carapersalinan"> Vacuum </label>
@@ -584,7 +588,7 @@
                                                                 </div>
                                                                 &nbsp
 
-                                                                Riwayat Pemberian ASI: <br>
+                                                                Riwayat Pemberian ASI Saja: <br>
                                                                 <input type="hidden" class="form-control" id="soal2_6b" name="soal2_6b" value="Riwayat Pemberian ASI:">
                                                                 <div class="toggle">
                                                                     <input class="m-r-200" type="radio" name="ASI" id="radioa_asi" value="Ya">
@@ -597,11 +601,13 @@
                                                                 </div>
                                                                 <div id="essayradioa_asi" class="boxa" style="display: none;">
                                                                     Selama:
-                                                                    {{!-- <textarea class="form-control essayboxa" name="essayboxa_asi" id="essayboxa_asi" rows="10"></textarea> --}}
+                                                                    <input type="hidden" class="form-control" id="subsoal2_6b_a" name="subsoal2_6b_a" value="Selama:">
                                                                     <input type="text" class="form-control essayboxa" id="essayboxa_asi" name="essayboxa_asi" placeholder="">
                                                                 </div>
                                                                 <div id="subradiob_asi" class="boxb" style="display: none;">
                                                                     {{!-- Pilih salah satu tindakan berikut: &nbsp --}}
+                                                                    Pengganti:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_6b_a" name="subsoal2_6b_a" value="Pengganti:">
                                                                     <div class="toggle">
                                                                         <input class="m-r-200" type="radio" name="radiosubasi" id="radiosuba_asi" value="ASI+Susu Formula">
                                                                         <label class="m-r-200" for="radiosuba_asi"> ASI+Susu Formula </label>
@@ -658,6 +664,8 @@
                                                                 <div id="subradiob_pemberianimunisasi" class="boxb" style="display: none;">
                                                                     Jenis Imuniasi yang pernah diberikan:<br>
                                                                     &lt;24 Jam: Hepatitis, HBO:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8a" name="subsoal2_8a" value="Jenis Imuniasi yang pernah diberikan:
+                                                                    \n&lt;24 Jam: Hepatitis, HBO:">
                                                                     <div id="subradiob_pemberianimunisasi_a" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_a" name="radiosubpemberianimunisasi_a" id="radiosubpemberianimunisasi_a_ya" value="Ya">
@@ -671,6 +679,7 @@
                                                                     </div>
 
                                                                     1 Bulan: BCG, OPV1:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8b" name="subsoal2_8b" value="1 Bulan: BCG, OPV1:">
                                                                     <div id="subradiob_pemberianimunisasi_b" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_b" name="radiosubpemberianimunisasi_b" id="radiosubpemberianimunisasi_b_ya" value="Ya">
@@ -684,6 +693,7 @@
                                                                     </div>
 
                                                                     2 Bulan: DPT-HB-Hib1,OPV2:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8c" name="subsoal2_8c" value="2 Bulan: DPT-HB-Hib1,OPV2:">
                                                                     <div id="subradiob_pemberianimunisasi_c" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_c" name="radiosubpemberianimunisasi_c" id="radiosubpemberianimunisasi_c_ya" value="Ya">
@@ -697,6 +707,7 @@
                                                                     </div>
 
                                                                     3 Bulan: DPT-HB-Hib2,OPV3:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8d" name="subsoal2_8d" value="3 Bulan: DPT-HB-Hib2,OPV3:">
                                                                     <div id="subradiob_pemberianimunisasi_d" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_d" name="radiosubpemberianimunisasi_d" id="radiosubpemberianimunisasi_d_ya" value="Ya">
@@ -710,6 +721,7 @@
                                                                     </div>
 
                                                                     4 Bulan: DPT-HB-Hib3,OPV4,IPV:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8e" name="subsoal2_8e" value="4 Bulan: DPT-HB-Hib3,OPV4,IPV:">
                                                                     <div id="subradiob_pemberianimunisasi_e" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_e" name="radiosubpemberianimunisasi_e" id="radiosubpemberianimunisasi_e_ya" value="Ya">
@@ -723,6 +735,7 @@
                                                                     </div>
 
                                                                     9 Bulan: MR:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8f" name="subsoal2_8f" value="9 Bulan: MR:">
                                                                     <div id="subradiob_pemberianimunisasi_f" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_f" name="radiosubpemberianimunisasi_f" id="radiosubpemberianimunisasi_f_ya" value="Ya">
@@ -736,6 +749,7 @@
                                                                     </div>
 
                                                                     18 Bulan: MR,DPT-HB-Hib:
+                                                                    <input type="hidden" class="form-control" id="subsoal2_8g" name="subsoal2_8g" value="18 Bulan: MR,DPT-HB-Hib:">
                                                                     <div id="subradiob_pemberianimunisasi_g" class="boxb" style="display: none;">
                                                                         <div class="toggle">
                                                                             <input type="radio" class="radiosubpemberianimunisasi_g" name="radiosubpemberianimunisasi_g" id="radiosubpemberianimunisasi_g_ya" value="Ya">
@@ -802,7 +816,7 @@
                                                                 &nbsp
 
                                                                 Jam Kematian: <br>
-                                                                <input type="hidden" class="form-control" id="soal3_1b" name="soal3_1b" value="Jam Kematian:">
+                                                                <input type="hidden" class="form-control" id="soal3_1c" name="soal3_1c" value="Jam Kematian:">
                                                                 <div class="input-group clockpicker " data-placement="bottom" data-align="top" data-autoclose="true">
                                                                     <input type="text" class="form-control" id="jamkematian" name="jamkematian" value="12:00"> <span class="input-group-addon"> <span class="fa fa-clock-o"></span> </span>
                                                                 </div>

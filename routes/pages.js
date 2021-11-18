@@ -16,29 +16,54 @@ require("moment/locale/id");  // without this line it didn't work
 Moment.locale('id');
 
 /** Route for / */
-// Router.get('/', (req, res) => {
-//     if(req.session.loggedIn){
-//         idu = req.session.id_akun
-//         email = req.session.email
-//         nama = req.session.nama
-//         tipe = req.session.type
-//         if(tipe === 'admin'){
-//             /** login page di arhkan ke page admin */
-//             res.render("index",{
-//                 email, nama, idu, tipe,
-//             });
-//         } else if(tipe === 'user'){
-//             /** login page di arhkan ke page psikolog */
-//             res.render("index",{
-//                 email, nama, idu, tipe,
-//             });
-//         } else {
-//             res.redirect('/login');    
-//         }
-//     } else {
-//         res.redirect('/login');
-//     }
-// });
+Router.get('/', async (req, res) => {
+    if(req.session.loggedIn){
+        idu = req.session.id_akun
+        email = req.session.email
+        nama = req.session.nama
+        tipe = req.session.type
+        if(tipe === 'admin' || tipe === 'user'){
+            /** login page di arhkan ke page home */
+            var tanggal = Moment().format("YYYY-MM-DD");
+            const tanggal_awal = tanggal;
+            const tanggal_akhir = tanggal;
+            try{
+                /** get data kematian balita*/
+                const get_data = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT h.*, ac.nama AS nama_user FROM kb_header h, kb_account ac WHERE h.id_user = ac.id AND h.date_created BETWEEN ? AND ?", [tanggal_awal, tanggal_akhir], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+
+                })
+                if(get_data.length >= 0){
+                    res.render("index",{
+                        email, nama, idu, tipe, tanggal_awal, tanggal_akhir, get_data
+                    });
+                } else {
+                    /** pengambilan data gagal */
+                    throw new Error("Pengambilan data gagal");
+                }
+            } catch(e) {
+                req.session.sessionFlash = {
+                    type: 'error',
+                    message: e.message
+                }
+                res.render("index",{
+                    email, nama, idu, tipe,
+                });
+            }
+            
+        } else {
+            res.redirect('/login');    
+        }
+    } else {
+        res.redirect('/login');
+    }
+});
 
 /** Route for Login */
 Router.get('/login', (req, res) => {
