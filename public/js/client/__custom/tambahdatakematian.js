@@ -30,6 +30,36 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='subradiosubarujukanfaskes']").click(function() {
+        if($(this).attr('id') == 'subradiosubarujukanfaskes_e') {
+                $('#subessaysuba_rujukanfaskes').show();           
+        }
+        else {
+                $('#subessaysuba_rujukanfaskes').hide();
+                $('#essaybox_lainnyarujukanfaskes').val('');
+        }
+    });
+
+    $("input[name$='masalahrujukan']").click(function() {
+        if($(this).attr('id') == 'radioa_masalahrujukan') {
+                $('#essay_masalahrujukan').show();           
+        }
+        else {
+                $('#essay_masalahrujukan').hide();
+                $('#essaybox_masalahrujukan').val('');
+        }
+    });
+
+    $("input[name$='radiosubrujukanfaskes']").click(function() {
+        if($(this).attr('id') == 'radiosubrujukanfaskes_c') {
+                $('#subradiosubc_rujukanfaskes').show();           
+        }
+        else {
+                $('#subradiosubc_rujukanfaskes').hide();
+                $('#essaybox_obatrujukanfaskes').val('');
+        }
+    });
+
     $("input[name$='radiopenyebabutamakematian']").click(function() {
         $('#essayradiosubm_pernafasan').hide();
         $('#essayboxm_pernafasan').val('');
@@ -80,6 +110,36 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='radiosubdaruratbedah']").click(function() {
+        if($(this).attr('id') == 'radiosubi_daruratbedah') {
+                $('#essayradiodaruratbedah').show();           
+        }
+        else {
+                $('#essayradiodaruratbedah').hide();
+                $('#essayboxi_daruratbedah').val('');
+        }
+    });
+
+    $("input[name$='radiosubginjal']").click(function() {
+        if($(this).attr('id') == 'radiosube_ginjal') {
+                $('#essayradioginjal').show();           
+        }
+        else {
+                $('#essayradioginjal').hide();
+                $('#essayboxe_ginjal').val('');
+        }
+    });
+
+    $("input[name$='radiosubkelenjarendokrin']").click(function() {
+        if($(this).attr('id') == 'radiosube_kelenjarendokrin') {
+                $('#essayradioendokrin').show();           
+        }
+        else {
+                $('#essayradioendokrin').hide();
+                $('#essayboxe_endokrin').val('');
+        }
+    });
+
     $("input[name$='radiosubneurologisakut']").click(function() {
         if($(this).attr('id') == 'radiosubh_neurologisakut') {
                 $('#essayradioneurologisakut').show();           
@@ -100,6 +160,16 @@ $(document).ready(function(){
         }
     });
 
+    $("input[name$='radiosubjantung']").click(function() {
+        if($(this).attr('id') == 'radiosubc_jantung') {
+                $('#essayradiojantung').show();           
+        }
+        else {
+                $('#essayradiojantung').hide();
+                $('#essayboxc_jantung').val('');
+        }
+    });
+
     $("input[name$='radiosubkanker']").click(function() {
         if($(this).attr('id') == 'radiosubh_kanker') {
                 $('#essayradiokanker').show();           
@@ -111,12 +181,43 @@ $(document).ready(function(){
     });
 
     $("input[name$='radiokondisikronis']").click(function() {
-        if($(this).attr('id') == 'radiok_kondisikronis') {
-                $('#essaykondisikronis').show();           
+        if($(this).attr('id') == 'radioo_kondisikronis') {
+                $('#essaykondisikronislainnya').show();           
         }
         else {
-                $('#essaykondisikronis').hide();
-                $('#essayboxk_kondisikronis').val('');
+                $('#essaykondisikronislainnya').hide();
+                $('#essayboxo_kondisikronis').val('');
+        }
+    });
+
+    $("input[name$='radiokondisikronis']").click(function() {
+        if($(this).attr('id') == 'radioi_kondisikronis') {
+                $('#essaykondisikronissindrom').show();           
+        }
+        else {
+                $('#essaykondisikronissindrom').hide();
+                $('#essayboxi_kondisikronis').val('');
+        }
+    });
+
+    var radioruangisolasibalitacovid = "radioruangisolasibalitacovid";
+    var radioapdsesuai = "radioapdsesuai";
+    var radioprotokolcovid = "radioprotokolcovid";
+    var radiokapasitasruangancovid = "radiokapasitasruangancovid";
+    var radiokematianruangisolasi = "radiokematianruangisolasi"
+    $("input[name$='radiocovid']").click(function() {
+        if($(this).attr('id') == 'radioa_ya') {
+                $('#essaycovid').show();           
+        }
+        else {
+                $('#essaycovid').hide();
+                $('#essayboxa_covidselama').val('');
+
+                $('input[name='+radioruangisolasibalitacovid+']').prop('checked', false);
+                $('input[name='+radioapdsesuai+']').prop('checked', false);
+                $('input[name='+radioprotokolcovid+']').prop('checked', false);
+                $('input[name='+radiokapasitasruangancovid+']').prop('checked', false);
+                $('input[name='+radiokematianruangisolasi+']').prop('checked', false);
         }
     });
 
@@ -147,6 +248,16 @@ $(document).ready(function(){
         else {
                 $('#essay5_3c').hide();
                 $('#essayboxb_5_3c').val('');
+        }
+    });
+
+    $("input[name$='radio5_4']").click(function() {
+        if($(this).attr('id') == 'radioa_5_4') {
+                $('#essay5_4').show();           
+        }
+        else {
+                $('#essay5_4').hide();
+                $('#essayboxi_5_4').val('');
         }
     });
 
@@ -219,6 +330,7 @@ $(document).ready(function(){
                 $('#essayboxa_5_5e').val('');
         }
     });
+    
 
     $("input[name$='radio5_5e']").click(function() {
         if($(this).attr('id') == 'radiob_5_5e') {
@@ -227,6 +339,27 @@ $(document).ready(function(){
         else {
                 $('#essayb5_5e').hide();
                 $('#essayboxb_5_5e').val('');
+        }
+    });
+
+    $("input[name$='radio5_5d']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5d') {
+                $('#essaya5_5d').show();           
+        }
+        else {
+                $('#essaya5_5d').hide();
+                $('#essayboxa_5_5d').val('');
+        }
+    });
+    
+
+    $("input[name$='radio5_5d']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5d') {
+                $('#essayb5_5d').show();           
+        }
+        else {
+                $('#essayb5_5d').hide();
+                $('#essayboxb_5_5d').val('');
         }
     });
 
@@ -307,6 +440,116 @@ $(document).ready(function(){
         else {
                 $('#essayb5_5i').hide();
                 $('#essayboxb_5_5i').val('');
+        }
+    });
+
+    $("input[name$='radio5_5j']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5j') {
+                $('#essaya5_5j').show();           
+        }
+        else {
+                $('#essaya5_5j').hide();
+                $('#essayboxa_5_5j').val('');
+        }
+    });
+
+    $("input[name$='radio5_5j']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5j') {
+                $('#essayb5_5j').show();           
+        }
+        else {
+                $('#essayb5_5j').hide();
+                $('#essayboxb_5_5j').val('');
+        }
+    });
+
+    $("input[name$='radio5_5k']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5k') {
+                $('#essaya5_5k').show();           
+        }
+        else {
+                $('#essaya5_5k').hide();
+                $('#essayboxa_5_5k').val('');
+        }
+    });
+
+    $("input[name$='radio5_5k']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5k') {
+                $('#essayb5_5k').show();           
+        }
+        else {
+                $('#essayb5_5k').hide();
+                $('#essayboxb_5_5k').val('');
+        }
+    });
+
+    $("input[name$='radio5_5l']").click(function() {
+        if($(this).attr('id') == 'radioa_5_5l') {
+                $('#essaya5_5l').show();           
+        }
+        else {
+                $('#essaya5_5l').hide();
+                $('#essayboxa_5_5l').val('');
+        }
+    });
+
+    $("input[name$='radio5_5l']").click(function() {
+        if($(this).attr('id') == 'radiob_5_5l') {
+                $('#essayb5_5l').show();           
+        }
+        else {
+                $('#essayb5_5l').hide();
+                $('#essayboxb_5_5l').val('');
+        }
+    });
+
+    $("input[name$='radio5_6']").click(function() {
+        if($(this).attr('id') == 'radioa_5_6') {
+                $('#essay5_6a').show();           
+        }
+        else {
+                $('#essay5_6a').hide();
+                $('#essayboxc_5_6a').val('');
+        }
+    });
+
+    $("input[name$='radio5_7']").click(function() {
+        if($(this).attr('id') == 'radioa_5_7') {
+                $('#essay5_7a').show();           
+        }
+        else {
+                $('#essay5_7a').hide();
+                $('#essayboxc_5_7a').val('');
+        }
+    });
+
+    $("input[name$='radio5_8a']").click(function() {
+        if($(this).attr('id') == 'radioa_5_8a') {
+                $('#essay5_8a_a').show();           
+        }
+        else {
+                $('#essay5_8a_a').hide();
+                $('#essayboxc_5_8a_a').val('');
+        }
+    });
+
+    $("input[name$='radio5_8b']").click(function() {
+        if($(this).attr('id') == 'radioa_5_8b') {
+                $('#essay5_8b_a').show();           
+        }
+        else {
+                $('#essay5_8b_a').hide();
+                $('#essayboxc_5_8b_a').val('');
+        }
+    });
+
+    $("input[name$='radio5_8c']").click(function() {
+        if($(this).attr('id') == 'radioa_5_8c') {
+                $('#essay5_8c_a').show();           
+        }
+        else {
+                $('#essay5_8c_a').hide();
+                $('#essayboxc_5_8c_a').val('');
         }
     });
 
@@ -417,17 +660,6 @@ $(document).ready(function(){
         }
     });
 
-//     var classpemberianimunisasi = "radiosubpemberianimunisasi";
-//     $("input[name$='radiopemberianimunisasi']").click(function() {
-//         if($(this).attr('id') == 'radiob_pemberianimunisasi') {
-//                 $('#subradiob_pemberianimunisasi').show();           
-//         }
-//         else {
-//                 $('#subradiob_pemberianimunisasi').hide();
-//                 $('input[class='+classpemberianimunisasi+']').prop('checked', false);
-//         }
-//     });
-
     var classpemberianimunisasi = "radiosubpemberianimunisasi";
     var radiosubpemberianimunisasi_a = "radiosubpemberianimunisasi_a";
     var radiosubpemberianimunisasi_b = "radiosubpemberianimunisasi_b";
@@ -436,6 +668,7 @@ $(document).ready(function(){
     var radiosubpemberianimunisasi_e = "radiosubpemberianimunisasi_e";
     var radiosubpemberianimunisasi_f = "radiosubpemberianimunisasi_f";
     var radiosubpemberianimunisasi_g = "radiosubpemberianimunisasi_g";
+    var radiosubpemberianimunisasi_h = "radiosubpemberianimunisasi_h";
     $("input[name$='radiopemberianimunisasi']").click(function() {
         if($(this).attr('id') == 'radiob_pemberianimunisasi') {
                 $('#subradiob_pemberianimunisasi').show();
@@ -447,6 +680,7 @@ $(document).ready(function(){
                 $('#subradiob_pemberianimunisasi_e').show();
                 $('#subradiob_pemberianimunisasi_f').show();
                 $('#subradiob_pemberianimunisasi_g').show();
+                $('#subradiob_pemberianimunisasi_h').show();
         }
         else {
                 $('#subradiob_pemberianimunisasi').hide();
@@ -466,6 +700,255 @@ $(document).ready(function(){
                 $('input[name='+radiosubpemberianimunisasi_f+']').prop('checked', false);
                 $('#subradiob_pemberianimunisasi_g').hide();
                 $('input[name='+radiosubpemberianimunisasi_g+']').prop('checked', false);
+                $('#subradiob_pemberianimunisasi_h').hide();
+                $('input[name='+radiosubpemberianimunisasi_h+']').prop('checked', false);
+        }
+    });
+
+    var radiosubrujukanfaskes = "radiosubrujukanfaskes";
+    var radiosubrujukanfaskes2 = "subradiosubarujukanfaskes";
+    $("input[name$='radiorujukanfaskes']").click(function() {
+        if($(this).attr('id') == 'radioa_rujukanfaskes') {
+                $('#subradioa_rujukanfaskes').show();           
+        }
+        else {
+                $('#subradioa_rujukanfaskes').hide();
+                $('input[name='+radiosubrujukanfaskes+']').prop('checked', false);
+
+                $('#subradiosuba_rujukanfaskes').hide();
+                $('input[name='+radiosubrujukanfaskes2+']').prop('checked', false);
+
+                $('#subessaysuba_rujukanfaskes').hide();
+                $('#essaybox_obatrujukanfaskes').val('');
+
+                $('#subradiosubc_rujukanfaskes').hide();
+                $('#essaybox_lainnyarujukanfaskes').val('');
+        }
+    });
+
+    var rujukanfaskes = "subradiosubarujukanfaskes";
+    $("input[name$='radiosubrujukanfaskes']").click(function() {
+        if($(this).attr('id') == 'radiosubrujukanfaskes_a') {
+                $('#subradiosuba_rujukanfaskes').show();           
+        }
+        else {
+                $('#subradiosuba_rujukanfaskes').hide();
+                $('input[name='+rujukanfaskes+']').prop('checked', false);
+
+                $('#subessaysuba_rujukanfaskes').hide();
+                $('#essaybox_lainnyarujukanfaskes').val('');
+        }
+    });
+
+    $("input[name$='radiogejalapanas']").click(function() {
+        if($(this).attr('id') == 'radioa_panas') {
+                $('#subradio_gejalakematianpanas').show();           
+        }
+        else {
+                $('#subradio_gejalakematianpanas').hide();
+                $('#essayboxa_gejalakematianpanas').val('');
+        }
+    });
+
+    $("input[name$='radiogejalabatuk']").click(function() {
+        if($(this).attr('id') == 'radioa_batuk') {
+                $('#subradio_gejalakematianbatuk').show();           
+        }
+        else {
+                $('#subradio_gejalakematianbatuk').hide();
+                $('#essayboxa_gejalakematianbatuk').val('');
+        }
+    });
+
+    var namasubtinja = "radiotinja";
+    $("input[name$='radiogejaladiare']").click(function() {
+        if($(this).attr('id') == 'radioa_diare') {
+                $('#subradio_gejalakematiandiare').show();           
+        }
+        else {
+                $('#subradio_gejalakematiandiare').hide();
+                $('#essayboxa_gejalakematiandiare').val('');
+                $('input[name='+namasubtinja+']').prop('checked', false);
+        }
+    });
+
+    $("input[name$='radiogejalasesaknafas']").click(function() {
+        if($(this).attr('id') == 'radioa_sesaknafas') {
+                $('#subradio_gejalakematiansesaknafas').show();           
+        }
+        else {
+                $('#subradio_gejalakematiansesaknafas').hide();
+                $('#essayboxa_gejalakematiansesaknafas').val('');
+        }
+    });
+
+    $("input[name$='radiogejalanafascepat']").click(function() {
+        if($(this).attr('id') == 'radioa_nafascepat') {
+                $('#subradio_gejalakematiannafascepat').show();           
+        }
+        else {
+                $('#subradio_gejalakematiannafascepat').hide();
+                $('#essayboxa_gejalakematiannafascepat').val('');
+        }
+    });
+
+    $("input[name$='radiogejalatarikandindingdada']").click(function() {
+        if($(this).attr('id') == 'radioa_tarikandindingdada') {
+                $('#subradio_gejalakematiantarikandindingdada').show();           
+        }
+        else {
+                $('#subradio_gejalakematiantarikandindingdada').hide();
+                $('#essayboxa_gejalakematiantarikandindingdada').val('');
+        }
+    });
+
+    $("input[name$='radiogejalacupinghidungpernafasan']").click(function() {
+        if($(this).attr('id') == 'radioa_cupinghidungpernafasan') {
+                $('#subradio_gejalakematiancupinghidungpernafasan').show();           
+        }
+        else {
+                $('#subradio_gejalakematiancupinghidungpernafasan').hide();
+                $('#essayboxa_gejalakematiancupinghidungpernafasan').val('');
+        }
+    });
+
+    $("input[name$='radiogejalanafasberbunyi']").click(function() {
+        if($(this).attr('id') == 'radioa_nafasberbunyi') {
+                $('#subradio_gejalakematiannafasberbunyi').show();           
+        }
+        else {
+                $('#subradio_gejalakematiannafasberbunyi').hide();
+                $('#essayboxa_gejalakematiannafasberbunyi').val('');
+        }
+    });
+
+    $("input[name$='radiogejalamuntah']").click(function() {
+        if($(this).attr('id') == 'radioa_muntah') {
+                $('#subradio_gejalakematianmuntah').show();           
+        }
+        else {
+                $('#subradio_gejalakematianmuntah').hide();
+                $('#essayboxa_gejalakematianmuntah').val('');
+        }
+    });
+
+    $("input[name$='radiogejalakejang']").click(function() {
+        if($(this).attr('id') == 'radioa_kejang') {
+                $('#subradio_gejalakematiankejang').show();           
+        }
+        else {
+                $('#subradio_gejalakematiankejang').hide();
+                $('#essayboxa_gejalakematiankejang').val('');
+        }
+    });
+
+    $("input[name$='radiogejalaletargi']").click(function() {
+        if($(this).attr('id') == 'radioa_letargi') {
+                $('#subradio_gejalakematianletargi').show();           
+        }
+        else {
+                $('#subradio_gejalakematianletargi').hide();
+                $('#essayboxa_gejalakematianletargi').val('');
+        }
+    });
+
+    $("input[name$='radiogejalatidaksadar']").click(function() {
+        if($(this).attr('id') == 'radioa_tidaksadar') {
+                $('#subradio_gejalakematiantidaksadar').show();           
+        }
+        else {
+                $('#subradio_gejalakematiantidaksadar').hide();
+                $('#essayboxa_gejalakematiantidaksadar').val('');
+        }
+    });
+
+    $("input[name$='radiogejalatidakbisaminum']").click(function() {
+        if($(this).attr('id') == 'radioa_tidakbisaminum') {
+                $('#subradio_gejalakematiantidakbisaminum').show();           
+        }
+        else {
+                $('#subradio_gejalakematiantidakbisaminum').hide();
+                $('#essayboxa_gejalakematiantidakbisaminum').val('');
+        }
+    });
+
+    $("input[name$='radiogejalaperdarahan']").click(function() {
+        if($(this).attr('id') == 'radioa_perdarahan') {
+                $('#subradio_gejalakematianperdarahan').show();           
+        }
+        else {
+                $('#subradio_gejalakematianperdarahan').hide();
+                $('#essayboxa_gejalakematianperdarahan').val('');
+        }
+    });
+
+    $("input[name$='radiogejalapucat']").click(function() {
+        if($(this).attr('id') == 'radioa_pucat') {
+                $('#subradio_gejalakematianpucat').show();           
+        }
+        else {
+                $('#subradio_gejalakematianpucat').hide();
+                $('#essayboxa_gejalakematianpucat').val('');
+        }
+    });
+
+    $("input[name$='radiogejaladehidrasi']").click(function() {
+        if($(this).attr('id') == 'radioa_dehidrasi') {
+                $('#subradio_gejalakematiandehidrasi').show();           
+        }
+        else {
+                $('#subradio_gejalakematiandehidrasi').hide();
+                $('#essayboxa_gejalakematiandehidrasi').val('');
+        }
+    });
+
+    $("input[name$='radiogejalasyok']").click(function() {
+        if($(this).attr('id') == 'radioa_syok') {
+                $('#subradio_gejalakematiansyok').show();           
+        }
+        else {
+                $('#subradio_gejalakematiansyok').hide();
+                $('#essayboxa_gejalakematiansyok').val('');
+        }
+    });
+
+    $("input[name$='radiopemeriksaandarahrutin']").click(function() {
+        if($(this).attr('id') == 'radioa_darahrutin') {
+                $('#subradio_pemeriksaanpenunjangdarahrutin').show();           
+        }
+        else {
+                $('#subradio_pemeriksaanpenunjangdarahrutin').hide();
+                $('#essayboxa_pemeriksaanpenunjangdarahrutin').val('');
+        }
+    });
+
+    $("input[name$='radiopemeriksaanrontgen']").click(function() {
+        if($(this).attr('id') == 'radioa_rontgen') {
+                $('#subradio_pemeriksaanpenunjangrontgen').show();           
+        }
+        else {
+                $('#subradio_pemeriksaanpenunjangrontgen').hide();
+                $('#essayboxa_pemeriksaanpenunjangrontgen').val('');
+        }
+    });
+
+    $("input[name$='radiopemeriksaanusg']").click(function() {
+        if($(this).attr('id') == 'radioa_usg') {
+                $('#subradio_pemeriksaanpenunjangusg').show();           
+        }
+        else {
+                $('#subradio_pemeriksaanpenunjangusg').hide();
+                $('#essayboxa_pemeriksaanpenunjangusg').val('');
+        }
+    });
+
+    $("input[name$='radiopemeriksaanlainnya']").click(function() {
+        if($(this).attr('id') == 'radioa_lainnya') {
+                $('#subradio_pemeriksaanpenunjanglainnya').show();           
+        }
+        else {
+                $('#subradio_pemeriksaanpenunjanglainnya').hide();
+                $('#essayboxa_pemeriksaanpenunjanglainnya').val('');
         }
     });
 
@@ -569,14 +1052,17 @@ $(document).ready(function(){
         }
     });
 
-    var namasubHiv = "radiosubdaruratbedah";
+    var namasubDaruratbedah = "radiosubdaruratbedah";
     $("input[name$='radiopenyebabutamakematian']").click(function() {
         if($(this).attr('id') == 'radioj_penyebabutamakematian') {
                 $('#subradio_daruratbedah').show();           
         }
         else {
                 $('#subradio_daruratbedah').hide();
-                $('input[name='+namasubHiv+']').prop('checked', false);
+                $('input[name='+namasubDaruratbedah+']').prop('checked', false);
+
+                $('#essayradiodaruratbedah').hide();
+                $('#essayboxi_daruratbedah').val('');
         }
     });
 
@@ -588,6 +1074,9 @@ $(document).ready(function(){
         else {
                 $('#subradio_ginjal').hide();
                 $('input[name='+namasubGinjal+']').prop('checked', false);
+
+                $('#essayradioginjal').hide();
+                $('#essayboxe_ginjal').val('');
         }
     });
 
@@ -599,6 +1088,9 @@ $(document).ready(function(){
         else {
                 $('#subradio_kelenjarendokrin').hide();
                 $('input[name='+namasubKelenjarendokrin+']').prop('checked', false);
+
+                $('#essayradioendokrin').hide();
+                $('#essayboxe_endokrin').val('');
         }
     });
 
@@ -621,6 +1113,9 @@ $(document).ready(function(){
         else {
                 $('#subradio_jantung').hide();
                 $('input[name='+namasubJantung+']').prop('checked', false);
+
+                $('#essayradiojantung').hide();
+                $('#essayboxc_jantung').val('');
         }
     });
 
