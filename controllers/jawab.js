@@ -857,7 +857,7 @@ Moment.locale('id');
 
 /** Insert Jawaban Process */
 exports.registrasi = async (req, res) => {
-    const { iduser, jawabannamabalita, umurbalita, tanggallahir, radiojeniskelamin, balitake, jumlahbalitadilahirkanhidup, jawabannamaibu, jawabanumuribu, radiopekerjaanibu, essayboxk_pekerjaanibu, radiopendidikanibu, jawabannamaayah, jawabanumurayah, radiopekerjaanayah, essayboxm_pekerjaanayah, radiopendidikanayah, jawabanalamat, jawabantelephone, jawabanpenghasilan, soal1_1, soal1_2, soal1_3, soal1_4, soal1_5, soal1_6, soal1_7, soal1_8, soal1_9, subsoal1_9, soal1_10, soal1_11, soal1_12, soal1_13, subsoal1_13, soal1_14, soal1_15, soal1_16, soal1_17, soal2_1, jawabanberatbadanbalita, soal2_2, jawabanberatbadansaatini, soal2_2a, jawabantinggibadan, soal2_2b, jawabanlingkarkepala, soal2_3, radiocarapersalinan, subsoal2_3, radiosubcarapersalinan, soal2_4, jawabanusiakehamilansaatlahir, soal2_5a, ASIIMD, soal2_5b, ASI, subsoal2_5b_a, essayboxa_asi, subsoal2_5b_b, radiosubasi, soal2_6, radiostatusnutrisi, soal2_7, radiopemberianimunisasi, subsoal2_7a, radiosubpemberianimunisasi_a, subsoal2_7b, radiosubpemberianimunisasi_b, subsoal2_7c, radiosubpemberianimunisasi_c, subsoal2_7d, radiosubpemberianimunisasi_d, subsoal2_7e, radiosubpemberianimunisasi_e, subsoal2_7f, radiosubpemberianimunisasi_f, subsoal2_7g, radiosubpemberianimunisasi_g, subsoal2_7h, radiosubpemberianimunisasi_h, soal3_1a, tanggalkematian, soal3_1b, jawabanusiameninggal, soal3_2, jamkematian, soal3_3, jawabanfaskeskematian, soal3_4, essaybox_alamatfaskes, soal3_5, radiorujukanfaskes, radiosubrujukanfaskes, subradiosubarujukanfaskes, soal3_5_suba_a_e, essaybox_lainnyarujukanfaskes, soal3_5_suba_c, essaybox_obatrujukanfaskes, soal3_6, masalahrujukan, soal3_6_sub_a, essaybox_masalahrujukan, soal3_7, jawabankm, soal3_7a, jawabanjam, soal3_7b, jawabanmenit, soal3_8, faskeshcu, soal3_8a, faskespicu1, soal3_8b, faskespicu2, soal3_8c, faskespicu3, soal3_8d, faskesigdanak, soal3_8e, faskesdokterigd24jam, soal3_8f, faskesdokterspesialisanak, soal3_9, tanggalmasukfaskes, soal3_10, jawaban3_10, soal4_1, radiogejalapanas, soal4_1a, essayboxa_gejalakematianpanas, soal4_1_1, radiogejalabatuk, soal4_1_1a, essayboxa_gejalakematianbatuk, soal4_1_2, radiogejaladiare, soal4_1_2a, essayboxa_gejalakematiandiare, soal4_1_2b, radiotinja, soal4_1_3, radiogejalasesaknafas, soal4_1_3a, essayboxa_gejalakematiansesaknafas, soal4_1_4, radiogejalanafascepat, soal4_1_4a, essayboxa_gejalakematiannafascepat, soal4_1_5, radiogejalatarikandindingdada, soal4_1_5a, essayboxa_gejalakematiantarikandindingdada, soal4_1_6, radiogejalacupinghidungpernafasan, soal4_1_6a, essayboxa_gejalakematiancupinghidungpernafasan, soal4_1_7, radiogejalanafasberbunyi, soal4_1_7a, essayboxa_gejalakematiannafasberbunyi, soal4_1_8, radiogejalamuntah, soal4_1_8a, essayboxa_gejalakematianmuntah, soal4_1_9, radiogejalakejang, soal4_1_9a, essayboxa_gejalakematiankejang, soal4_1_10, radiogejalaletargi, soal4_1_10a, essayboxa_gejalakematianletargi, soal4_1_11, radiogejalatidaksadar, soal4_1_11a, essayboxa_gejalakematiantidaksadar, soal4_1_12, radiogejalatidakbisaminum, soal4_1_12a, essayboxa_gejalakematiantidakbisaminum, soal4_1_13, radiogejalaperdarahan, soal4_1_13a, essayboxa_gejalakematianperdarahan, soal4_1_14, radiogejalapucat, soal4_1_14a, essayboxa_gejalakematianpucat, soal4_1_15, radiogejaladehidrasi, soal4_1_15a, essayboxa_gejalakematiandehidrasi, soal4_1_16, radiogejalasyok, soal4_1_16a, essayboxa_gejalakematiansyok, soal4_1_17, essayboxa_gejalakematianjejastrauma, soal4_1_18, essayboxa_gejalakematianlainnya, soal4_2, radiopemeriksaandarahrutin, soal4_2a, essayboxa_pemeriksaanpenunjangdarahrutin,soal4_2_1, radiopemeriksaanrontgen, soal4_2_1a, essayboxa_pemeriksaanpenunjangrontgen, soal4_2_2, radiopemeriksaanusg, soal4_2_2a, essayboxa_pemeriksaanpenunjangusg, soal4_2_3, radiopemeriksaanlainnya, soal4_2_3a, essayboxa_pemeriksaanpenunjanglainnya, soal4_3, radiopenyebabutamakematian, subsoal4_3, radiosubpernafasan, subessaysoal4_3, essayboxm_pernafasan, radiosubgastrontestinal, essayboxl_gastrontestinal, radiosubgizi, essayboxg_gizi, radiosubmalaria, radiosubneurologiskronis, essayboxe_neurologiskronis, radiosubneurologisakut, essayboxh_neurologisakut, radiosubtuberkulosis, radiosubruamdandemam, radiosubhiv, radiosubdaruratbedah, essayboxi_daruratbedah, radiosubginjal, essayboxe_ginjal, radiosubkelenjarendokrin, essayboxe_endokrin, radiosubhematologi, essayboxg_hematologi, radiosubjantung, essayboxc_jantung, radiosubkanker, essayboxh_kanker, radiosubperlindunganbalita, soal4_4, radiokondisikronis, soal4_4_sindrom, essayboxi_kondisikronis, soal4_4_lainnya, essayboxo_kondisikronis, soal4_5, radiocovid, soal4_5_covidselama, essayboxa_covidselama, soal4_5a, radioruangisolasibalitacovid, soal4_5b, radioapdsesuai, soal4_5c, radioprotokolcovid, soal4_5d, radiokapasitasruangancovid, soal4_5e, radiokematianruangisolasi, soal4_6, jawaban4_6, soal4_7, radio4_7, soal4_8, radio4_8, soal4_9, jawaban4_9} = req.body;
+    const { iduser, jawabannamabalita, umurbalita, tanggallahir, radiojeniskelamin, balitake, jumlahbalitadilahirkanhidup, jawabannamaibu, jawabanumuribu, radiopekerjaanibu, essayboxk_pekerjaanibu, radiopendidikanibu, jawabannamaayah, jawabanumurayah, radiopekerjaanayah, essayboxm_pekerjaanayah, radiopendidikanayah, jawabanalamat, jawabantelephone, jawabanpenghasilan, soal1_1, soal1_2, soal1_3, soal1_4, soal1_5, soal1_6, soal1_7, soal1_8, soal1_9, subsoal1_9, soal1_10, soal1_11, soal1_12, soal1_13, subsoal1_13, soal1_14, soal1_15, soal1_16, soal1_17, soal2_1, jawabanberatbadanbalita, soal2_2, jawabanberatbadansaatini, soal2_2a, jawabantinggibadan, soal2_2b, jawabanlingkarkepala, soal2_3, radiocarapersalinan, subsoal2_3, radiosubcarapersalinan, soal2_4, jawabanusiakehamilansaatlahir, soal2_5a, ASIIMD, soal2_5b, ASI, subsoal2_5b_a, essayboxa_asi, subsoal2_5b_b, radiosubasi, soal2_6, radiostatusnutrisi, soal2_7, radiopemberianimunisasi, subsoal2_7a, radiosubpemberianimunisasi_a, subsoal2_7b, radiosubpemberianimunisasi_b, subsoal2_7c, radiosubpemberianimunisasi_c, subsoal2_7d, radiosubpemberianimunisasi_d, subsoal2_7e, radiosubpemberianimunisasi_e, subsoal2_7f, radiosubpemberianimunisasi_f, subsoal2_7g, radiosubpemberianimunisasi_g, subsoal2_7h, radiosubpemberianimunisasi_h, soal3_1a, tanggalkematian, soal3_1b, jawabanusiameninggal, soal3_2, jamkematian, soal3_3, jawabanfaskeskematian, soal3_4, essaybox_alamatfaskes, soal3_5, radiorujukanfaskes, radiosubrujukanfaskes, subradiosubarujukanfaskes, soal3_5_suba_a_e, essaybox_lainnyarujukanfaskes, soal3_5_suba_c, essaybox_obatrujukanfaskes, soal3_6, masalahrujukan, soal3_6_sub_a, essaybox_masalahrujukan, soal3_7, jawabankm, soal3_7a, jawabanjam, soal3_7b, jawabanmenit, soal3_8, faskeshcu, soal3_8a, faskespicu1, soal3_8b, faskespicu2, soal3_8c, faskespicu3, soal3_8d, faskesigdanak, soal3_8e, faskesdokterigd24jam, soal3_8f, faskesdokterspesialisanak, soal3_9, tanggalmasukfaskes, soal3_10, jawaban3_10, soal4_1, radiogejalapanas, soal4_1a, essayboxa_gejalakematianpanas, soal4_1_1, radiogejalabatuk, soal4_1_1a, essayboxa_gejalakematianbatuk, soal4_1_2, radiogejaladiare, soal4_1_2a, essayboxa_gejalakematiandiare, soal4_1_2b, radiotinja, soal4_1_3, radiogejalasesaknafas, soal4_1_3a, essayboxa_gejalakematiansesaknafas, soal4_1_4, radiogejalanafascepat, soal4_1_4a, essayboxa_gejalakematiannafascepat, soal4_1_5, radiogejalatarikandindingdada, soal4_1_5a, essayboxa_gejalakematiantarikandindingdada, soal4_1_6, radiogejalacupinghidungpernafasan, soal4_1_6a, essayboxa_gejalakematiancupinghidungpernafasan, soal4_1_7, radiogejalanafasberbunyi, soal4_1_7a, essayboxa_gejalakematiannafasberbunyi, soal4_1_8, radiogejalamuntah, soal4_1_8a, essayboxa_gejalakematianmuntah, soal4_1_9, radiogejalakejang, soal4_1_9a, essayboxa_gejalakematiankejang, soal4_1_10, radiogejalaletargi, soal4_1_10a, essayboxa_gejalakematianletargi, soal4_1_11, radiogejalatidaksadar, soal4_1_11a, essayboxa_gejalakematiantidaksadar, soal4_1_12, radiogejalatidakbisaminum, soal4_1_12a, essayboxa_gejalakematiantidakbisaminum, soal4_1_13, radiogejalaperdarahan, soal4_1_13a, essayboxa_gejalakematianperdarahan, soal4_1_14, radiogejalapucat, soal4_1_14a, essayboxa_gejalakematianpucat, soal4_1_15, radiogejaladehidrasi, soal4_1_15a, essayboxa_gejalakematiandehidrasi, soal4_1_16, radiogejalasyok, soal4_1_16a, essayboxa_gejalakematiansyok, soal4_1_17, essayboxa_gejalakematianjejastrauma, soal4_1_18, essayboxa_gejalakematianlainnya, soal4_2, radiopemeriksaandarahrutin, soal4_2a, essayboxa_pemeriksaanpenunjangdarahrutin,soal4_2_1, radiopemeriksaanrontgen, soal4_2_1a, essayboxa_pemeriksaanpenunjangrontgen, soal4_2_2, radiopemeriksaanusg, soal4_2_2a, essayboxa_pemeriksaanpenunjangusg, soal4_2_3, radiopemeriksaanlainnya, soal4_2_3a, essayboxa_pemeriksaanpenunjanglainnya, soal4_3, radiopenyebabutamakematian, subsoal4_3, radiosubpernafasan, subessaysoal4_3, essayboxm_pernafasan, radiosubgastrontestinal, essayboxl_gastrontestinal, radiosubgizi, essayboxg_gizi, radiosubmalaria, radiosubneurologiskronis, essayboxe_neurologiskronis, radiosubneurologisakut, essayboxh_neurologisakut, radiosubtuberkulosis, radiosubruamdandemam, radiosubhiv, radiosubdaruratbedah, essayboxi_daruratbedah, radiosubginjal, essayboxe_ginjal, radiosubkelenjarendokrin, essayboxe_endokrin, radiosubhematologi, essayboxg_hematologi, radiosubjantung, essayboxc_jantung, radiosubkanker, essayboxh_kanker, radiosubperlindunganbalita, soal4_4, radiokondisikronis, soal4_4_sindrom, essayboxi_kondisikronis, soal4_4_lainnya, essayboxo_kondisikronis, soal4_5, radiocovid, soal4_5_covidselama, essayboxa_covidselama, soal4_5a, radioruangisolasibalitacovid, soal4_5b, radioapdsesuai, soal4_5c, radioprotokolcovid, soal4_5d, radiokapasitasruangancovid, soal4_5e, radiokematianruangisolasi, soal4_6, jawaban4_6, soal4_7, radio4_7, soal4_8, radio4_8, soal4_9, jawaban4_9, soal5_1, radio5_1, soalsub5_1, essayboxl_5_1, soal5_2, radio5_2, soalsub5_2, essayboxi_5_2, soal5_3, radio5_3a, soal5_3b, radio5_3b, soal5_3c, radio5_3c, soal5_3c_essay, essayboxb_5_3c, soal5_4, radio5_4, soalsub5_4, essayboxi_5_4, soal5_5, radio5_5a, soal5_5a_a, essayboxa_5_5a, soal5_5a_b, essayboxb_5_5a, soal5_5b, radio5_5b, soal5_5b_a, essayboxa_5_5b, soal5_5b_b, essayboxb_5_5b, soal5_5c, radio5_5c, soal5_5c_a, essayboxa_5_5c, soal5_5c_b, essayboxb_5_5c, soal5_5d, radio5_5d, soal5_5d_a, essayboxa_5_5d, soal5_5d_b, essayboxb_5_5d, soal5_5e, radio5_5e, soal5_5e_a, essayboxa_5_5e, soal5_5e_b, essayboxb_5_5e, soal5_5f, radio5_5f, soal5_5f_a, essayboxa_5_5f, soal5_5f_b, essayboxb_5_5f, soal5_5g, radio5_5g, soal5_5g_a, essayboxa_5_5g, soal5_5g_b, essayboxb_5_5g, soal5_5h, radio5_5h, soal5_5h_a, essayboxa_5_5h, soal5_5h_b, essayboxb_5_5h, soal5_5i, radio5_5i, soal5_5i_a, essayboxa_5_5i, soal5_5i_b, essayboxb_5_5i, soal5_5j, radio5_5j, soal5_5j_a, essayboxa_5_5j, soal5_5j_b, essayboxb_5_5j, soal5_5k, radio5_5k, soal5_5k_a, essayboxa_5_5k, soal5_5k_b, essayboxb_5_5k, soal5_5l, radio5_5l, soal5_5l_a, essayboxa_5_5l, soal5_5l_b, essayboxb_5_5l, soal5_6, radio5_6, soal5_6a, essayboxc_5_6a, soal5_7, radio5_7, soal5_7a, essayboxc_5_7a, soal5_8, radio5_8a, soal5_8a_a, essayboxc_5_8a_a, soal5_8b, radio5_8b, soal5_8b_a, essayboxc_5_8b_a, soal5_8c, radio5_8c, soal5_8c_a, essayboxc_5_8c_a, soal6_1, radio6_1, subsoala6_1, essaybox_6_1a, subsoalb6_1, essaybox_6_1b, soal6_1a, radio6_1a, subsoala6_1a, jumlah6_1a, subsoalb6_1a, essayboxa_6_1a, soala6_1b, essayboxa_6_1b, soal6_1c, essayboxc_6_1, soal6_2, radio6_2, soal6_2essay, essayboxa_6_2, soalb6_2essay, essayboxb_6_2, soal6_2a, radio6_2a, subsoala6_2, essayboxa_6_2a, subsoalb6_2, essayboxb_6_2a, soal6_2b, radio6_2b, subsoala6_2b, essayboxa_6_2b, subsoalb6_2b, essayboxb_6_2b, soal6_2c, radio6_2c, subsoala6_2c, essayboxa_6_2c, subsoalb6_2c, essayboxb_6_2c, soal6_3, radio6_3, subsoala6_3, essayboxa_6_3, subsoalb6_3, essayboxb_6_3, soal6_3a, radio6_3a, subsoala6_3a, essayboxa_6_3a, subsoalb6_3a, essayboxb_6_3a, soal6_4, subjawaban6_4,radio6_4, subsoala6_4, essayboxa_6_4, subsoalb6_4, essayboxb_6_4, soal6_5, radio6_5, subsoala6_5, essayboxa_6_5, subsoalb6_5, essayboxb_6_5, soal6_5a, radio6_5a, subsoala6_5a, essayboxa_6_5a, subsoalb6_5a, essayboxb_6_5a, soal6_6, radio6_6, subsoala6_6, essayboxa_6_6, subsoalb6_6, essayboxb_6_6, soal6_6a, radio6_6a, subsoala6_6a, essayboxa_6_6a, subsoalb6_6a, essayboxb_6_6a, soal6_6b, essayboxb_6_6b, soal6_7, radio6_7, subsoala6_7, essayboxa_6_7, subsoalb6_7, essayboxb_6_7, soal6_7a, radio6_7a, subsoala6_7a, essayboxa_6_7a, subsoalb6_7a, essayboxb_6_7a, soal6_7b, radio6_7b, subsoala6_7b, essayboxa_6_7b, subsoalb6_7b, essayboxb_6_7b, soal6_7c, essayboxb_6_7c,  } = req.body;
     var tanggal = Moment().format("YYYY-MM-DD");
     var waktu = Moment().format("HH:mm:ss");
     var tglreg = Moment().format("YYYYMMDD");
@@ -1193,7 +1193,7 @@ exports.registrasi = async (req, res) => {
 
                 /** insert detail 3 soal34*/
                 const insert_detail_3_soal34 = await new Promise((resolve, reject) => {
-                    Connection.query("INSERT INTO kb_detail_3 SET ?", [{id: null, kode_registrasi: newId, soal: soal3_4, jawaban: radiofaskeslain, soal1: null, jawaban1: null, soal2: null, jawaban2: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                    Connection.query("INSERT INTO kb_detail_3 SET ?", [{id: null, kode_registrasi: newId, soal: soal3_4, jawaban: essaybox_alamatfaskes, soal1: null, jawaban1: null, soal2: null, jawaban2: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
                         if(error){
                             reject(error)
                         } else {
@@ -1440,201 +1440,255 @@ exports.registrasi = async (req, res) => {
                     })
                 })
 
-                // /** insert detail 5 soal51*/
-                // const insert_detail_5_soal51 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_1, soal1: soalsub5_1, soal2: null, soal3: null, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_1, jawaban1: essayboxl_5_1, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                /** insert detail 5 soal51*/
+                const insert_detail_5_soal51 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_1, jawaban:radio5_1, soal1: soalsub5_1, jawaban1:  essayboxl_5_1, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
 
-                // /** insert detail 5 soal52*/
-                // const insert_detail_5_soal52 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_2, soal1: soalsub5_2, soal2: null, soal3: null, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_2, jawaban1: essayboxi_5_2, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                /** insert detail 5 soal52*/
+                const insert_detail_5_soal52 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_2, jawaban:radio5_2, soal1: soalsub5_2, jawaban1: essayboxi_5_2, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
 
-                // /** insert detail 5 soal53*/
-                // const insert_detail_5_soal53 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_3, soal1: soal5_3b, soal2: soal5_3c, soal3: soal5_3c_essay, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: soal5_3a, jawaban1: radio5_3b, jawaban2: radio5_3c, jawaban3: essayboxb_5_3c, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                /** insert detail 5 soal53*/
+                const insert_detail_5_soal53 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_3, jawaban:radio5_3a, soal1: soal5_3b, jawaban1: radio5_3b, soal2: soal5_3c, jawaban2: radio5_3c, soal3: soal5_3c_essay, jawaban3: essayboxb_5_3c, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
 
-                // /** insert detail 5 soal54*/
-                // const insert_detail_5_soal54 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_4, soal1: null, soal2: null, soal3: null, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_4, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                /** insert detail 5 soal54*/
+                const insert_detail_5_soal54 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_4, jawaban:radio5_4, soal1: soalsub5_4, jawaban1: essayboxi_5_4, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
 
-                // /** insert detail 5 soal55*/
-                // let essaya = null;
-                // if(essayboxa_5_5a){
-                //     essaya = essayboxa_5_5a
-                // } else if(essayboxb_5_5a){
-                //     essaya = essayboxb_5_5a
-                // }
-                // let essayb = null;
-                // if(essayboxa_5_5b){
-                //     essayb = essayboxa_5_5b
-                // } else if(essayboxb_5_5b){
-                //     essayb = essayboxb_5_5b
-                // }
-                // let essayc = null;
-                // if(essayboxa_5_5c){
-                //     essayc = essayboxa_5_5c
-                // } else if(essayboxb_5_5c){
-                //     essayc = essayboxb_5_5c
-                // }
-                // let essaye = null;
-                // if(essayboxa_5_5e){
-                //     essaye = essayboxa_5_5e
-                // } else if(essayboxb_5_5e){
-                //     essaye = essayboxb_5_5e
-                // }
-                // let essayf = null;
-                // if(essayboxa_5_5f){
-                //     essayf = essayboxa_5_5f
-                // } else if(essayboxb_5_5f){
-                //     essayf = essayboxb_5_5f
-                // }
-                // let essayg = null;
-                // if(essayboxa_5_5g){
-                //     essayg = essayboxa_5_5g
-                // } else if(essayboxb_5_5g){
-                //     essayg = essayboxb_5_5g
-                // }
-                // let essayh = null;
-                // if(essayboxa_5_5h){
-                //     essayh = essayboxa_5_5h
-                // } else if(essayboxb_5_5h){
-                //     essayh = essayboxb_5_5h
-                // }
-                // let essayi = null;
-                // if(essayboxa_5_5i){
-                //     essayi = essayboxa_5_5i
-                // } else if(essayboxb_5_5i){
-                //     essayi = essayboxb_5_5i
-                // }
+                /** insert detail 5 soal55*/
+                let isisoal1_soal55 = null
+                let isijawaban1_soal55 = null
+                if(essayboxa_5_5a && !essayboxb_5_5a){
+                    isisoal1_soal55 = soal5_5a_a
+                    isijawaban1_soal55 = essayboxa_5_5a
+                } else if(!essayboxa_5_5a && essayboxb_5_5a){
+                    isisoal1_soal55 = soal5_5a_b
+                    isijawaban1_soal55 = essayboxb_5_5a
+                }
 
-                // let soal5_5_1_essay = null;
-                // if(essayboxa_5_5a){
-                //     soal5_5_1_essay = soal5_5a_a
-                // } else if(essayboxb_5_5a){
-                //     soal5_5_1_essay = soal5_5a_b
-                // }
-                // let soal5_5_2_essay = null;
-                // if(essayboxa_5_5b){
-                //     soal5_5_2_essay = soal5_5b_a
-                // } else if(essayboxb_5_5b){
-                //     soal5_5_2_essay = soal5_5b_b
-                // }
-                // let soal5_5_3_essay = null;
-                // if(essayboxa_5_5c){
-                //     soal5_5_3_essay = soal5_5c_a
-                // } else if(essayboxb_5_5c){
-                //     soal5_5_3_essay = soal5_5c_b
-                // }
-                // let soal5_5_4_essay = null;
-                // if(essayboxa_5_5e){
-                //     soal5_5_4_essay = soal5_5e_a
-                // } else if(essayboxb_5_5e){
-                //     soal5_5_4_essay = soal5_5e_b
-                // }
-                // let soal5_5_5_essay = null;
-                // if(essayboxa_5_5f){
-                //     soal5_5_5_essay = soal5_5f_a
-                // } else if(essayboxb_5_5f){
-                //     soal5_5_5_essay = soal5_5f_b
-                // }
-                // let soal5_5_6_essay = null;
-                // if(essayboxa_5_5g){
-                //     soal5_5_6_essay = soal5_5g_a
-                // } else if(essayboxb_5_5g){
-                //     soal5_5_6_essay = soal5_5g_b
-                // }
-                // let soal5_5_7_essay = null;
-                // if(essayboxa_5_5h){
-                //     soal5_5_7_essay = soal5_5h_a
-                // } else if(essayboxb_5_5h){
-                //     soal5_5_7_essay = soal5_5h_b
-                // }
-                // let soal5_5_8_essay = null;
-                // if(essayboxa_5_5i){
-                //     soal5_5_8_essay = soal5_5i_a
-                // } else if(essayboxb_5_5i){
-                //     soal5_5_8_essay = soal5_5i_b
-                // }
-                // const insert_detail_5_soal55 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_5, soal1: soal5_5_1_essay, soal2: soal5_5b, soal3: soal5_5_2_essay, soal4: soal5_5c, soal5: soal5_5_3_essay, soal6: soal5_5d, soal7: soal5_5_4_essay, soal8: soal5_5e, soal9: soal5_5_5_essay, soal10: soal5_5f, soal11: soal5_5_6_essay, soal12: soal5_5g, soal13: soal5_5_7_essay, soal14: soal5_5h, soal15: soal5_5_8_essay, soal16: soal5_5i, jawaban: radio5_5a, jawaban1: essaya, jawaban2: radio5_5b, jawaban3: essayb, jawaban4: radio5_5c, jawaban5: essayc, jawaban6: essayboxb_5_5d, jawaban7: radio5_5e, jawaban8: essaye, jawaban9: radio5_5f, jawaban10: essayf, jawaban11: radio5_5g, jawaban12: essayg, jawaban13: radio5_5h, jawaban14: essayh, jawaban15: radio5_5i, jawaban16: essayi, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                let isisoal3_soal55 = null
+                let isijawaban3_soal55 = null
+                if(essayboxa_5_5b && !essayboxb_5_5b){
+                    isisoal3_soal55 = soal5_5b_a
+                    isijawaban3_soal55 = essayboxa_5_5b
+                } else if(!essayboxa_5_5b && essayboxb_5_5b){
+                    isisoal3_soal55 = soal5_5b_b
+                    isijawaban3_soal55 = essayboxb_5_5b
+                }
 
-                // /** insert detail 5 soal56*/
-                // const insert_detail_5_soal56 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_6, soal1: null, soal2: null, soal3: null, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_6, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                let isisoal5_soal55 = null
+                let isijawaban5_soal55 = null
+                if(essayboxa_5_5c && !essayboxb_5_5c){
+                    isisoal5_soal55 = soal5_5c_a
+                    isijawaban5_soal55 = essayboxa_5_5c
+                } else if(!essayboxa_5_5c && essayboxb_5_5c){
+                    isisoal5_soal55 = soal5_5c_b
+                    isijawaban5_soal55 = essayboxb_5_5c
+                }
 
-                // /** insert detail 5 soal57*/
-                // const insert_detail_5_soal57 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_7, soal1: null, soal2: null, soal3: null, soal4: null, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_7, jawaban1: null, jawaban2: null, jawaban3: null, jawaban4: null, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                let isisoal7_soal55 = null
+                let isijawaban7_soal55 = null
+                if(essayboxa_5_5d && !essayboxb_5_5d){
+                    isisoal7_soal55 = soal5_5d_a
+                    isijawaban7_soal55 = essayboxa_5_5d
+                } else if(!essayboxa_5_5d && essayboxb_5_5d){
+                    isisoal7_soal55 = soal5_5d_b
+                    isijawaban7_soal55 = essayboxb_5_5d
+                }
 
-                // /** insert detail 5 soal58*/
-                // const insert_detail_5_soal58 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_8, soal1: soal5_8b, soal2: soal5_8c, soal3: soal5_8d, soal4: soal5_8e, soal5: null, soal6: null, soal7: null, soal8: null, soal9: null, soal10: null, soal11: null, soal12: null, soal13: null, soal14: null, soal15: null, soal16: null, jawaban: radio5_8a, jawaban1: radio5_8b, jawaban2: radio5_8c, jawaban3: radio5_8d, jawaban4: radio5_8e, jawaban5: null, jawaban6: null, jawaban7: null, jawaban8: null, jawaban9: null, jawaban10: null, jawaban11: null, jawaban12: null, jawaban13: null, jawaban14: null, jawaban15: null, jawaban16: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                let isisoal9_soal55 = null
+                let isijawaban9_soal55 = null
+                if(essayboxa_5_5e && !essayboxb_5_5e){
+                    isisoal9_soal55 = soal5_5e_a
+                    isijawaban9_soal55 = essayboxa_5_5e
+                } else if(!essayboxa_5_5e && essayboxb_5_5e){
+                    isisoal9_soal55 = soal5_5e_b
+                    isijawaban9_soal55 = essayboxb_5_5e
+                }
 
-                // /** insert detail 6 soal61*/
-                // const insert_detail_6_soal61 = await new Promise((resolve, reject) => {
-                //     Connection.query("INSERT INTO kb_detail_6 SET ?", [{id: null, kode_registrasi: newId, soal: soal6_1, jawaban: essaybox_6_1, soal1: null, jawaban1: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
-                //         if(error){
-                //             reject(error)
-                //         } else {
-                //             resolve("true")
-                //         }
-                //     })
-                // })
+                let isisoal11_soal55 = null
+                let isijawaban11_soal55 = null
+                if(essayboxa_5_5f && !essayboxb_5_5f){
+                    isisoal11_soal55 = soal5_5f_a
+                    isijawaban11_soal55 = essayboxa_5_5f
+                } else if(!essayboxa_5_5f && essayboxb_5_5f){
+                    isisoal11_soal55 = soal5_5f_b
+                    isijawaban11_soal55 = essayboxb_5_5f
+                }
+
+                let isisoal13_soal55 = null
+                let isijawaban13_soal55 = null
+                if(essayboxa_5_5g && !essayboxb_5_5g){
+                    isisoal13_soal55 = soal5_5g_a
+                    isijawaban13_soal55 = essayboxa_5_5g
+                } else if(!essayboxa_5_5g && essayboxb_5_5g){
+                    isisoal13_soal55 = soal5_5g_b
+                    isijawaban13_soal55 = essayboxb_5_5g
+                }
+
+                let isisoal15_soal55 = null
+                let isijawaban15_soal55 = null
+                if(essayboxa_5_5h && !essayboxb_5_5h){
+                    isisoal15_soal55 = soal5_5h_a
+                    isijawaban15_soal55 = essayboxa_5_5h
+                } else if(!essayboxa_5_5h && essayboxb_5_5h){
+                    isisoal15_soal55 = soal5_5h_b
+                    isijawaban15_soal55 = essayboxb_5_5h
+                }
+
+                let isisoal17_soal55 = null
+                let isijawaban17_soal55 = null
+                if(essayboxa_5_5i && !essayboxb_5_5i){
+                    isisoal17_soal55 = soal5_5i_a
+                    isijawaban17_soal55 = essayboxa_5_5i
+                } else if(!essayboxa_5_5i && essayboxb_5_5i){
+                    isisoal17_soal55 = soal5_5i_b
+                    isijawaban17_soal55 = essayboxb_5_5i
+                }
+
+                let isisoal19_soal55 = null
+                let isijawaban19_soal55 = null
+                if(essayboxa_5_5j && !essayboxb_5_5j){
+                    isisoal19_soal55 = soal5_5j_a
+                    isijawaban19_soal55 = essayboxa_5_5j
+                } else if(!essayboxa_5_5j && essayboxb_5_5j){
+                    isisoal19_soal55 = soal5_5j_b
+                    isijawaban19_soal55 = essayboxb_5_5j
+                }
+
+                let isisoal21_soal55 = null
+                let isijawaban21_soal55 = null
+                if(essayboxa_5_5k && !essayboxb_5_5k){
+                    isisoal21_soal55 = soal5_5k_a
+                    isijawaban21_soal55 = essayboxa_5_5k
+                } else if(!essayboxa_5_5k && essayboxb_5_5k){
+                    isisoal21_soal55 = soal5_5k_b
+                    isijawaban21_soal55 = essayboxb_5_5k
+                }
+
+                let isisoal23_soal55 = null
+                let isijawaban23_soal55 = null
+                if(essayboxa_5_5l && !essayboxb_5_5l){
+                    isisoal23_soal55 = soal5_5l_a
+                    isijawaban23_soal55 = essayboxa_5_5l
+                } else if(!essayboxa_5_5l && essayboxb_5_5l){
+                    isisoal23_soal55 = soal5_5l_b
+                    isijawaban23_soal55 = essayboxb_5_5l
+                }
+
+                const insert_detail_5_soal55 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_5, jawaban:radio5_5a, soal1: isisoal1_soal55, jawaban1: isijawaban1_soal55, soal2: soal5_5b, jawaban2: radio5_5b, soal3: isisoal3_soal55, jawaban3: isijawaban3_soal55, soal4: soal5_5c, jawaban4: radio5_5c, soal5: isisoal5_soal55, jawaban5: isijawaban5_soal55, soal6: soal5_5d, jawaban6: radio5_5d, soal7: isisoal7_soal55, jawaban7: isijawaban7_soal55, soal8: soal5_5e, jawaban8: radio5_5e, soal9: isisoal9_soal55, jawaban9: isijawaban9_soal55, soal10: soal5_5f, jawaban10: radio5_5f, soal11: isisoal11_soal55, jawaban11: isijawaban11_soal55, soal12: soal5_5g, jawaban12: radio5_5g, soal13: isisoal13_soal55, jawaban13: isijawaban13_soal55, soal14: soal5_5h, jawaban14: radio5_5h, soal15: isisoal15_soal55, jawaban15: isijawaban15_soal55, soal16: soal5_5i, jawaban16: radio5_5i, soal17: isisoal17_soal55, jawaban17: isijawaban17_soal55, soal18: soal5_5j, jawaban18: radio5_5j, soal19: isisoal19_soal55, jawaban19: isijawaban19_soal55, soal20: soal5_5k, jawaban20: radio5_5k, soal21: isisoal21_soal55, jawaban21: isijawaban21_soal55, soal22: soal5_5l, jawaban22: radio5_5l, soal23: isisoal23_soal55, jawaban23: isijawaban23_soal55, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 5 soal56*/
+                const insert_detail_5_soal56 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_6, jawaban:radio5_6, soal1: soal5_6a, jawaban1: essayboxc_5_6a, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 5 soal57*/
+                const insert_detail_5_soal57 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_7, jawaban:radio5_7, soal1: soal5_7a, jawaban1: essayboxc_5_7a, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 5 soal58*/
+                const insert_detail_5_soal58 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_5 SET ?", [{id: null, kode_registrasi: newId, soal: soal5_8, jawaban:radio5_8a, soal1: soal5_8a_a, jawaban1: essayboxc_5_8a_a, soal2: soal5_8b, jawaban2: radio5_8b, soal3: soal5_8b_a, jawaban3: essayboxc_5_8b_a, soal4: soal5_8c, jawaban4: radio5_8c, soal5: soal5_8c_a, jawaban5: essayboxc_5_8c_a, soal6: null, jawaban6: null, soal7: null, jawaban7: null, soal8: null, jawaban8: null, soal9: null, jawaban9: null, soal10: null, jawaban10: null, soal11: null, jawaban11: null, soal12: null, jawaban12: null, soal13: null, jawaban13: null, soal14: null, jawaban14: null, soal15: null, jawaban15: null, soal16: null, jawaban16: null, soal17: null, jawaban17: null, soal18: null, jawaban18: null, soal19: null, jawaban19: null, soal20: null, jawaban20: null, soal21: null, jawaban21: null, soal22: null, jawaban22: null, soal23: null, jawaban23: null, date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 6 soal61*/
+                let isisoal1_soal61 = null;
+                let isijawaban1_soal61 = null;
+                if(essaybox_6_1a && !essaybox_6_1b){
+                    isisoal1_soal61 = subsoala6_1
+                    isijawaban1_soal61 = essaybox_6_1a
+                } else if(!essaybox_6_1a && essaybox_6_1b){
+                    isisoal1_soal61 = subsoalb6_1
+                    isijawaban1_soal61 = essaybox_6_1b
+                }
+
+                let isisoal3_soal61 = null
+                let isijawaban3_saol61 = null
+                if(jumlah6_1a && !essayboxa_6_1b){
+                    isisoal3_soal61 = subsoala6_1a
+                    isijawaban3_saol61 = jumlah6_1a;
+                } else if(!jumlah6_1a && essayboxa_6_1b){
+                    isisoal3_soal61 = soala6_1b
+                    isijawaban3_saol61 = essayboxa_6_1b;
+                }
+
+                const insert_detail_6_soal61 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_6 SET ?", [{id: null, kode_registrasi: newId, soal: soal6_1, jawaban: radio6_1, soal1: isisoal1_soal61, jawaban1: isijawaban1_soal61, soal2: soal6_1a, jawaban2: radio6_1a, soal3: isisoal3_soal61, jawaban3: isijawaban3_saol61, soal4: subsoalb6_1a, jawaban4: essayboxa_6_1a, soal5: soal6_1c, jawaban5: essayboxc_6_1, soal6: null, jawaban6: null, soal7: null, jawaban7: null,date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
+
+                /** insert detail 6 soal62*/
+                const insert_detail_6_soal62 = await new Promise((resolve, reject) => {
+                    Connection.query("INSERT INTO kb_detail_6 SET ?", [{id: null, kode_registrasi: newId, soal: soal6_2, jawaban: radio6_2, soal1: null, jawaban1: null, soal2: null, jawaban2: null, soal3: null, jawaban3: null, soal4: null, jawaban4: null, soal5: null, jawaban5: null, soal6: null, jawaban6: null, soal7: null, jawaban7: null,date_created: tanggal, date_updated: null, time_created: waktu, time_updated: null}], (error) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve("true")
+                        }
+                    })
+                })
 
                 // /** insert detail 6 soal62*/
                 // let essay6_2 = null;
@@ -1759,7 +1813,7 @@ exports.registrasi = async (req, res) => {
                 //     })
                 // })
 
-                if(insert_header === "true" && insert_detail_1_soal1 === "true" && insert_detail_1_soal2 === "true" && insert_detail_1_soal3 === "true" && insert_detail_1_soal4 === "true" && insert_detail_1_soal5 === "true" && insert_detail_1_soal6 === "true" && insert_detail_1_soal7 === "true" && insert_detail_1_soal8 === "true" && insert_detail_1_soal9 === "true" && insert_detail_1_soal10 === "true" && insert_detail_1_soal11 === "true" && insert_detail_1_soal12 === "true" && insert_detail_1_soal13 === "true" && insert_detail_1_soal14 === "true" && insert_detail_1_soal15 === "true" && insert_detail_1_soal16 === "true" && insert_detail_1_soal17 === "true" && insert_detail_2_soal21 == "true" && insert_detail_2_soal22 == "true" && insert_detail_2_soal23 == "true" && insert_detail_2_soal24 == "true" && insert_detail_2_soal25 == "true" && insert_detail_2_soal26 == "true" && insert_detail_2_soal27 == "true" && insert_detail_3_soal31 == "true" && insert_detail_3_soal32 == "true" && insert_detail_3_soal33 == "true" && insert_detail_3_soal34 == "true" && insert_detail_3_soal35 == "true" && insert_detail_3_soal36 == "true" && insert_detail_3_soal37 == "true" && insert_detail_3_soal38 == "true" && insert_detail_3_soal39 == "true" && insert_detail_3_soal310 == "true"){
+                if(insert_header === "true" && insert_detail_1_soal1 === "true" && insert_detail_1_soal2 === "true" && insert_detail_1_soal3 === "true" && insert_detail_1_soal4 === "true" && insert_detail_1_soal5 === "true" && insert_detail_1_soal6 === "true" && insert_detail_1_soal7 === "true" && insert_detail_1_soal8 === "true" && insert_detail_1_soal9 === "true" && insert_detail_1_soal10 === "true" && insert_detail_1_soal11 === "true" && insert_detail_1_soal12 === "true" && insert_detail_1_soal13 === "true" && insert_detail_1_soal14 === "true" && insert_detail_1_soal15 === "true" && insert_detail_1_soal16 === "true" && insert_detail_1_soal17 === "true" && insert_detail_2_soal21 == "true" && insert_detail_2_soal22 == "true" && insert_detail_2_soal23 == "true" && insert_detail_2_soal24 == "true" && insert_detail_2_soal25 == "true" && insert_detail_2_soal26 == "true" && insert_detail_2_soal27 == "true" && insert_detail_3_soal31 == "true" && insert_detail_3_soal32 == "true" && insert_detail_3_soal33 == "true" && insert_detail_3_soal34 == "true" && insert_detail_3_soal35 == "true" && insert_detail_3_soal36 == "true" && insert_detail_3_soal37 == "true" && insert_detail_3_soal38 == "true" && insert_detail_3_soal39 == "true" && insert_detail_3_soal310 == "true" && insert_detail_4_soal41 == "true" && insert_detail_4_soal42 == "true" && insert_detail_4_soal43 == "true" && insert_detail_4_soal44 == "true" && insert_detail_4_soal45 == "true" && insert_detail_4_soal46 == "true" && insert_detail_4_soal47 == "true" && insert_detail_4_soal48 == "true" && insert_detail_4_soal49 == "true" && insert_detail_5_soal51 == "true" && insert_detail_5_soal52 == "true" && insert_detail_5_soal53 == "true" && insert_detail_5_soal54 == "true" && insert_detail_5_soal55 == "true" && insert_detail_5_soal56 == "true" && insert_detail_5_soal57 == "true" && insert_detail_5_soal58 == "true"){
                 // if(insert_header == "true"){
                     req.session.sessionFlash2 = {
                         type: 'success',
