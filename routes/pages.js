@@ -273,7 +273,27 @@ Router.get('/detail/:kode_registrasi', async (req, res) => {
                         }
                     })
                 })
-                if(get_data_header.length >= 0 && get_data_d1.length >= 0 && get_data_d2.length >= 0 && get_data_d3.length >= 0 && get_data_d4.length >= 0 && get_data_d5.length >= 0 && get_data_d6.length >= 0 && get_data_d7.length >= 0){
+
+                const get_data_d8 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_8 WHERE kb_detail_8.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+
+                const get_data_d9 = await new Promise((resolve, reject) => {
+                    Connection.query("SELECT * FROM kb_detail_9 WHERE kb_detail_9.kode_registrasi = ?", [idregistrasi], (error, results) => {
+                        if(error){
+                            reject(error)
+                        } else {
+                            resolve(results)
+                        }
+                    })
+                })
+                if(get_data_header.length >= 0 && get_data_d1.length >= 0 && get_data_d2.length >= 0 && get_data_d3.length >= 0 && get_data_d4.length >= 0 && get_data_d5.length >= 0 && get_data_d6.length >= 0 && get_data_d7.length >= 0 && get_data_d8.length >= 0 && get_data_d9.length >= 0){
                     res.render("detail",{
                         email, nama, idu, tipe, tanggalSekarang,
                         get_data_header, 
@@ -283,7 +303,9 @@ Router.get('/detail/:kode_registrasi', async (req, res) => {
                         get_data_d4,
                         get_data_d5,
                         get_data_d6,
-                        get_data_d7
+                        get_data_d7,
+                        get_data_d8,
+                        get_data_d9
                     });
                 } else {
                     /** pengambilan data gagal */

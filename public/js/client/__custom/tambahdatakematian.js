@@ -1427,6 +1427,29 @@ $(document).ready(function(){
         }
     });
 
+    var subsoal8_2c_a = "radio8_2c_a";
+    var subsoal8_2c_b = "radio8_2c_b";
+    var subsoal8_2c_c = "radio8_2c_c";
+    var subsoal8_2c_d = "radio8_2c_d";
+    var subsoal8_2c_e = "radio8_2c_e";
+    var subsoal8_2c_f = "radio8_2c_f";
+    var subsoal8_2c_g = "radio8_2c_g";
+    $("input[name$='radio8_2c']").click(function() {
+        if($(this).attr('id') == 'radioa_8_2c') {
+                $('#subradio8_2c').show();           
+        }
+        else {
+                $('#subradio8_2c').hide();
+                $('input[name='+subsoal8_2c_a+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_b+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_c+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_d+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_e+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_f+']').prop('checked', false);
+                $('input[name='+subsoal8_2c_g+']').prop('checked', false);
+        }
+    });
+
     /**
     var nama = 'radio'+{{id}}
     var namasub = 'radiosub'+{{id}}

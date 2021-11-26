@@ -547,8 +547,8 @@
                                                                 Cara Persalinan: <br>
                                                                 <input type="hidden" class="form-control" id="soal2_3" name="soal2_3" value="Cara Persalinan:">
                                                                 <div class="toggle">
-                                                                    <input class="m-r-200" type="radio" name="radiocarapersalinan" id="radioa_carapersalinan" value="Normal">
-                                                                    <label class="m-r-200" for="radioa_carapersalinan"> Normal </label>
+                                                                    <input class="m-r-200" type="radio" name="radiocarapersalinan" id="radioa_carapersalinan" value="Normal/Spontan">
+                                                                    <label class="m-r-200" for="radioa_carapersalinan"> Normal/Spontan </label>
                                                                     &nbsp
 
                                                                     <input type="radio" name="radiocarapersalinan" id="radiob_carapersalinan" value="Spontan">
@@ -3759,9 +3759,7 @@
                                                             </td>
                                                             <td>
                                                                 Waktu tunggu sejak pasien datang sampai mendapatkan pelayanan <br>
-                                                                Menit:
-                                                                <input type="hidden" class="form-control" id="soal6_4" name="soal6_4" value="Waktu tunggu sejak pasien datang sampai mendapatkan pelayanan
-                                                                Menit">
+                                                                <input type="hidden" class="form-control" id="soal6_4" name="soal6_4" value="Waktu tunggu sejak pasien datang sampai mendapatkan pelayanan">
                                                                 Menit:
                                                                 <input type="number" class="form-control" id="subjawaban6_4" name="subjawaban6_4" placeholder="Menit">
                                                                 &nbsp <br>
@@ -4073,6 +4071,369 @@
                                                                 Jelaskan:">
 
                                                                 <textarea class="form-control" name="essaybox_7_4" id="essaybox_7_4" rows="20"></textarea>&nbsp
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- end of row --}}
+                    {{!-- end of row --}}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-outline-info">
+                                {{!-- <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Form Soal</h4>
+                                </div> --}}
+                                <div class="card-block">
+                                        {{!-- Start of tabel list soal --}}
+                                        <h4 class="card-title">Formulir Komite Mutu Layanan Kesehatan di Fasilitas Kesehatan</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment3" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.
+                                                            </td>
+                                                            <td>
+                                                                Kode Area Kejadian Deviasi: <br>
+                                                                Defisiensi atau masalah:
+                                                                <input type="hidden" class="form-control" id="soal8_1a" name="soal8_1a" value="Kode Area Kejadian Deviasi:
+                                                                Defisiensi atau masalah:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1a" id="radioa_8_1a" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1a"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1a" id="radiob_8_1a" value="Tidak">
+                                                                    <label for="radiob_8_1a"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Manajemen fasilitas Kesehatan (fasilitas, peralatan, kebijakan):
+                                                                <input type="hidden" class="form-control" id="soal8_1b" name="soal8_1b" value="Manajemen fasilitas Kesehatan (fasilitas, peralatan, kebijakan):">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1b" id="radioa_8_1b" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1b"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1b" id="radiob_8_1b" value="Tidak">
+                                                                    <label for="radiob_8_1b"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Staff di pelayanan medik
+                                                                <input type="hidden" class="form-control" id="soal8_1c" name="soal8_1c" value="Staff di pelayanan medik">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1c" id="radioa_8_1c" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1c"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1c" id="radiob_8_1c" value="Tidak">
+                                                                    <label for="radiob_8_1c"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Staff di keperawatan
+                                                                <input type="hidden" class="form-control" id="soal8_1d" name="soal8_1d" value="Staff di keperawatan">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1d" id="radioa_8_1d" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1d"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1d" id="radiob_8_1d" value="Tidak">
+                                                                    <label for="radiob_8_1d"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Pelayanan lain (laboratorium, radiologi, anestesi, dsb)
+                                                                <input type="hidden" class="form-control" id="soal8_1e" name="soal8_1e" value="Pelayanan lain (laboratorium, radiologi, anestesi, dsb)">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1e" id="radioa_8_1e" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1e"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1e" id="radiob_8_1e" value="Tidak">
+                                                                    <label for="radiob_8_1e"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Pelayanan bukan dokter (fisioterapis, nutrisionis, dsb)
+                                                                <input type="hidden" class="form-control" id="soal8_1f" name="soal8_1f" value="Pelayanan bukan dokter (fisioterapis, nutrisionis, dsb)">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1f" id="radioa_8_1f" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1f"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1f" id="radiob_8_1f" value="Tidak">
+                                                                    <label for="radiob_8_1f"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Kondisi atau ketidak taatan pasien
+                                                                <input type="hidden" class="form-control" id="soal8_1g" name="soal8_1g" value="Kondisi atau ketidak taatan pasien">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1g" id="radioa_8_1g" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1g"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1g" id="radiob_8_1g" value="Tidak">
+                                                                    <label for="radiob_8_1g"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Faktor masyarakat (penolakkan kepercayaan)
+                                                                <input type="hidden" class="form-control" id="soal8_1h" name="soal8_1h" value="Faktor masyarakat (penolakkan kepercayaan)">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_1h" id="radioa_8_1h" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_1h"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_1h" id="radiob_8_1h" value="Tidak">
+                                                                    <label for="radiob_8_1h"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                2.
+                                                            </td>
+                                                            <td>
+                                                                Apakah Ada Masalah (yang Nantinya BISA DIUBAH pada Kematian Anak)?  <br>
+                                                                Komunitas:
+                                                                <input type="hidden" class="form-control" id="soal8_2a" name="soal8_2a" value="Apakah Ada Masalah (yang Nantinya BISA DIUBAH pada Kematian Anak)? 
+                                                                Komunitas:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_2a" id="radioa_8_2a" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_2a"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_2a" id="radiob_8_2a" value="Tidak">
+                                                                    <label for="radiob_8_2a"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Pelayanan primer:
+                                                                <input type="hidden" class="form-control" id="soal8_2b" name="soal8_2b" value="Pelayanan primer:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_2b" id="radioa_8_2b" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_2b"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_2b" id="radiob_8_2b" value="Tidak">
+                                                                    <label for="radiob_8_2b"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+
+                                                                Fasilitas kesehatan:
+                                                                <input type="hidden" class="form-control" id="soal8_2c" name="soal8_2c" value="Fasilitas kesehatan:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio8_2c" id="radioa_8_2c" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_8_2c"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio8_2c" id="radiob_8_2c" value="Tidak">
+                                                                    <label for="radiob_8_2c"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                                <div id="subradio8_2c" class="boxa" style="display: none; margin-left: 50px;">
+                                                                    Pelayanan tidak sesuai standar:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_a" name="soal8_2c_a" value="Pelayanan tidak sesuai standar:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_a" id="radioa_8_2c_a" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_a"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_a" id="radiob_8_2c_a" value="Tidak">
+                                                                        <label for="radiob_8_2c_a"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Tidak ada triase atau keterlambatan emergensi:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_b" name="soal8_2c_b" value="Tidak ada triase atau keterlambatan emergensi:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_b" id="radioa_8_2c_b" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_b"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_b" id="radiob_8_2c_b" value="Tidak">
+                                                                        <label for="radiob_8_2c_b"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Penilaian, diagnosis atau pengobatan tidak adekuat:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_c" name="soal8_2c_c" value="Penilaian, diagnosis atau pengobatan tidak adekuat:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_c" id="radioa_8_2c_c" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_c"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_c" id="radiob_8_2c_c" value="Tidak">
+                                                                        <label for="radiob_8_2c_c"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Pemantauan atau dukungan pelayanan tidak adekuat:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_d" name="soal8_2c_d" value="Pemantauan atau dukungan pelayanan tidak adekuat:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_d" id="radioa_8_2c_d" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_d"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_d" id="radiob_8_2c_d" value="Tidak">
+                                                                        <label for="radiob_8_2c_d"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Infeksi nosokomial, yang didapat di fasilitas kesehatan:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_e" name="soal8_2c_e" value="Infeksi nosokomial, yang didapat di fasilitas kesehatan:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_e" id="radioa_8_2c_e" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_e"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_e" id="radiob_8_2c_e" value="Tidak">
+                                                                        <label for="radiob_8_2c_e"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Malnutrisi progresif selama dirawat:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_f" name="soal8_2c_f" value="Malnutrisi progresif selama dirawat:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_f" id="radioa_8_2c_f" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_f"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_f" id="radiob_8_2c_f" value="Tidak">
+                                                                        <label for="radiob_8_2c_f"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+
+                                                                    Masalah jumlah staff pelayanan saat kematian:
+                                                                    <input type="hidden" class="form-control" id="soal8_2c_g" name="soal8_2c_g" value="Masalah jumlah staff pelayanan saat kematian:">
+                                                                    <div class="toggle">
+                                                                        <input class="m-r-200" type="radio" name="radio8_2c_g" id="radioa_8_2c_g" value="Ya">
+                                                                        <label class="m-r-200" for="radioa_8_2c_g"> Ya </label>
+                                                                        &nbsp
+
+                                                                        <input type="radio" name="radio8_2c_g" id="radiob_8_2c_g" value="Tidak">
+                                                                        <label for="radiob_8_2c_g"> Tidak </label>
+                                                                        &nbsp
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {{!-- End of tabel list soal --}}
+                                        <hr>
+                                        <h4 class="card-title">Review (Pengkajian) Kematian Balita</h4>
+                                        <h6 class="card-subtitle"> Jawablah pertanyaan-pertanyaan berikut</h6>
+                                        <hr>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="soalassessment3" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No.</th>
+                                                        <th class="text-center">Soal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                1.
+                                                            </td>
+                                                            <td>
+                                                                Ringkasan Kasus (Lihat Formulir diatas) <br>
+                                                                Penyebab Kematian (Lihat Formulir diatas) <br>
+                                                                Faktor yang Bisa diubah untuk Perbaikan (Lihat Formulir diatas) <br>
+                                                                Tindakan atau Respon dari Faktor yang Bisa diubah:
+                                                                <input type="hidden" class="form-control" id="soal9_1a" name="soal9_1a" value="Ringkasan Kasus (Lihat Formulir diatas)
+                                                                Penyebab Kematian (Lihat Formulir diatas)
+                                                                Faktor yang Bisa diubah untuk Perbaikan (Lihat Formulir diatas)
+                                                                Tindakan atau Respon dari Faktor yang Bisa diubah:">
+                                                                <textarea class="form-control essayboxk" name="essaybox_9_1a" id="essaybox_9_1a" rows="10"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                2.
+                                                            </td>
+                                                            <td>
+                                                                Setelah mempelajari review kematian diatas dan pengkajian review kematian balita, diputuskan bahwa:
+                                                                <input type="hidden" class="form-control" id="soal9_2a" name="soal9_2a" value="Setelah mempelajari review kematian diatas dan pengkajian review kematian balita, diputuskan bahwa:">
+                                                                <textarea class="form-control essayboxk" name="essaybox_9_2a" id="essaybox_9_2a" rows="10"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                3.
+                                                            </td>
+                                                            <td>
+                                                                Pelayanan sesuai standar:
+                                                                <input type="hidden" class="form-control" id="soal9_3a" name="soal9_3a" value="Pelayanan sesuai standar:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio9_3a" id="radioa_9_3a" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_9_3a"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio9_3a" id="radiob_9_3a" value="Tidak">
+                                                                    <label for="radiob_9_3a"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                4.
+                                                            </td>
+                                                            <td>
+                                                                Kematian bisa dicegah:
+                                                                <input type="hidden" class="form-control" id="soal9_4a" name="soal9_4a" value="Kematian bisa dicegah:">
+                                                                <div class="toggle">
+                                                                    <input class="m-r-200" type="radio" name="radio9_4a" id="radioa_9_4a" value="Ya">
+                                                                    <label class="m-r-200" for="radioa_9_4a"> Ya </label>
+                                                                    &nbsp
+
+                                                                    <input type="radio" name="radio9_4a" id="radiob_9_4a" value="Tidak">
+                                                                    <label for="radiob_9_4a"> Tidak </label>
+                                                                    &nbsp
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                5.
+                                                            </td>
+                                                            <td>
+                                                                Nama petugas pengisi data:
+                                                                <input type="hidden" class="form-control" id="soal9_5a" name="soal9_5a" value="Nama petugas pengisi data:">
+                                                                <input type="text" class="form-control" id="jawaban9_5a" name="jawaban9_5a" placeholder="Nama petugas pengisi data">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                6.
+                                                            </td>
+                                                            <td>
+                                                                Nama penanggung jawab:
+                                                                <input type="hidden" class="form-control" id="soal9_6a" name="soal9_6a" value="Nama penanggung jawab:">
+                                                                <input type="text" class="form-control" id="jawaban9_6a" name="jawaban9_6a" placeholder="Nama penanggung jawab">
                                                             </td>
                                                         </tr>
                                                 </tbody>
