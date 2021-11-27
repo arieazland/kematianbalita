@@ -14,7 +14,7 @@ img > .greyscale {
     color: orange;
 }
 
-.login-box{
+/* .login-box{
     /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 
@@ -29,7 +29,8 @@ img > .greyscale {
 
   /* Good browsers */
   opacity: 0.5;   
-}
+} */
+
 
 .login-register2 {
     background-size:cover;
