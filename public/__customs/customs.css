@@ -14,6 +14,23 @@ img > .greyscale {
     color: orange;
 }
 
+.login-box{
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.5;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+
+  /* Good browsers */
+  opacity: 0.5;   
+}
+
 .login-register2 {
     background-size:cover;
     background-repeat:no-repeat;
@@ -28,6 +45,7 @@ img > .greyscale {
     width:400px;
     margin:0 auto
 }
+
 .login-box2 .footer {
     width:100%;
     left:0px;
