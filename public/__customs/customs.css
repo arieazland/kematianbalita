@@ -14,9 +14,10 @@ img > .greyscale {
     color: orange;
 }
 
-/* .login-box{
-    background: transparent;
-} */
+.login-box{
+    margin: 0 10% auto auto !important;
+}
+
 
 .login-register2 {
     background-size:cover;
